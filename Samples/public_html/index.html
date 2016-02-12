@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Newest Manuscript Tracking System</title>
+    <link rel="stylesheet" type="text/css" href="../resources/jeasyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../resources/jeasyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="../resources/jeasyui/themes/color.css">
+    <link rel="stylesheet" type="text/css" href="../resources/jeasyui/demo/demo.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="../resources/jeasyui/jquery.min.js"></script>
+    <script type="text/javascript" src="../resources/jeasyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="js/mansuscript.js"></script>
+    <script type="text/javascript" src="js/reviewer.js"></script>
+
+</head>
+<body>
+
+
+<table id="manuscriptTable" title="Manuscripts" class="easyui-datagrid" style="width:700px;height:250px"
+       url="getManuscript.php"
+       toolbar="#manuscriptToolbar" pagination="true"
+       rownumbers="true" fitColumns="true" singleSelect="true">
+    <thead>
+    <tr>
+        <th field="id" width="50">ID</th>
+        <th field="title" width="50">Title</th>
+        <th field="author" width="50">Author</th>
+        <th field="category" width="50">Category</th>
+        <th field="content" width="50">Content</th>
+        <th field="receivedDate" width="50">Submission Date</th>
+        <th field="status" width="50">Status</th>
+        <th field="finalizedDate" width="50">Final Decision Date</th>
+    </tr>
+    </thead>
+</table>
+<div id="manuscriptToolbar">
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newManuscript()">New
+        Manuscript</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editManuscript()">Edit
+        Manuscript</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true"
+       onclick="deleteManuscript()">Delete Manuscript</a>
+</div>
+
+<div id="manuscriptDlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
+     closed="true" buttons="#manuscript-dlg-buttons">
+    <div class="ftitle">Manuscript Information</div>
+    <form id="manuscriptFm" method="post" novalidate>
+        <div class="fitem">
+            <label>Title:</label>
+            <input name="title" class="easyui-textbox" required="true">
+        </div>
+        <div class="fitem">
+            <label>Author:</label>
+            <input name="author" class="easyui-textbox" required="true">
+        </div>
+        <div class="fitem">
+            <label>Category:</label>
+            <select>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+            </select>
+            <!--<input name="phone" class="easyui-textbox">-->
+        </div>
+        <div class="fitem">
+            <label>Email:</label>
+            <input name="email" class="easyui-textbox" validType="email">
+        </div>
+    </form>
+
+</div>
+<div id="manuscript-dlg-buttons">
+    <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveManuscript()"
+       style="width:90px">Save</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel"
+       onclick="javascript:$('#manuscriptDlg').dialog('close')" style="width:90px">Cancel</a>
+</div>
+
+
+<!--reviewer section -->
+<table id="reviewerTable" title="Reviewers" class="easyui-datagrid" style="width:700px;height:250px"
+       url="getReviewer.php"
+       toolbar="#reviewerToolbar" pagination="true"
+       rownumbers="true" fitColumns="true" singleSelect="true">
+    <thead>
+    <tr>
+        <th field="id" width="50">ID</th>
+        <th field="name" width="50">Name</th>
+        <th field="phone" width="50">Phone</th>
+        <th field="email" width="50">Email</th>
+        <th field="content" width="50">Address</th>
+    </tr>
+    </thead>
+</table>
+<div id="reviewerToolbar">
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newReviewer()">New
+        Reviewer</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editReviewer()">Edit
+        Reviewer</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true"
+       onclick="deleteReviewer()">Delete Reviewer</a>
+</div>
+
+<div id="reviewerDlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
+     closed="true" buttons="#reviewer-dlg-buttons">
+    <div class="ftitle">Reviewer Information</div>
+    <form id="reviewerFm" method="post" novalidate>
+        <div class="fitem">
+            <label>Name:</label>
+            <input name="Name" class="easyui-textbox" required="true">
+        </div>
+        <div class="fitem">
+            <label>Phone:</label>
+            <input name="Phone" class="easyui-textbox" required="true">
+        </div>
+
+        <div class="fitem">
+            <label>Email:</label>
+            <input name="email" class="easyui-textbox" validType="email">
+        </div>
+    </form>
+
+</div>
+<div id="reviewer-dlg-buttons">
+    <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveReviewer()"
+       style="width:90px">Save</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel"
+       onclick="javascript:$('#reviewerDlg').dialog('close')" style="width:90px">Cancel</a>
+</div>
+</body>
+</html>
