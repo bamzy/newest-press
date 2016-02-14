@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:onSelect="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Newest Manuscript Tracking System</title>
@@ -12,25 +12,27 @@
     <script type="text/javascript" src="../resources/jeasyui/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="js/mansuscript.js"></script>
     <script type="text/javascript" src="js/reviewer.js"></script>
+    <script type="text/javascript" src="js/review.js"></script>
 
 </head>
 <body>
 
 
-<table id="manuscriptTable" title="Manuscripts" class="easyui-datagrid" style="width:700px;height:250px"
+<table id="manuscriptTable" title="Manuscripts" class="easyui-datagrid" style="width:1000px;height:250px"
        url="getManuscript.php"
+       onSelect:function(record){ alert(record.text)}
        toolbar="#manuscriptToolbar" pagination="true"
        rownumbers="true" fitColumns="true" singleSelect="true">
     <thead>
     <tr>
-        <th field="id" width="50">ID</th>
-        <th field="title" width="50">Title</th>
-        <th field="author" width="50">Author</th>
-        <th field="category" width="50">Category</th>
-        <th field="content" width="50">Content</th>
-        <th field="receivedDate" width="50">Submission Date</th>
-        <th field="status" width="50">Status</th>
-        <th field="finalizedDate" width="50">Final Decision Date</th>
+        <!--<th field="id" width="20">ID</th>-->
+        <th field="title" width="200">Title</th>
+        <th field="author" width="100">Author</th>
+        <th field="category" width="100">Category</th>
+        <th field="content" width="100">Content</th>
+        <th field="receivedDate" width="75">Submission Date</th>
+        <th field="status" width="75">Status</th>
+        <th field="finalizedDate" width="50">Finalized Date</th>
     </tr>
     </thead>
 </table>
@@ -41,6 +43,8 @@
         Manuscript</a>
     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true"
        onclick="deleteManuscript()">Delete Manuscript</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-large-smartart" plain="true"
+       onclick="loadAssociatedReviewers()">List Reviewers</a>
 </div>
 
 <div id="manuscriptDlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
@@ -130,5 +134,58 @@
     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel"
        onclick="javascript:$('#reviewerDlg').dialog('close')" style="width:90px">Cancel</a>
 </div>
+
+
+<!--review section-->
+
+<table id="associateReviewTable" title="Related Reviews" class="easyui-datagrid" style="width:700px;height:250px"
+       url="getReview.php"
+       toolbar="#reviewerToolbar" pagination="true"
+       rownumbers="true" fitColumns="true" singleSelect="true">
+    <thead>
+    <tr>
+        <!--<th field="id" width="50">ID</th>-->
+        <th field="reviewerName" width="50">Reviewer Name</th>
+        <th field="manuscriptTitle" width="50">Manuscript Title</th>
+        <th field="reviewDescription" width="50">Review Description</th>
+        <th field="finalDecision" width="50">Final Decision</th>
+    </tr>
+    </thead>
+</table>
+<div id="associateReviewToolbar">
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="assignReviewer()">Assign
+        a
+        Reviewer</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true"
+       onclick="deleteAssignedReviewer()">Delete Assigned Reviewer</a>
+</div>
+
+<div id="associateReviewerDlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
+     closed="true" buttons="#associate-reviewer-dlg-buttons">
+    <div class="ftitle">Reviewer Information</div>
+    <form id="associateReviewerFm" method="post" novalidate>
+        <div class="fitem">
+            <label>Name:</label>
+            <input name="manuscriptId" class="easyui-textbox" required="true">
+        </div>
+        <div class="fitem">
+            <label>Phone:</label>
+            <input name="reviewerId" class="easyui-textbox" required="true">
+        </div>
+
+        <div class="fitem">
+            <label>Email:</label>
+            <input name="reviewContent" class="easyui-textbox" validType="email">
+        </div>
+    </form>
+
+</div>
+<!--<div id="associate-reviewer-dlg-buttons">-->
+<!--<a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveReviewer()"-->
+<!--style="width:90px">Save</a>-->
+<!--<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel"-->
+<!--onclick="javascript:$('#reviewerDlg').dialog('close')" style="width:90px">Cancel</a>-->
+<!--</div>-->
+
 </body>
 </html>
