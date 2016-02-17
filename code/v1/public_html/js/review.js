@@ -7,7 +7,7 @@ function assignReviewer() {
     $('#manuscriptFm').form('clear');
     url = 'saveManuscript.php';
 }
-function editManuscript() {
+function editReview() {
     var row = $('#manuscriptTable').datagrid('getSelected');
     if (row) {
         $('#manuscriptDlg').dialog('open').dialog('setTitle', 'Edit Manuscript');
@@ -15,7 +15,7 @@ function editManuscript() {
         url = 'updateManuscript.php?id=' + row.id;
     }
 }
-function saveManuscript() {
+function saveReview() {
     $('#manuscriptFm').form('submit', {
         url: url,
         onSubmit: function () {
@@ -35,7 +35,7 @@ function saveManuscript() {
         }
     });
 }
-function deleteManuscript() {
+function deleteReview() {
     var row = $('#manuscriptTable').datagrid('getSelected');
     if (row) {
         $.messager.confirm('Confirm', 'Are you sure you want to destroy this manuscript?', function (r) {

@@ -19,7 +19,7 @@ function saveManuscript() {
     $('#manuscriptFm').form('submit', {
         url: url,
         onSubmit: function () {
-            return $(this).form('validate');
+            //return $(this).form('validate');
         },
         success: function (result) {
             var result = eval('(' + result + ')');

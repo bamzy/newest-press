@@ -1451,7 +1451,7 @@
 
 .tabs-header,
 .tabs-tool {
-    background-color: #E0ECFF;
+    background-color: rgba(156, 158, 6, 0.54);
 }
 
 .tabs-header-plain {
@@ -1469,7 +1469,7 @@
 .tabs-header-bottom .tabs li.tabs-selected a.tabs-inner,
 .tabs-header-left .tabs li.tabs-selected a.tabs-inner,
 .tabs-header-right .tabs li.tabs-selected a.tabs-inner {
-    border-color: #95B8E7;
+    border-color: #8CAF23;
 }
 
 .tabs-p-tool a:hover,

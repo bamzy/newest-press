@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - newest@127.0.0.1" uuid="8539a6bd-e914-4ecb-93b4-8c54f23f2c65">
+    <database-info product="MySQL" version="5.5.5-10.1.9-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.2">
+      <schema id="1" name="newest"/>
+      <table id="2" parent="1" name="manuscript"/>
+      <table id="3" parent="1" name="review"/>
+      <table id="4" parent="1" name="reviewer"/>
+      <column id="5" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="6" parent="2" name="title">
+        <mandatory>1</mandatory>
+        <data-type>char(100)</data-type>
+      </column>
+      <column id="7" parent="2" name="author">
+        <mandatory>1</mandatory>
+        <data-type>char(100)</data-type>
+      </column>
+      <column id="8" parent="2" name="category">
+        <mandatory>1</mandatory>
+        <data-type>char(50)</data-type>
+      </column>
+      <column id="9" parent="2" name="content">
+        <data-type>blob</data-type>
+      </column>
+      <column id="10" parent="2" name="text">
+        <data-type>text</data-type>
+      </column>
+      <column id="11" parent="2" name="receivedDate">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="12" parent="2" name="status">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;Rejected&apos;, &apos;Accepted&apos;, &apos;Undetermined&apos;)</data-type>
+      </column>
+      <column id="13" parent="2" name="finalizedDate">
+        <data-type>date</data-type>
+      </column>
+      <key id="14" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="15" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="16" parent="3" name="manuscriptId">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="17" parent="3" name="reviewerId">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="18" parent="3" name="reviewContent">
+        <data-type>text</data-type>
+      </column>
+      <column id="19" parent="3" name="finalDecision">
+        <data-type>enum(&apos;Accepted&apos;, &apos;Rejected&apos;, &apos;Not Submitted&apos;)</data-type>
+      </column>
+      <key id="20" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="21" parent="3" name="review_ibfk_1">
+        <columns>manuscriptId</columns>
+        <ref-key>manuscript.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="22" parent="3" name="review_ibfk_2">
+        <columns>reviewerId</columns>
+        <ref-key>reviewer.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="23" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="24" parent="4" name="name">
+        <data-type>char(50)</data-type>
+      </column>
+      <column id="25" parent="4" name="phone">
+        <data-type>char(12)</data-type>
+      </column>
+      <column id="26" parent="4" name="email">
+        <data-type>char(50)</data-type>
+      </column>
+      <column id="27" parent="4" name="address">
+        <data-type>char(255)</data-type>
+      </column>
+      <column id="28" parent="4" name="biography">
+        <data-type>text</data-type>
+      </column>
+      <key id="29" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
