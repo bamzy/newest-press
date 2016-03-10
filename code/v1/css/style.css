@@ -1,0 +1,63 @@
+.adjacentDiv {
+    float: left !important;
+    background-color: rgba(125, 125, 125, 0.33);
+    box-shadow: #7d7d7d;
+    padding: 3px;
+    border: 0px;
+    margin: 10%;
+}
+
+.grid-page-toolbar {
+    width: 100% !important;
+}
+
+div.grid-header-bg {
+    /*display: initial !important;*/
+    width: 0px !important;
+    /*position: initial!important;*/
+}
+
+.rowContainer {
+    overflow: auto;
+    background-color: #e3e5a3;
+    align-content: center;
+    /*content: "";*/
+    /*display: table;*/
+    /*clear: both;*/
+}
+
+.tableTitleFont {
+    font-size: 30px;
+    padding: 0px;
+    color: Black;
+}
+
+.tableTitleDiv {
+    /*margin-left: 10px;*/
+    height: 25px;
+    font-family: tableTitleFont;
+    margin-left: 5%;
+    padding: 0px;
+}
+
+.shadowedDiv {
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 5px;
+    margin-right: 10%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+    width: auto;
+}
+
+@font-face {
+    font-family: tableTitleFont;
+    src: url("../font/SummitBold-Display.otf");
+}
+
+#mapDiv {
+    padding: 0;
+    margin-left: 20%;
+    height: 200px;
+    width: 50%;
+}
+

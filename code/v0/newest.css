@@ -1,0 +1,187 @@
+/* 
+CSS for NeWest Press Manuscript Tracking System.
+Lisa Goddard
+February 2012
+*/
+
+/******************************
+*
+* HTML tag defaults
+* 
+*******************************/
+
+    body,
+    html {
+    margin:0;
+    padding:0;
+    color:#000;
+    background:#ffffff;
+    }
+
+    #wrap {
+    width:1050px;
+    margin:0 auto;
+    background:#ffffff;
+    }
+
+    #header {
+    height: 105px;
+    background:#fffbcf url(js_header.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    color: #a4a657;
+    border-bottom: solid;
+    border-top: solid;
+    margin-top: 15px;
+    }
+    
+    #main {
+    float:right;
+    width:850px;
+    /*background:#9c9;*/
+    min-height:500px;
+    }
+    
+    #main a, a visited{
+    color: #D55F29;
+    text-decoration: none;    
+    }
+    
+    #main a:hover{
+    text-decoration: underline;
+    }
+      
+    #inlinemenu a{
+    background: #e9e9e4;
+    padding: 7px;
+    margin: 4px;
+    }
+    
+    #review {
+    border-top: solid;
+    border-width:1px;
+    border-color:gray;
+    padding: 7px;
+    margin: 4px;
+    }
+    
+    #account {
+    border-top: solid;
+    border-width:1px;
+    border-color:gray;
+    padding: 7px;
+    margin: 4px;
+    }
+    
+    #sidebar {
+    float:left;
+    width:200px;
+    background:#ffffff;
+    min-height:500px;
+    }
+    
+    #sidebar a:hover{
+     color: #FFFFFF;
+}
+
+    #sidebar a, a:visited{
+    color: #fffbcf;
+    text-decoration: none; 
+}
+
+    #sidebar p {
+   padding: 2px;
+   padding-left: 10px;
+   /*border: double;*/
+   width: 130px;
+   background: #a4a657;
+}
+    
+    #footer {
+    clear: both;
+    background:#fffbcf;
+    color: #a4a657;
+    border-top: solid;
+    text-align: center;
+    }
+
+    .searchterm{
+    font-style: italic;
+    }   
+    
+    .note{
+     font-size:80%;   
+     }
+     
+    .username{
+     color:#D55F29;
+     }
+     
+     .pagetitle{
+     font-size: 130%;
+     font-weight: bold;
+     }
+     
+     .searchbox{
+     display: inline-block;
+     /*border:solid; 
+     border-color: #a4a657;
+     border-width:5px;*/
+     padding: 10px;
+     background: #e9e9e4;
+     margin-right: 20px;
+    }  
+    
+    .reviewblock{
+     display: inline-block;
+     /*border:solid; 
+     border-color: #a4a657;
+     border-width:5px;*/
+     padding: 10px;
+     background: #e9e9e4;
+     margin-right: 20px;
+     margin-top: 10px;
+     margin-bottom: 10px;
+    }  
+    
+    .manuside {
+    border-left: solid;
+    border-width:1px;
+    border-color:gray;
+    float: right;
+    display: inline-block;
+    padding: 10px;
+    margin: 4px;
+    }
+    
+    .edblock {
+    border-left: solid;
+    border-width:1px;
+    border-color:gray;
+    float: right;
+    display: inline-block;
+    padding: 10px;
+    margin: 4px;
+    }
+
+    .manuscript {
+    border-top: solid;
+    border-bottom: solid;
+    border-width:1px;
+    border-color:gray;
+    width: 650px;
+    display: inline-block;
+    padding-top: 7px;
+    margin: 4px;
+    }
+    
+    .edituser {
+    border-top: solid;
+    border-bottom: solid;
+    border-width:1px;
+    border-color:gray;
+    width: 650px;
+    display: inline-block;
+    padding-top: 7px;
+    margin: 4px;
+    }
