@@ -67,7 +67,9 @@ connect();
 		<?php $file=menuselect($_SESSION['role_id']); 
 		include $file;
 		?></div>
-		<div id="footer">footer stuff</div>
+<div id="footer">Copyrighted © by University of Alberta</div>
     </div>
+
+
 </body>
 </html>
