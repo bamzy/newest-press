@@ -1,0 +1,155 @@
+/*********** Start  *******************************
+			
+		the stylesheet for the public style:
+			
+			All about top, navigator, logo, footer. 
+			Basic style of main. 
+
+************ of Newest pages *********************/
+
+
+body{
+	margin:0;
+	font-family: 'Asap', Verdana, Tahoma, Arial, sans-serif;
+    line-height: 1.5em;
+    display: block;
+    background: url(images/dot-bg-grey.png);
+    background-repeat: repeat;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+
+}
+
+ul{
+	text-decoration: none;
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+.clear{
+	clear: both;
+}
+
+
+
+/***** Start: extend the background *********************************/
+.top,.main-clear{
+	background: url(images/wave-bg.png);
+	background-repeat: repeat;
+	width: 100%;
+	height: 37px;
+}
+
+.nav{
+	background: url(images/dot-bg-grey.png);
+	background-repeat: repeat;
+	border: 1px #fff solid;
+
+}
+.main{
+	background: url(images/dot-bg-brown.png);
+	background-repeat: repeat;
+}
+.footer{
+	background: url(images/wave-bg.png);
+	background-repeat: repeat;
+	width:100%;
+	color: #eee;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.main-clear{
+	margin-top: 0px;
+}
+/***** End: extend the background **********************************/
+
+
+
+
+
+
+/******** Start: make most divs in the center ***********/
+.top-inner, .nav-inner , .logo , .main-inner,.footer-inner{
+	width: 960px;
+    margin-left:auto;
+    margin-right:auto;
+}
+/******** End: make most divs in the center ***********/
+
+
+
+
+.top-inner{
+	height: 37px;
+	line-height: 37px;
+	color: #d0d5db;
+	text-decoration: none;
+	width: 960px;
+    margin-left:auto;
+    margin-right:auto;
+    text-indent: 810px;
+}
+
+.top-inner a{
+	color: #d0d5db;
+	margin-right: 0;
+}
+
+.top-inner a:hover{
+	color:#fff;
+}
+
+.nav-inner{
+	height: 57px;
+}
+
+.nav-inner ul{
+	display: block;
+	margin-left: 597px;
+	padding: 0;
+}
+
+.nav-inner li a {
+	display: block;
+	float: left;
+	width: 120px;
+	background: #fff;
+	margin-left: 1px;
+	margin-top: -10px;
+	height: 67px;
+	line-height: 57px;
+	text-align: center;
+	color:#222;
+}
+
+.nav-inner li a:hover{
+	background: #efefef;
+}
+
+.logo{
+	margin-top: -110px;
+}
+
+.main-inner{
+	background: #fdf8ee;
+}
+
+.footer-inner a img{
+	margin-right: 25px;
+	margin-top: 30px;
+}
+
+/*********** END  *******************************
+			
+		the stylesheet for the public style:
+			
+			All about top, navigator, logo, footer. 
+			Basic style of main. 
+
+************ of Newest pages *********************/
+
+
