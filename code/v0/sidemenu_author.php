@@ -1,7 +1,7 @@
 <?php
 printf(
 '<div id="menucolumn">	
-		<p><a href="http://www.newestpress.com/catalog/" target="_blank">NeWest Home</a></p>
+		<p><a href="http://www.newestpress.com/" target="_blank">NeWest Home</a></p>
 		<p><a href="author.php">Author Home</a></p>
 		<p><a href="submit_manuscript.php">New Submission</a></p>
 		<p><a href="myaccount.php">My Account</a></p>

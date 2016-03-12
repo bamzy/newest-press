@@ -9,154 +9,188 @@ February 2012
 * HTML tag defaults
 * 
 *******************************/
-    #main {
-    float:right;
-    width:100%;
-    min-height:500px;
-    padding-right:20px;
-    }
-    
-    #main a, a visited{
+#main {
+    float: right;
+    width: 100%;
+    min-height: 500px;
+    padding-right: 0px;
+}
+
+#main a, a visited {
     color: #D55F29;
-    text-decoration: none;    
-    }
-    
-    #main a:hover{
+    text-decoration: none;
+}
+
+#main a:hover {
     text-decoration: underline;
-    }
-      
-    #inlinemenu a{
+}
+
+#inlinemenu a {
     background: #e9e9e4;
     padding: 7px;
     margin: 4px;
-    }
-    
-    #review {
-    border-top: solid;
-    border-width:1px;
-    border-color:gray;
-    padding: 7px;
-    margin: 4px;
-    }
-    
-    #account {
-    border-top: solid;
-    border-width:1px;
-    border-color:gray;
-    padding: 7px;
-    margin: 4px;
-    }
-    
-    #sidebar {
-    float:left;
-    width:170px;
-    min-height:500px;
-    margin-left:50px;
-    }
-    
-    #sidebar a:hover{
-     color: #FFFbcf;
-     text-decoration:none;
 }
 
-    #sidebar a, a:visited{
+#review {
+    border-top: solid;
+    border-width: 1px;
+    border-color: gray;
+    padding: 7px;
+    margin: 4px;
+}
+
+#account {
+    border-top: solid;
+    border-width: 1px;
+    border-color: gray;
+    padding: 7px;
+    margin: 4px;
+}
+
+#sidebar {
+    float: left;
+    width: 12%;
+    min-height: 200px;
+    position: relative;
+    margin-left: 20px;
+    overflow: hidden;
+    /*left:72%;*/
+}
+
+#mainManuscriptContainer {
+    float: left;
+    width: 85%;
+    position: relative;
+    margin-left: 5px;
+    overflow: hidden;
+    height: auto;
+    /*left:80%;*/
+}
+
+#sidebarMainManuscriptContainer {
+    float: left;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/*#manuscriptTable {*/
+    /*float: left;*/
+    /**/
+    /*height:500px;*/
+
+/*}*/
+/*#associateReviewTable {*/
+    /*float: left;*/
+    /*width: 10%;*/
+    /*height:500px;*/
+/*}*/
+
+
+#sidebar a:hover {
+    color: #FFFbcf;
+    text-decoration: none;
+}
+
+#sidebar a, a:visited {
     color: #fff;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
-    #sidebar p {
-   padding: 2px;
-   padding-left: 10px;
-   /*border: double;*/
-   width: 130px;
-   background: #db966b;
+#sidebar p {
+    padding: 2px;
+    padding-left: 10px;
+    /*border: double;*/
+    width: 130px;
+    background: #db966b;
 }
-    
-    #footer {
+
+#footer {
     clear: both;
-    background:#fffbcf;
+    background: #fffbcf;
     color: #a4a657;
     border-top: solid;
     text-align: center;
-    }
+}
 
-    .searchterm{
+.searchterm {
     font-style: italic;
-    }   
-    
-    .note{
-     font-size:80%;   
-     }
-     
-    .username{
-     color:#D55F29;
-     }
-     
-     .pagetitle{
-     font-size: 130%;
-     font-weight: bold;
-     }
-     
-     .searchbox{
-     display: inline-block;
-     /*border:solid; 
-     border-color: #a4a657;
-     border-width:5px;*/
-     padding: 10px;
-     background: #e9e9e4;
-     margin-right: 20px;
-    }  
-    
-    .reviewblock{
-     display: inline-block;
-     /*border:solid; 
-     border-color: #a4a657;
-     border-width:5px;*/
-     padding: 10px;
-     background: #e9e9e4;
-     margin-right: 20px;
-     margin-top: 10px;
-     margin-bottom: 10px;
-    }  
-    
-    .manuside {
-    border-left: solid;
-    border-width:1px;
-    border-color:gray;
-    float: right;
-    display: inline-block;
-    padding: 10px;
-    margin: 4px;
-    }
-    
-    .edblock {
-    border-left: solid;
-    border-width:1px;
-    border-color:gray;
-    float: right;
-    display: inline-block;
-    padding: 10px;
-    margin: 4px;
-    }
+}
 
-    .manuscript {
+.note {
+    font-size: 80%;
+}
+
+.username {
+    color: #D55F29;
+}
+
+.pagetitle {
+    font-size: 130%;
+    font-weight: bold;
+}
+
+.searchbox {
+    display: inline-block;
+    /*border:solid;
+    border-color: #a4a657;
+    border-width:5px;*/
+    padding: 10px;
+    background: #e9e9e4;
+    margin-right: 20px;
+}
+
+.reviewblock {
+    display: inline-block;
+    /*border:solid;
+    border-color: #a4a657;
+    border-width:5px;*/
+    padding: 10px;
+    background: #e9e9e4;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.manuside {
+    border-left: solid;
+    border-width: 1px;
+    border-color: gray;
+    float: right;
+    display: inline-block;
+    padding: 10px;
+    margin: 4px;
+}
+
+.edblock {
+    border-left: solid;
+    border-width: 1px;
+    border-color: gray;
+    float: right;
+    display: inline-block;
+    padding: 10px;
+    margin: 4px;
+}
+
+.manuscript {
     border-top: solid;
     border-bottom: solid;
-    border-width:1px;
-    border-color:gray;
+    border-width: 1px;
+    border-color: gray;
     width: 650px;
     display: inline-block;
     padding-top: 7px;
     margin: 4px;
-    }
-    
-    .edituser {
+}
+
+.edituser {
     border-top: solid;
     border-bottom: solid;
-    border-width:1px;
-    border-color:gray;
+    border-width: 1px;
+    border-color: gray;
     width: 650px;
     display: inline-block;
     padding-top: 7px;
     margin: 4px;
-    }
+}
+

@@ -18,12 +18,12 @@
 				<li><a href="">AAA</a></li>
 				<li><a href="">BBB</a></li>
 				<li><a href="">CCC</a></li>
-			</ol>
+			</ul>
 
 		</div>
 	</div>
 	<div class="clear"></div>
-	<div class="logo"><a href="http://newestpress.com/"><img src="images/newestpress-logo.png"></a></div>
+	<div class="logo"><a href="http://newestpress.com/"><img src="images/newestpress-logo.png">  <p style="font-size:20px;text-align: center;color:#111111"> Manuscript Tracking System</p></a></div>
 
 </div>
 
