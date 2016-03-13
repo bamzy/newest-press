@@ -3,9 +3,10 @@
  */
 var url;
 function assignReviewer() {
-    $('#manuscriptDlg').dialog('open').dialog('setTitle', 'New Manuscript');
-    $('#manuscriptFm').form('clear');
-    url = 'saveManuscript.php';
+
+    //$('#manuscriptDlg').dialog('open').dialog('setTitle', 'New Manuscript');
+    //$('#manuscriptFm').form('clear');
+    //url = 'saveManuscript.php';
 }
 function editReview() {
     var row = $('#manuscriptTable').datagrid('getSelected');

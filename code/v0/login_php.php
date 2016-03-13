@@ -37,7 +37,7 @@ if (auth($username, $userpass)) {
         
 			if ($roleid==3){
 			printf('<script type="text/javascript">
-			location.replace("manuscripts.php");
+			location.replace("newmanuscripts.php");
 			</script>');
 			}
 			
