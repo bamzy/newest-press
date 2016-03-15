@@ -109,14 +109,14 @@ a{
 
 .nav-inner ul{
 	display: block;
-	margin-left: 597px;
+	margin-left: 100px;
 	padding: 0;
 }
 
 .nav-inner li a {
 	display: block;
 	float: left;
-	width: 120px;
+	width: 420px;
 	background: #fff;
 	margin-left: 1px;
 	margin-top: -10px;
@@ -124,10 +124,12 @@ a{
 	line-height: 57px;
 	text-align: center;
 	color:#222;
+	font-size:16px;
 }
 
 .nav-inner li a:hover{
-	background: #efefef;
+	/**background: #efefef;**/
+	color:#666;
 }
 
 .logo{
