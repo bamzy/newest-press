@@ -33,16 +33,18 @@
                    toolbar="#manuscriptToolbar" pagination="true"
                    remoteSort="false"
                    multiSort="true"
-                   rownumbers="true" fitColumns="true" singleSelect="true">
+                   rownumbers="true" singleSelect="true">
                 <thead>
                 <tr>
                     <!--<th field="id" width="20">ID</th>-->
                     <th field="title" ,width="200" data-options="sortable:true">Title</th>
-                    <th field="author" ,width="100" data-options="sortable:true">Author</th>
-                    <th field="category" ,width="100" data-options="sortable:true">Category</th>
-                    <th field="receivedDate" ,width="75" data-options="sortable:true">Submission Date</th>
-                    <th field="status" ,width="75" data-options="sortable:true">Status</th>
-                    <th field="finalizedDate" ,width="75" data-options="sortable:true">Finalized Date</th>
+                    <th field="authorName" ,width="30" data-options="sortable:true">Author's Name</th>
+                    <th field="authorFamily" ,width="30" data-options="sortable:true">Author's Family</th>
+                    <th field="category" ,width="30" data-options="sortable:true">Category</th>
+                    <th field="dateSubmitted" ,width="45" data-options="sortable:true">Submission Date</th>
+                    <th field="status" ,width="25" data-options="sortable:true">Status</th>
+                    <th field="notes" ,width="35" data-options="sortable:true">Notes</th>
+                    <th field="dateStatus" ,width="75" data-options="sortable:true">Finalized Date</th>
                     <th field="content" ,width="45">Download</th>
                 </tr>
                 </thead>
@@ -128,112 +130,32 @@
                 <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteAssignedReviewer()">Delete Assigned Reviewer</a>
 
             </div>
-            <!--            <div id="addAssociateReviewToolbar" style="padding:2px 0">-->
-            <!--                <table id="reviewerNameList" cellpadding="0" cellspacing="0" style="width:100%"-->
-            <!--                    url="getReviewer.php">-->
-            <!--                    <tr>-->
-            <!--                        <td style="text-align:left;padding-left:10px;width:inherit">-->
-            <!--                            <input class="easyui-searchbox" data-options="prompt:'Search Here',searcher:doSearch"-->
-            <!--                                     >-->
-            <!--                            <script>-->
-            <!--                                function doSearch(value){-->
-            <!--//                                    alert('You input: ' + value);-->
-            <!--                                    console.log('called');-->
-            <!--                                    $('#associateReviewTable').datagrid('reload');	// reload the user data-->
-            <!--                                }-->
-            <!--                            </script>-->
-            <!--                        </td>-->
-            <!--                    </tr>-->
-            <!--                </table>-->
-            <!--            </div>-->
-            <!--            <div id="associateReviewerDlg" class="easyui-dialog" style="top: 30%;width:400px;height:280px;padding:10px 20px"-->
-            <!--                 closed="true" buttons="#associate-reviewer-dlg-buttons">-->
-            <!--                <div class="ftitle">Reviewer Information</div>-->
-            <!--                <form id="associateReviewerFm" method="post" novalidate>-->
-            <!--                    <div class="fitem">-->
-            <!--                        <label>Reviewer Name:</label>-->
-            <!--                        <input name="manuscriptId" class="easyui-textbox" required="true">-->
-            <!--                        <input id="category" class="easyui-combobox" name="category"-->
-            <!--                               data-options="valueField:'id',textField:'categoryName',url:'getCategory.php'">-->
-            <!--                    </div>-->
-            <!--                    <div class="fitem">-->
-            <!--                        <label>Phone:</label>-->
-            <!--                        <input name="reviewerId" class="easyui-textbox" required="true">-->
-            <!--                    </div>-->
-            <!---->
-            <!--                    <div class="fitem">-->
-            <!--                        <label>Email:</label>-->
-            <!--                        <input name="reviewContent" class="easyui-textbox" validType="email">-->
-            <!--                    </div>-->
-            <!--                </form>-->
-            <!---->
-            <!--            </div>-->
+
             <div id="associateReviewerDlg" class="easyui-dialog" title="Select Reviewer"
-                 style="top: 30%;width:400px;height:400px;padding:10px"
+                 style="top: 30%;width:400px;height:310px;padding:10px"
                  data-options="
                 iconCls: 'icon-save',
                 toolbar: '#addAssociateReviewToolbar',
-                buttons: '#review-dlg-buttons'">
-                <!--                <div class="easyui-datalist" title="Remote Data" style="width:400px;height:250px" data-options="url: 'getReviewer.php',method: 'get'">-->
-                <!--                </div>-->
-
-                <!--                <table id="associateReviewTable" title="" class="easyui-datagrid" style="width: 100% ;height:300px; "-->
-                <!--                       url="getReviewer.php"-->
-                <!--                       fitColumns="true"-->
-                <!--                       singleSelect="true">-->
-                <!--                    <thead>-->
-                <!--                    <tr>-->
-                <!--                        <!--<th field="id" width="50">ID</th>-->-->
-                <!--                        <th field="fname" height="3" width="20">Name</th>-->
-                <!--                        <th field="lname" width="30">Family</th>-->
-                <!--<!--                        <th field="reviewDescription" width="50">Review Description</th>-->-->
-                <!--<!--                        <th field="finalDecision" width="50">Final Decision</th>-->-->
-                <!--<!--                        <th field="assignmentDate" width="50">Assignment Date</th>-->-->
-                <!--<!--                        <th field="decisionDate" width="50">Decision Date</th>-->-->
-                <!--                    </tr>-->
-                <!--                    </thead>-->
-                <!--                </table>-->
-                <!---->
+                buttons: '#review-dlg-buttons',
+                 closed:'true'">
 
 
-                <table id="dg" title="DataGrid" style="width:700px;height:250px">
-                    <thead>
-                    <tr>
-                        <th data-options="field:'itemid',width:80">Item ID</th>
-                        <th data-options="field:'productid',width:100">Product</th>
-                        <th data-options="field:'listprice',width:80,align:'right'">List Price</th>
-                        <th data-options="field:'unitcost',width:80,align:'right'">Unit Cost</th>
-                        <th data-options="field:'attr1',width:250">Attribute</th>
-                    </tr>
-                    </thead>
-                </table>
-                <script type="text/javascript" src="./resources/jeasyui/datagrid-filter.js"></script>
-                <script type="text/javascript">
-                    $(function () {
-                        var dg = $('#dg').datagrid({
-                            url: 'datagrid33_getdata.php',
-                            pagination: true,
-                            remoteFilter: true,
-                            rownumbers: true
-                        });
-                        dg.datagrid('enableFilter', [{
-                            field: 'listprice',
-                            type: 'numberbox',
-                            options: {precision: 1},
-                            op: ['less', 'greater']
-                        }, {
-                            field: 'unitcost',
-                            type: 'numberbox',
-                            options: {precision: 1},
-                            op: ['less', 'greater']
-                        }]);
-                    });
-                </script>
-
-
+                <select id="selectedReviewerRow" class="easyui-combogrid" style="width:300px" data-options="
+                    panelWidth: 350,
+                    idField: 'per_id',
+                    textField: 'uname',
+                    url: 'getReviewer.php',
+                    method: 'get',
+                    columns: [[
+                        {field:'uname',title:'First Name',width:40},
+                        {field:'fname',title:'Last Name',width:40},
+                        {field:'stree',title:'Street',width:20,align:'right'}
+                    ]],
+                    fitColumns: true">
+                </select>
             </div>
             <div id="review-dlg-buttons">
-                <a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:alert('save')">Select</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" onclick="addNewReviewer()">Add</a>
                 <a href="javascript:void(0)" class="easyui-linkbutton"
                    onclick="javascript:$('#associateReviewerDlg').dialog('close')">Close</a>
             </div>

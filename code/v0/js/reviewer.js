@@ -54,3 +54,32 @@ function deleteReviewer() {
         });
     }
 }
+
+function addNewReviewer() {
+
+    //$('#associateReviewTable').datagrid('reload', {
+    //    //id: row.id,
+    //
+    //});
+    var val = $('#selectedReviewerRow').combogrid('getValue');
+    var row = $('#manuscriptTable').datagrid('getSelected');
+    console.log('0');
+    jQuery.ajax({
+        type: "POST",
+        url: 'saveReview.php',
+        dataType: 'json',
+        data: {functionname: 'addNewReview', arguments: [val, 3]},
+
+        success: function (obj, textstatus) {
+            if (!('error' in obj)) {
+                console.log('1');
+                yourVariable = obj.result;
+            }
+            else {
+                console.log(2)
+                console.log(obj.error);
+            }
+        }
+    });
+    console.log(3);
+}

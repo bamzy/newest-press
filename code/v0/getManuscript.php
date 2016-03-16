@@ -6,14 +6,14 @@ $result = array();
 
 include './model/conn.php';
 
-$query = "select count(*) from manuscript";
+$query = "select count(*) from tbl_manuscript";
 if(!$res = $conn->query($query)){
     die('There was an error running the query [' . $query->error . ']');
 }
 //$rs = mysql_query($query);
 $result["total"] = $res->fetch_assoc();
 
-$query = "select * from manuscript limit $offset,$rows";
+$query = "SELECT tbl_people.`fname` AS authorName, tbl_people.`lname` AS authorFamily, tbl_status.`stat_text` AS `status`, tbl_manuscript.`datesubmitted` AS dateSubmitted , tbl_manuscript.`datestatus` AS dateStatus , tbl_manuscript.`title_orig` AS title , tbl_manuscript.`genre` AS category ,tbl_manuscript.`notes` AS notes FROM tbl_manuscript, tbl_status, tbl_rec, tbl_people WHERE `tbl_manuscript`.`stat_id`= `tbl_status`.`stat_id` AND `tbl_manuscript`.`per_id` = `tbl_people`.`per_id`  limit $offset,$rows";
 if(!$res = $conn->query($query)){
     die('There was an error running the query [' . $query->error . ']');
 }

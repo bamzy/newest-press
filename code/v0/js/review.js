@@ -4,7 +4,7 @@
 var url;
 function assignReviewer() {
 
-    //$('#manuscriptDlg').dialog('open').dialog('setTitle', 'New Manuscript');
+    $('#associateReviewerDlg').dialog('open').dialog('setTitle', 'New Manuscript');
     //$('#manuscriptFm').form('clear');
     //url = 'saveManuscript.php';
 }
