@@ -2,7 +2,7 @@
 //function to connect to database
 function connect(){
 
-$link = mysql_pconnect("localhost","root", "salam");
+$link = mysql_pconnect("localhost","newest", "OZqXiGU&]D");
 
 	if (!$link) {
 
@@ -10,7 +10,7 @@ $link = mysql_pconnect("localhost","root", "salam");
 		return false;
 	}
 
-$db = mysql_select_db('newest_orig', $link);
+$db = mysql_select_db('newest', $link);
 
 	if (!$db) {
 
