@@ -17,12 +17,12 @@ February 2012
 }
 
 #main a, a visited {
-    color: #D55F29;
-    text-decoration: none;
+    /*color: #D55F29;
+    text-decoration: none;*/
 }
 
 #main a:hover {
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 
 #inlinemenu a {
@@ -105,13 +105,13 @@ February 2012
     background: #db966b;
 }
 
-#footer {
+/*#footer {
     clear: both;
     background: #fffbcf;
     color: #a4a657;
     border-top: solid;
     text-align: center;
-}
+}*/
 
 .searchterm {
     font-style: italic;
@@ -126,7 +126,7 @@ February 2012
 }
 
 .pagetitle {
-    font-size: 130%;
+   font-size: 130%;
     font-weight: bold;
 }
 
