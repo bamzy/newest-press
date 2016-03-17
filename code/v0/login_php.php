@@ -1,4 +1,5 @@
 <?php
+//header("Content-Type: application/json");
 session_start();
 printf('<html>
 <head>
@@ -13,9 +14,16 @@ printf('<html>
 		<div id="main"><p>');
 		
 include 'manutrack.php';
-$username=$_POST['uname'];
-$userpass=$_POST['upass'];
-connect();
+//include './model/conn.php';
+
+$rest_json = file_get_contents("php://input");
+$_POST = json_decode($rest_json, true);
+$_POST = parse_str($rest_json);
+$username = $uname;
+$userpass = $upass;
+//$username=$_POST['uname'];
+//$userpass=$_POST['upass'];
+//connect();
 
 //printf ('success: '.$success.'');
 
@@ -33,7 +41,7 @@ if (auth($username, $userpass)) {
 	  	}
 	 
 	    $_SESSION['per_id'] = $uid;
-	    $_SESSION['role_id']=$roleid;
+	$_SESSION['role_id'] = $roleid;
         
 			if ($roleid==3){
 			printf('<script type="text/javascript">
@@ -49,24 +57,28 @@ if (auth($username, $userpass)) {
 			
 			else{
 			printf('<script type="text/javascript">
-			location.replace("mymanuscripts.php");
+			location.replace("newManuscripts.php");
 			</script>');
 			}
 } 
      
 else {
         // didn't auth
-        printf("<p>Authentication failed.</p>");
-        printf('<a href="./login.php">Try again.</a>');
+	include "header.php";
+
+	printf("<div style='height: 300px;text-align: center'><p>Authentication failed <a href=\"./login.php\">Try again.</a>.</p></div>");
+
+	include "footer.php";
+
 }
 
 
 ?>
 
 </p></div> <!--end main-->
-		
-		<div id="sidebar"><?php include 'sidemenu.php' ?></div>
-		<div id="footer">footer stuff</div>
+
+<!--		<div id="sidebar">--><?php //include 'sidemenu.php' ?><!--</div>-->
+<!--		<div id="footer">footer stuff</div>-->
     </div> <!--end wrap-->
 </body>
 </html>

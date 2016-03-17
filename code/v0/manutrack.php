@@ -1,5 +1,6 @@
 <?php
 //function to connect to database
+
 function connect(){
 
 $link = mysql_pconnect("localhost","newest", "OZqXiGU&]D");
@@ -17,7 +18,7 @@ $db = mysql_select_db('newest', $link);
     	die ("That database doesn't exist : " . mysql_error());
     	return false;
 	}
-
+//	include './model/conn.php';
 return true;
 
 } //end connect
@@ -26,19 +27,28 @@ return true;
 
 function auth($username, $userpass){
 
-$safe="bunchwordspiswallopnomeeeenerthang9357211";
-$upass=md5($userpass.$safe);
+	$safe = "bunchwordspiswallopnomeeeenerthang9357211";
+	$upass = md5($userpass . $safe);
 
 //printf("<p>Username: ".$username." Password: ".$userpass."</p>");
 //printf("SELECT upass FROM users WHERE uname LIKE '.$username.'");
 
-$cloud = mysql_query("SELECT pass FROM tbl_people WHERE uname LIKE '$username'");
+	$query = "SELECT pass FROM tbl_people WHERE uname = " . "'" . $username . "'";
+	$conn = new mysqli('localhost', 'root', 'salam', 'newest');
+	if ($conn->connect_errno > 0) {
+		die('Unable to connect to database [' . $conn->connect_error . ']');
+	}
+	if (!$res = $conn->query($query)) {
+		die('There was an error running the query [' . $query->error . ']');
+	}
+//	$cloud = mysql_query($query);
 
-$rows = mysql_num_rows($cloud);
+//$rows = mysql_num_rows($cloud);
+	$row = $res->fetch_assoc();
 
     //printf("rows ".$rows);
-    
-    		if ($rows<1){
+
+	if ($row == null) {
     			
     			printf("That username does not exist. Would you like to <a href='./register.html'>register</a>?");
     			return false;
@@ -47,13 +57,14 @@ $rows = mysql_num_rows($cloud);
 			
 			else{
 
-     			while ($arr = mysql_fetch_assoc($cloud)){
-
-     			$pass=$arr['pass']; }   
+//     			while ($arr = mysql_fetch_assoc($cloud)){
+//
+//     			$pass=$arr['pass']; }
+				$pass = $row;
 
 				//printf("<p>I read pass as ".$pass.", yo.</p>");
 
-			    if ($pass==$upass) {
+				if ($pass['pass'] == $upass) {
 			        
         		return true;
         				
@@ -61,7 +72,7 @@ $rows = mysql_num_rows($cloud);
 
         		else {
 
-        		printf("<p>That's the wrong password.</p>");
+//        		printf("<p>That's the wrong password.</p>");
         		return false;
 
         		}

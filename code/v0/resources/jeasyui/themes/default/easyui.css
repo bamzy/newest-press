@@ -142,7 +142,7 @@
     background: -webkit-linear-gradient(top, #EFF5FF 0, #E0ECFF 100%);
     background: -moz-linear-gradient(top, #EFF5FF 0, #E0ECFF 100%);
     background: -o-linear-gradient(top, #EFF5FF 0, #E0ECFF 100%);
-    background: linear-gradient(to bottom, #A2A503 0, #9E8404 100%);
+    background: linear-gradient(to bottom, #EBEF2A 0, #DB966B 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#EFF5FF, endColorstr=#E0ECFF, GradientType=0);
 }
@@ -1451,7 +1451,7 @@
 
 .tabs-header,
 .tabs-tool {
-    background-color: rgba(156, 158, 6, 0.54);
+    background-color: rgb(219, 150, 107);
 }
 
 .tabs-header-plain {
@@ -2670,7 +2670,7 @@
 
 .slider-v .slider-rule span {
     width: 5px;
-    height: 'auto';
+    height: auto;
     border-left: 0;
     border-width: 1px 0 0 0;
     border-style: solid;
