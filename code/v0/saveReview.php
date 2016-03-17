@@ -1,31 +1,17 @@
 <?php
-//function  addNewReview($man_id,$per_id)
-//{
-//
-//$fullNmae = htmlspecialchars($_REQUEST['name']);
-//$phone = htmlspecialchars($_REQUEST['phone']);
-//$email = htmlspecialchars($_REQUEST['email']);
-//$address = htmlspecialchars($_REQUEST['address']);
-//
-//include 'conn.php';
-//    return null;
-////    $sql = "insert into review(name,phone,email,address) values('$man_id','$per_id')";
-////    $result = @mysql_query($sql);
-////    if ($result) {
-////        echo json_encode(array(
-////            'id' => mysql_insert_id(),
-////
-//////            'address' => $address
-////        ));
-////    } else {
-////        echo json_encode(array('errorMsg' => 'Some errors occured.'));
-////    }
-//}
 header('Content-Type: application/json');
+function addNewReview($id, $idd)
+{
+    $function = $_POST["Method"];
+    call_user_func($function);
+}
 
 $aResult = array();
-
-if (!isset($_POST['functionname'])) {
+if (isset($_POST["Method"])) {
+    $function = $_POST["Method"];
+    call_user_func($function);
+}
+if (!isset($_POST['functionName'])) {
     $aResult['error'] = 'No function name!';
 }
 
@@ -51,7 +37,7 @@ if (!isset($aResult['error'])) {
 
 }
 
-echo json_encode($aResult);
+return json_encode($aResult);
 
 ?>
 

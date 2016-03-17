@@ -64,11 +64,15 @@ function addNewReviewer() {
     var val = $('#selectedReviewerRow').combogrid('getValue');
     var row = $('#manuscriptTable').datagrid('getSelected');
     console.log('0');
+    var data = {};
+    var id = 1, idd = 2;
+    data["Method"] = "test";
     jQuery.ajax({
-        type: "POST",
         url: 'saveReview.php',
+        //data: data,
+        type: "POST",
         dataType: 'json',
-        data: {functionname: 'addNewReview', arguments: [val, 3]},
+        data: {functionName: 'addNewReview', arguments: [id, idd]},
 
         success: function (obj, textstatus) {
             if (!('error' in obj)) {

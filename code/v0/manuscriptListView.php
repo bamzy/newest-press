@@ -38,8 +38,8 @@
                 <tr>
                     <!--<th field="id" width="20">ID</th>-->
                     <th field="title" ,width="200" data-options="sortable:true">Title</th>
-                    <th field="authorName" ,width="30" data-options="sortable:true">Author's Name</th>
-                    <th field="authorFamily" ,width="30" data-options="sortable:true">Author's Family</th>
+                    <th field="authorName" ,width="30" data-options="sortable:true">Author</th>
+                    <!--                    <th field="authorFamily" ,width="30" data-options="sortable:true">Author's Family</th>-->
                     <th field="category" ,width="30" data-options="sortable:true">Category</th>
                     <th field="dateSubmitted" ,width="45" data-options="sortable:true">Submission Date</th>
                     <th field="status" ,width="25" data-options="sortable:true">Status</th>
