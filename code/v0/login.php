@@ -57,7 +57,7 @@ return true;
 						<!--					</td>-->
 					</tr>
 				</TABLE>
-				<p><input type="submit" style="width: 150px;height: 30px" value="login"></p>
+				<input type="submit" style="width: 150px;height: 50px" value="login">
 
 			</form>
 

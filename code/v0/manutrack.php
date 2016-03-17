@@ -34,7 +34,7 @@ function auth($username, $userpass){
 //printf("SELECT upass FROM users WHERE uname LIKE '.$username.'");
 
 	$query = "SELECT pass FROM tbl_people WHERE uname = " . "'" . $username . "'";
-	$conn = new mysqli('localhost', 'root', 'salam', 'newest');
+	$conn = new mysqli('localhost', 'newest', 'OZqXiGU&]D', 'newest');
 	if ($conn->connect_errno > 0) {
 		die('Unable to connect to database [' . $conn->connect_error . ']');
 	}
@@ -92,7 +92,7 @@ session_regenerate_id();
 	}
 
 	if (isset($_REQUEST['_SESSION'])) die("Nothing for you.");
-	
+/**	
 	printf('<html>
 <head>
 <!DOCTYPE html>
@@ -103,7 +103,7 @@ session_regenerate_id();
    <div id="wrap">
 		<div id="header"></div>
 		<div id="main"><p>');
-	
+**/	
 	//printf ('<p>You are logged in as <span class="username">'.$_SESSION['user'].'</span>.</p>');
 }
 

@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli('localhost', 'root', 'salam', 'newest');
+$conn = new mysqli('localhost', 'newest', 'OZqXiGU&]D', 'newest');
 if($conn->connect_errno > 0){
     die('Unable to connect to database [' . $conn->connect_error . ']');
 }

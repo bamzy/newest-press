@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html xmlns:onSelect="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="UTF-8">
+
     <title>Newest Manuscript Tracking System</title>
     <link rel="stylesheet" type="text/css" href="./resources/jeasyui/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="./resources/jeasyui/themes/icon.css">
@@ -15,9 +12,6 @@
     <script type="text/javascript" src="js/mansuscript.js"></script>
     <script type="text/javascript" src="js/reviewer.js"></script>
     <script type="text/javascript" src="js/review.js"></script>
-
-</head>
-<body>
 
 <div id="sidebarMainManuscriptContainer">
 <div id="sidebar">
