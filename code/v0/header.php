@@ -9,8 +9,9 @@
 <div class="header">
 	<div class="top">
 		<div class="top-inner">
-			<a href="#">Sign in</a>&nbsp;&nbsp;|&nbsp;
+			<!--<a href="#">Sign in</a>&nbsp;&nbsp;|&nbsp;
 			<a href="#">Contact</a>
+			-->
 		</div>
 	</div>
 	
