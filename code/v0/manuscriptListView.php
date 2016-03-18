@@ -30,10 +30,9 @@
                    rownumbers="true" singleSelect="true">
                 <thead>
                 <tr>
-                    <!--<th field="id" width="20">ID</th>-->
+                    <th field="id" width="20" hidden="true">ID</th>
                     <th field="title" ,width="200" data-options="sortable:true">Title</th>
                     <th field="authorName" ,width="30" data-options="sortable:true">Author</th>
-                    <!--                    <th field="authorFamily" ,width="30" data-options="sortable:true">Author's Family</th>-->
                     <th field="category" ,width="30" data-options="sortable:true">Category</th>
                     <th field="dateSubmitted" ,width="45" data-options="sortable:true">Submission Date</th>
                     <th field="status" ,width="25" data-options="sortable:true">Status</th>
@@ -108,13 +107,12 @@
                    singleSelect="true">
                 <thead>
                 <tr>
-                    <!--<th field="id" width="50">ID</th>-->
-                    <th field="reviewerName" width="50">Reviewer Name</th>
-                    <!--<th field="manuscriptTitle" width="50">Manuscript Title</th>-->
-                    <th field="reviewDescription" width="50">Review Description</th>
-                    <th field="finalDecision" width="50">Final Decision</th>
-                    <th field="assignmentDate" width="50">Assignment Date</th>
-                    <th field="decisionDate" width="50">Decision Date</th>
+                    <th field="rev_id" width="0" hidden="true">ID</th>
+                    <th field="reviewer" width="50">Reviewer Name</th>
+                    <th field="currentStat" width="50">Current Status</th>
+                    <th field="dateIn" width="50">Assignment Date</th>
+                    <th field="dateRec" width="50">Submitted Date</th>
+                    <th field="comment" width="50">Comment</th>
                 </tr>
                 </thead>
             </table>

@@ -63,30 +63,42 @@ function deleteReview() {
 //});
 
 function loadAssociatedReviewers() {
-    var row = $('#manuscriptTable').datagrid('getSelected');
-    if (row) {
-        //$.messager.confirm('Confirm', 'Are you sure you want to destroy this manuscript?', function (r) {
-        //    if (r) {
-        //$.post('listAssociatedReviewers.php', {id: row.id}, function (result) {
-        //$('#associateReviewTable').datagrid('reload');	// reload the user data
-        $('#associateReviewTable').datagrid('reload', {
-            id: row.id,
-
-        });
-        //$.post('listAssociatedReviewers.php', {id: 1}, function (result) {
-        //    if (result) {
-        //        console.log('1\n');
-        //        $('#associateReviewTable').datagrid('reload');	// reload the user data
-        //    } else {
-        //
-        //        console.log(result.errorMsg);
-        //        $.messager.show({	// show error message
-        //            title: 'Error',
-        //            msg: result.errorMsg
-        //        });
-        //    }
-        //}, 'json');
-    }
+    //var row = $('#manuscriptTable').datagrid('getSelected');
+    //if (row) {
+    //    //$.messager.confirm('Confirm', 'Are you sure you want to destroy this manuscript?', function (r) {
+    //    //    if (r) {
+    //    //$.post('listAssociatedReviewers.php', {id: row.id}, function (result) {
+    //    //$('#associateReviewTable').datagrid('reload');	// reload the user data
+    //    $('#associateReviewTable').datagrid('reload', {
+    //        id: row.id,
+    //
+    //    });
+    //    $.post('listAssociatedReviewers.php', {id: row.id}, function (result) {
+    //        if (result) {
+    //            console.log('1\n');
+    //            $('#associateReviewTable').datagrid('reload');	// reload the user data
+    //        } else {
+    //
+    //            console.log(result.errorMsg);
+    //            $.messager.show({	// show error message
+    //                title: 'Error',
+    //                msg: result.errorMsg
+    //            });
+    //        }
+    //    }, 'json');
+    //}
     //});
+
+
+    var row = $('#manuscriptTable').datagrid('getSelected');
+    //if (row) {
+    //    //$('#manuscriptDlg').dialog('open').dialog('setTitle', 'Edit Manuscript');
+    //    //$('#manuscriptFm').form('load', row);
+    //    window.alert(row.id);
+    //    url = 'getReview.php?id=' + row.id;
+    //}
+    $('#associateReviewTable').datagrid('reload', {
+        id: row.id,
+    });
 
 }

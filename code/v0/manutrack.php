@@ -3,7 +3,7 @@
 
 function connect(){
 
-$link = mysql_pconnect("localhost","newest", "OZqXiGU&]D");
+	$link = mysql_pconnect("localhost", "root", "salam");
 
 	if (!$link) {
 
