@@ -13,13 +13,16 @@ if(!$res = $conn->query($query)){
 //$rs = mysql_query($query);
 $result["total"] = $res->fetch_assoc();
 
-$query = "SELECT DISTINCT tbl_manuscript.man_id AS id, CONCAT(tbl_people.`fname`,' ',`tbl_people`.`lname`) AS authorName, tbl_status.`stat_text` AS `status`, tbl_manuscript.`dateSubmitted` AS dateSubmitted , tbl_manuscript.`dateStatus` AS dateStatus , tbl_manuscript.`title_orig` AS title , tbl_manuscript.`genre` AS category ,tbl_manuscript.`notes` AS notes FROM tbl_manuscript, tbl_status, tbl_rec, tbl_people WHERE `tbl_manuscript`.`stat_id`= `tbl_status`.`stat_id` AND `tbl_manuscript`.`per_id` = `tbl_people`.`per_id`  limit $offset,$rows";
+$query = "SELECT DISTINCT tbl_manuscript.man_id AS id, CONCAT(tbl_people.`fname`,' ',tbl_people.`lname`) AS authorName, tbl_status.`stat_text` AS `status`, tbl_manuscript.`dateSubmitted` AS dateSubmitted , tbl_manuscript.`dateStatus` AS dateStatus , tbl_manuscript.`title_orig` AS title , tbl_manuscript.`genre` AS category ,tbl_manuscript.`notes` AS notes, tbl_doc.`doc_filename`AS downloadLink FROM tbl_manuscript, tbl_status, tbl_rec, tbl_people,tbl_doc WHERE `tbl_manuscript`.`stat_id`= `tbl_status`.`stat_id` AND `tbl_manuscript`.`per_id` = `tbl_people`.`per_id` AND `tbl_doc`.`man_id` = `tbl_manuscript`.`man_id`  limit $offset,$rows";
+//$query = "SELECT DISTINCT tbl_manuscript.man_id AS id, CONCAT(tbl_people.`fname`,' ',tbl_people.`lname`) AS authorName, tbl_status.`stat_text` AS `status`, tbl_manuscript.`dateSubmitted` AS dateSubmitted , tbl_manuscript.`dateStatus` AS dateStatus , tbl_manuscript.`title_orig` AS title , tbl_manuscript.`genre` AS category ,tbl_manuscript.`notes` AS notes, `tbl_doc`.`doc_filename` AS downloadLink FROM tbl_manuscript, tbl_status, tbl_rec, tbl_people,tbl_doc WHERE `tbl_manuscript`.`stat_id`= `tbl_status`.`stat_id` AND `tbl_manuscript`.`per_id` = `tbl_people`.`per_id` AND `tbl_doc`.`man_id` = `tbl_manuscript`.`man_id`  limit $offset,$rows";
+//$query = "SELECT DISTINCT tbl_manuscript.man_id AS id, CONCAT(`tbl_people`.`fname`,' ',`tbl_people`.`lname`) AS authorName, tbl_status.`stat_text` AS `status`, tbl_manuscript.`dateSubmitted` AS dateSubmitted , tbl_manuscript.`dateStatus` AS dateStatus , tbl_manuscript.`title_orig` AS title , tbl_manuscript.`genre` AS category ,tbl_manuscript.`notes` AS notes, CONCAT('aaa' ,tbl_doc.`doc_filename`, 'bbb') AS downloadLink FROM tbl_manuscript, tbl_status, tbl_rec, tbl_people,tbl_doc WHERE `tbl_manuscript`.`stat_id`= `tbl_status`.`stat_id` AND `tbl_manuscript`.`per_id` = `tbl_people`.`per_id` AND `tbl_doc`.`man_id` = `tbl_manuscript`.`man_id` limit $offset,$rows";
 if(!$res = $conn->query($query)){
     die('There was an error running the query [' . $query->error . ']');
 }
 
 $items = array();
 while ($row = $res->fetch_assoc()) {
+    $row['downloadLink'] = "<a href=\"./download.php?fileName=" . $row['downloadLink'] . "\">Click Here </a>";
     array_push($items, $row);
 }
 $result["rows"] = $items;

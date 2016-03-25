@@ -5,6 +5,7 @@ session_start();
 
 		
 include 'manutrack.php';
+include './model/conn.php';
 //include './model/conn.php';
 
 $rest_json = file_get_contents("php://input");
@@ -22,18 +23,23 @@ $userpass = $upass;
 if (auth($username, $userpass)) {
 		
 		// auth okay, setup session
-		
+
         $_SESSION['user'] = $username;
+    $query = "SELECT per_id, role_id FROM tbl_people WHERE uname LIKE  '{$username}'";
+//		$query = "select count(*) from tbl_people where role_id = {$authorRoleId}";
+    if (!$res = $conn->query($query)) {
+        die('There was an error running the query [' . $query->error . ']');
+    }
 
-        $cloud = mysql_query("SELECT per_id, role_id FROM tbl_people WHERE uname LIKE '$username'");
+//        $cloud = mysql_query("SELECT per_id, role_id FROM tbl_people WHERE uname LIKE '$username'");
 
-     	while ($arr = mysql_fetch_assoc($cloud)){
-     	$uid=$arr['per_id'];
-     	$roleid=$arr['role_id'];
+    while ($arr = $res->fetch_assoc()) {
+        $uid = $arr['per_id'];
+        $roleid = $arr['role_id'];
 	  	}
 	 
 	    $_SESSION['per_id'] = $uid;
-	$_SESSION['role_id'] = $roleid;
+    $_SESSION['role_id'] = $roleid;
         
 			if ($roleid==3){
 			printf('<script type="text/javascript">

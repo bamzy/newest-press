@@ -2,6 +2,7 @@
 //function to connect to database
 function connect(){
 
+<<<<<<< HEAD
 $link = mysql_connect("localhost","newest", "OZqXiGU&]D","");
 
 	if (!$link) {
@@ -19,6 +20,27 @@ $db = mysql_select_db('newest', $link);
 	}
 
 return true;
+=======
+    return include_once('./model/conn.php');
+
+//	$link = mysql_pconnect("localhost", "root", "salam");
+//
+//	if (!$link) {
+//
+//    	die('Not connected : ' . mysql_error());
+//		return false;
+//	}
+//
+//$db = mysql_select_db('newest', $link);
+//
+//	if (!$db) {
+//
+//    	die ("That database doesn't exist : " . mysql_error());
+//    	return false;
+//	}
+//	include './model/conn.php';
+// true;
+>>>>>>> abd81482364f328cb1e30ff10902557ca2c7bb12
 
 } //end connect
 
