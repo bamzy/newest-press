@@ -98,7 +98,8 @@ February 2012
     text-decoration: none;
 }
 
-#sidebar p {
+#sidebar p a {
+	display:block;
     padding: 2px;
     padding-left: 10px;
     /*border: double;*/
