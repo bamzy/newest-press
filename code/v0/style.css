@@ -29,7 +29,9 @@ ul{
 a{
 	text-decoration: none;
 }
-
+a:visited{
+	color:blue;
+}
 .clear{
 	clear: both;
 }

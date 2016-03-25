@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 <title>NewWest Press - Manuscript Tracking System</title>
 <link rel="stylesheet" href="newest.css" type="text/css">
-
+<style>
+input,select{margin-bottom:9px;height:22px}
+</style>
 <script type="text/javascript">
 
 function validateForm() {
@@ -109,18 +111,28 @@ return true;
 </head>
 
 <body>
- <div id="wrap">
-		<div id="header"></div>
-		<div id="main"><p><span class="pagetitle">Author Registration</span></p><p>
+
+	<?php include 'header.php'?>
+  <div id="main" class="main">
+
+		<div id="sidebar"> <?php include 'sidemenu.php' ?> </div>
+		
 		<form name="reg" action="reg.php" onsubmit="return validateForm();" method="post" >
-			<table>
-					<tr><td align="right">Username:</td><td><input type="text" size=50 maxlength="25" name="uname"></td></tr>
-					<tr><td></td><td><span class="note">*username must be unique, and cannot be changed</span></td></tr>
-					<tr><td align="right">First name:</td><td><input type="text" size=50 maxlength="50" name="ufname"></td></tr>
-					<tr><td align="right">Last name:</td><td><input type="text" size=50 maxlength="75" name="ulname"></td></tr>
-					<tr><td align="right">Street:</td><td><input type="text" size=50 maxlength="75" name="street"></td></tr>
-					<tr><td align="right">City:</td><td><input type="text" size=50 maxlength="75" name="city"></td></tr>
-					<tr><td align="right">Province:</td><td><select name ="province">
+			
+					<p><span class="pagetitle" style="margin:50px;">Author Registration</span></p>
+			<p style="margin-left:222px">
+					Username:<br><span class="note">(It must be unique, and cannot be changed)</span><br><input type="text" size=50 maxlength="25" name="uname"><br>
+					
+					
+					 First name:<br><input type="text" size=50 maxlength="50" name="ufname"> <br>
+					  
+					 Last name:<br><input type="text" size=50 maxlength="75" name="ulname"> <br>
+					  
+					 Street:<br><input type="text" size=50 maxlength="75" name="street"><br>
+					 
+					 City:<br><input type="text" size=50 maxlength="75" name="city"><br>
+					 
+					 Province:<br><select name ="province">
   						<option value="AB">Alberta</option>
   						<option value="BC">British Columbia</option>
   						<option value="MB">Manitoba</option>
@@ -134,19 +146,20 @@ return true;
   						<option value="QC">Quebec</option>
   						<option value="SK">Saskatchewan</option>
   						<option value="YT">Yukon</option>
-					</select> </td></tr>
-					<tr><td align="right">Postal code:</td><td><input type="text" size=7 maxlength="7" name="postal"></td></tr>
-					<tr><td align="right">Email address:</td><td><input type="text" size=50 maxlength="75" name="uemail"></td></tr>
-					<tr><td></td><td><span class="note">*An email address is necessary in case you forget your password.</span></td></tr>
-					<tr><td align="right">Password:</td><td><input type="password" size=50 maxlength="20" name="upass1"></td></tr>
-					<tr><td align="right">Enter password again:</td><td><input type="password" size=50 maxlength="20" name="upass2"></td></tr>
-					<tr><td align="right"></td><td><input type="submit" value="Register"></td></tr>
-			</table>
+					</select><br> 
+					
+					 Postal code:<br><input type="text" size=7 maxlength="7" name="postal"><br>
+					 
+					 Email address:<br><span class="note">(This is necessary in case you forget your password)</span><br><input type="text" size=50 maxlength="75" name="uemail"><br>
+					      
+					 Password:<br><input type="password" size=50 maxlength="20" name="upass1"><br>  
+					 
+					 Enter password again:<br><input type="password" size=50 maxlength="20" name="upass2"><br>  
+					 <input type="submit" value="Register" style="height:25px;">  
+			</p>
 			</form>
-		</p>
-		</div>
-		<div id="sidebar"><?php include 'sidemenu.php' ?></div>
-		<div id="footer">footer stuff</div>
-</div>
+
+	</div>
+		<div id="footer"><?php include 'footer.php'?></div>
 </body>
 </html>

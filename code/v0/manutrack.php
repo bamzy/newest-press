@@ -1,9 +1,8 @@
 <?php
 //function to connect to database
-
 function connect(){
 
-	$link = mysql_pconnect("localhost", "root", "salam");
+$link = mysql_connect("localhost","newest", "OZqXiGU&]D","");
 
 	if (!$link) {
 
@@ -18,7 +17,7 @@ $db = mysql_select_db('newest', $link);
     	die ("That database doesn't exist : " . mysql_error());
     	return false;
 	}
-//	include './model/conn.php';
+
 return true;
 
 } //end connect
@@ -81,6 +80,7 @@ function auth($username, $userpass){
 
 } //ends auth
 
+
 function sess(){
 
 session_start();
@@ -92,7 +92,7 @@ session_regenerate_id();
 	}
 
 	if (isset($_REQUEST['_SESSION'])) die("Nothing for you.");
-/**	
+	
 	printf('<html>
 <head>
 <!DOCTYPE html>
@@ -100,10 +100,8 @@ session_regenerate_id();
 <link rel="stylesheet" href="newest.css" type="text/css">
 </head>
 <body> 
-   <div id="wrap">
-		<div id="header"></div>
-		<div id="main"><p>');
-**/	
+   <div id="wrap">');
+	
 	//printf ('<p>You are logged in as <span class="username">'.$_SESSION['user'].'</span>.</p>');
 }
 

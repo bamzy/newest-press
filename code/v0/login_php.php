@@ -1,17 +1,8 @@
 <?php
 //header("Content-Type: application/json");
+//echo '1';
 session_start();
-printf('<html>
-<head>
-<!DOCTYPE html>
-<title>NeWest Press - Manuscript Tracking System</title>
-<link rel="stylesheet" href="newest.css" type="text/css">
-</head>
 
-<body> 
-   <div id="wrap">
-		<div id="header"></div>
-		<div id="main"><p>');
 		
 include 'manutrack.php';
 //include './model/conn.php';
@@ -21,6 +12,7 @@ $_POST = json_decode($rest_json, true);
 $_POST = parse_str($rest_json);
 $username = $uname;
 $userpass = $upass;
+//echo $uname . "   " . $upass;
 //$username=$_POST['uname'];
 //$userpass=$_POST['upass'];
 //connect();
@@ -75,9 +67,9 @@ else {
 
 ?>
 
-</p></div> <!--end main-->
+ <!--end main-->
 
-<!--		<div id="sidebar">--><?php //include 'sidemenu.php' ?><!--</div>-->
+<!--		<div id="sidebar"><?php //include 'sidemenu.php' ?><!--</div>
 <!--		<div id="footer">footer stuff</div>-->
     </div> <!--end wrap-->
 </body>

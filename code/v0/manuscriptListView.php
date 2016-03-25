@@ -1,4 +1,3 @@
-
     <title>Newest Manuscript Tracking System</title>
     <link rel="stylesheet" type="text/css" href="./resources/jeasyui/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="./resources/jeasyui/themes/icon.css">
