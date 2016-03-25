@@ -38,7 +38,7 @@
                     <th field="status" ,width="25" data-options="sortable:true">Status</th>
                     <th field="notes" ,width="35" data-options="sortable:true">Notes</th>
                     <th field="dateStatus" ,width="75" data-options="sortable:true">Finalized Date</th>
-                    <th field="content" ,width="45">Download</th>
+                    <th field="downloadLink" ,width="45">Download</th>
                 </tr>
                 </thead>
             </table>

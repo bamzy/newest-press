@@ -3,23 +3,25 @@
 
 function connect(){
 
-	$link = mysql_pconnect("localhost", "root", "salam");
+    return include_once('./model/conn.php');
 
-	if (!$link) {
-
-    	die('Not connected : ' . mysql_error());
-		return false;
-	}
-
-$db = mysql_select_db('newest', $link);
-
-	if (!$db) {
-
-    	die ("That database doesn't exist : " . mysql_error());
-    	return false;
-	}
+//	$link = mysql_pconnect("localhost", "root", "salam");
+//
+//	if (!$link) {
+//
+//    	die('Not connected : ' . mysql_error());
+//		return false;
+//	}
+//
+//$db = mysql_select_db('newest', $link);
+//
+//	if (!$db) {
+//
+//    	die ("That database doesn't exist : " . mysql_error());
+//    	return false;
+//	}
 //	include './model/conn.php';
-return true;
+// true;
 
 } //end connect
 
