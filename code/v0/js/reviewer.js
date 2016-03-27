@@ -29,8 +29,9 @@ function saveReviewer() {
                     msg: result.errorMsg
                 });
             } else {
+
                 $('#reviewerDlg').dialog('close');		// close the dialog
-                $('#ReviewerTable').datagrid('reload');	// reload the user data
+                $('#reviewerTable').datagrid('reload');	// reload the user data
             }
         }
     });

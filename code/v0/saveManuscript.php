@@ -1,11 +1,13 @@
 <?php
-
-$title = htmlspecialchars($_REQUEST['title']);
-$author = htmlspecialchars($_REQUEST['author']);
-$category = htmlspecialchars($_REQUEST['category']);
-$uploadedFile = $_FILES['uploadedFile'];
-$receivedDate = htmlspecialchars($_REQUEST['receivedDate']);
-$msText = htmlspecialchars($_REQUEST['msText']);
+$rest_json = file_get_contents("php://input");
+$_POST = json_decode($rest_json, true);
+$_POST = parse_str($rest_json);
+$title = htmlspecialchars($_POST['title']);
+//$author = htmlspecialchars($_POST['author']);
+//$category = htmlspecialchars($_POST['category']);
+//$uploadedFile = $_FILES['uploadedFile'];
+//$receivedDate = htmlspecialchars($_POST['receivedDate']);
+//$msText = htmlspecialchars($_POST['msText']);
 
 include 'conn.php';
 
@@ -96,7 +98,7 @@ try {
 //    }
 
 
-    $target_dir = "uploads/";
+    $target_dir = "upload/";
     $target_file = $target_dir . basename($_FILES["uploadedFile"]["name"]);
     $uploadOk = 1;
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);

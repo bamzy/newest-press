@@ -4,10 +4,13 @@ $fullNmae = htmlspecialchars($_REQUEST['name']);
 $phone = htmlspecialchars($_REQUEST['phone']);
 $email = htmlspecialchars($_REQUEST['email']);
 $address = htmlspecialchars($_REQUEST['address']);
+$rest_json = file_get_contents("php://input");
+$_POST = json_decode($rest_json, true);
+$_POST = parse_str($rest_json);
 
 include 'conn.php';
 
-$sql = "insert into reviewer(name,phone,email,address) values('$fullNmae','$phone','$email','$address')";
+$sql = "insert into tbl_people(name,phone,email,address) values('$fullNmae','$phone','$email','$address')";
 $result = @mysql_query($sql);
 if ($result) {
     echo json_encode(array(

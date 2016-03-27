@@ -1,13 +1,16 @@
 <?php
-$page = isset($_POST['page']) ? intval($_POST['page']) : 1;
-$rows = isset($_POST['rows']) ? intval($_POST['rows']) : 10;
-$id = isset($_POST['id']) ? intval($_POST['id']) : -1;
-$offset = ($page - 1) * $rows;
-$result = array();
 
 $rest_json = file_get_contents("php://input");
 $_POST = json_decode($rest_json, true);
-$_POST = parse_str($rest_json, $output);
+$_POST = parse_str($rest_json, $parameters);
+
+$page = isset($parameters['page']) ? intval($parameters['page']) : 1;
+$rows = isset($parameters['rows']) ? intval($parameters['rows']) : 11;
+$id = isset($parameters['id']) ? intval($parameters['id']) : -1;
+$offset = ($page - 1) * $rows;
+$result = array();
+
+
 if (isset($output['id']))
     $id = $output['id'];
 else $id = -1;
