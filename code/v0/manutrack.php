@@ -2,25 +2,25 @@
 //function to connect to database
 function connect(){
 
-<<<<<<< HEAD
-$link = mysql_connect("localhost","newest", "OZqXiGU&]D","");
-
-	if (!$link) {
-
-    	die('Not connected : ' . mysql_error());
-		return false;
-	}
-
-$db = mysql_select_db('newest', $link);
-
-	if (!$db) {
-
-    	die ("That database doesn't exist : " . mysql_error());
-    	return false;
-	}
-
-return true;
-=======
+//<<<<<<< HEAD
+//$link = mysql_connect("localhost","newest", "OZqXiGU&]D","");
+//
+//	if (!$link) {
+//
+//    	die('Not connected : ' . mysql_error());
+//		return false;
+//	}
+//
+//$db = mysql_select_db('newest', $link);
+//
+//	if (!$db) {
+//
+//    	die ("That database doesn't exist : " . mysql_error());
+//    	return false;
+//	}
+//
+//return true;
+//=======
     return include_once('./model/conn.php');
 
 //	$link = mysql_pconnect("localhost", "root", "salam");
@@ -40,7 +40,7 @@ return true;
 //	}
 //	include './model/conn.php';
 // true;
->>>>>>> abd81482364f328cb1e30ff10902557ca2c7bb12
+//>>>>>>> abd81482364f328cb1e30ff10902557ca2c7bb12
 
 } //end connect
 
@@ -70,12 +70,12 @@ function auth($username, $userpass){
     //printf("rows ".$rows);
 
 	if ($row == null) {
-    			
+
     			printf("That username does not exist. Would you like to <a href='./register.html'>register</a>?");
     			return false;
-    			
+
 			}
-			
+
 			else{
 
 //     			while ($arr = mysql_fetch_assoc($cloud)){
@@ -86,9 +86,9 @@ function auth($username, $userpass){
 				//printf("<p>I read pass as ".$pass.", yo.</p>");
 
 				if ($pass['pass'] == $upass) {
-			        
+
         		return true;
-        				
+
         		}
 
         		else {
@@ -97,7 +97,7 @@ function auth($username, $userpass){
         		return false;
 
         		}
-        
+
     		}
 
 } //ends auth
@@ -109,21 +109,21 @@ session_start();
 
 session_regenerate_id();
 
-	if(!isset($_SESSION['user'])){ 
+	if (!isset($_SESSION['user'])) {
     	header("Location: login.php");
 	}
 
 	if (isset($_REQUEST['_SESSION'])) die("Nothing for you.");
-	
+
 	printf('<html>
 <head>
 <!DOCTYPE html>
 <title>NeWest Press - Manuscript Tracking System</title>
 <link rel="stylesheet" href="newest.css" type="text/css">
 </head>
-<body> 
+<body>
    <div id="wrap">');
-	
+
 	//printf ('<p>You are logged in as <span class="username">'.$_SESSION['user'].'</span>.</p>');
 }
 
@@ -876,8 +876,8 @@ function peoplebyname(){
 		<tr><td>Name:</td><td><a href="viewauthor.php?perid='.$perid.'">'.$reviewer.'</a></td><td></td></tr>
 		<tr><td>Username:</td><td>'.$arr['uname'].'</td><td></td></tr>
 		<tr><td>Address:</td><td>'.$arr['street'].'</td><td></td></tr>
-		<tr><td></td</tr></td><td>'.$arr['city'].', '.$arr['province'].'</td><td></td></tr>
-		<tr><td></td</tr></td><td>'.$arr['postal'].'</td><td></td></tr>
+		<tr><td></td></tr></td><td>' . $arr['city'] . ', ' . $arr['province'] . '</td><td></td></tr>
+		<tr><td></td></tr></td><td>' . $arr['postal'] . '</td><td></td></tr>
 		<tr><td>Email:</td><td>'.$arr['email'].'</td><td></td></tr>
 		<tr><td>Date created:</td><td>'.$arr['created'].'</td><td></td></tr>');
 		printf('</table></div>');
@@ -905,8 +905,8 @@ function peoplebydate(){
 		<tr><td>Name:</td><td><a href="viewauthor.php?perid='.$perid.'">'.$reviewer.'</a></td><td></td></tr>
 		<tr><td>Username:</td><td>'.$arr['uname'].'</td><td></td></tr>
 		<tr><td>Address:</td><td>'.$arr['street'].'</td><td></td></tr>
-		<tr><td></td</tr></td><td>'.$arr['city'].', '.$arr['province'].'</td><td></td></tr>
-		<tr><td></td</tr></td><td>'.$arr['postal'].'</td><td></td></tr>
+		<tr><td></td></tr></td><td>' . $arr['city'] . ', ' . $arr['province'] . '</td><td></td></tr>
+		<tr><td></td></tr></td><td>' . $arr['postal'] . '</td><td></td></tr>
 		<tr><td>Email:</td><td>'.$arr['email'].'</td><td></td></tr>
 		<tr><td>Date created:</td><td>'.$arr['created'].'</td><td></td></tr>');
 		printf('</table></div>');
@@ -959,8 +959,8 @@ function getauthkw($trunc, $keywords){
 			<tr><td>Name:</td><td><a href="viewauthor.php?perid='.$perid.'">'.$name.'</a></td><td></td></tr>
 			<tr><td>Username:</td><td>'.$arr['uname'].'</td><td></td></tr>
 			<tr><td>Address:</td><td>'.$arr['street'].'</td><td></td></tr>
-			<tr><td></td</tr></td><td>'.$arr['city'].', '.$arr['province'].'</td><td></td></tr>
-			<tr><td></td</tr></td><td>'.$arr['postal'].'</td><td></td></tr>
+			<tr><td></td></tr></td><td>' . $arr['city'] . ', ' . $arr['province'] . '</td><td></td></tr>
+			<tr><td></td></tr></td><td>' . $arr['postal'] . '</td><td></td></tr>
 			<tr><td>Email:</td><td>'.$arr['email'].'</td><td></td></tr>
 			<tr><td>Date created:</td><td>'.$arr['created'].'</td><td></td></tr>');
 			printf('</table></div>');
@@ -1004,8 +1004,8 @@ function getauthbyrole($roleid){
 			<tr><td>Name:</td><td><a href="viewauthor.php?perid='.$perid.'">'.$name.'</a></td><td></td></tr>
 			<tr><td>Username:</td><td>'.$arr['uname'].'</td><td></td></tr>
 			<tr><td>Address:</td><td>'.$arr['street'].'</td><td></td></tr>
-			<tr><td></td</tr></td><td>'.$arr['city'].', '.$arr['province'].'</td><td></td></tr>
-			<tr><td></td</tr></td><td>'.$arr['postal'].'</td><td></td></tr>
+			<tr><td></td></tr></td><td>' . $arr['city'] . ', ' . $arr['province'] . '</td><td></td></tr>
+			<tr><td></td></tr></td><td>' . $arr['postal'] . '</td><td></td></tr>
 			<tr><td>Email:</td><td>'.$arr['email'].'</td><td></td></tr>
 			<tr><td>Date created:</td><td>'.$arr['created'].'</td><td></td></tr>');
 			printf('</table></div>');
@@ -1032,8 +1032,8 @@ function peoplebyuname(){
 		<tr><td>Account #:</td><td>'.$perid.'</td><td></td></tr>
 		<tr><td>Name:</td><td><a href="viewauthor.php?perid='.$perid.'">'.$reviewer.'</a></td><td></td></tr>
 		<tr><td>Address:</td><td>'.$arr['street'].'</td><td></td></tr>
-		<tr><td></td</tr></td><td>'.$arr['city'].', '.$arr['province'].'</td><td></td></tr>
-		<tr><td></td</tr></td><td>'.$arr['postal'].'</td><td></td></tr>
+		<tr><td></td></tr></td><td>' . $arr['city'] . ', ' . $arr['province'] . '</td><td></td></tr>
+		<tr><td></td></tr></td><td>' . $arr['postal'] . '</td><td></td></tr>
 		<tr><td>Email:</td><td>'.$arr['email'].'</td><td></td></tr>
 		<tr><td>Date created:</td><td>'.$arr['created'].'</td><td></td></tr>');
 		printf('</table></div>');
