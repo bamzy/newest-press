@@ -28,7 +28,7 @@
                        toolbar="#manuscriptToolbar" pagination="true"
                        remoteSort="false"
                        multiSort="true"
-                       fitColumns="true"
+                       fitColumns="false"
                        rownumbers="true" singleSelect="true">
                     <thead>
                     <tr>
@@ -38,7 +38,7 @@
                         <th field="category" ,width="30" data-options="sortable:true">Category</th>
                         <th field="dateSubmitted" ,width="45" data-options="sortable:true">Submission Date</th>
                         <th field="status" ,width="25" data-options="sortable:true">Status</th>
-                        <th field="notes" ,width="35" data-options="sortable:true">Notes</th>
+                        <th field="notes" ,width="35" data-options="sortable:false">Notes</th>
                         <th field="dateStatus" ,width="75" data-options="sortable:true">Finalized Date</th>
                         <th field="downloadLink" ,width="45">Download</th>
                     </tr>
@@ -54,14 +54,14 @@
                     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true"
                        onclick="deleteManuscript()">Delete Manuscript</a>
                     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-large-smartart" plain="true"
-                       onclick="loadAssociatedReviewers()">Show Assigned Reviewers</a>
+                       onclick="loadAssociatedReviewers()">Load Assigned Reviewers</a>
                 </div>
-                <div id="manuscriptDlg" class="easyui-dialog"
+                <div id="editManuscriptDlg" class="easyui-dialog"
                      style="top: 30% ;width:600px;height:400px;padding:10px 20px"
-                     closed="true" buttons="#manuscript-dlg-buttons">
-                    <div class="ftitle">Add Manuscript</div>
+                     closed="true" buttons="#edit-manuscript-dlg-buttons">
+                    <div class="ftitle">Edit Manuscript</div>
                     <!--                    <form id="manuscriptFm" method="post" >-->
-                    <form id="manuscriptFm" method="post" enctype="multipart/form-data">
+                    <form id="editManuscriptFm" method="post" enctype="multipart/form-data">
                         <div class="fitem">
                             <label>Title:</label>
                             <input id='title' name="title" class="easyui-textbox" style="width: 300px" required="true">
@@ -91,29 +91,94 @@
                         </div>
 
                         <div class="fitem">
-                            <label>Upload File:</label>
-                            <input id='uploadedFile' name="uploadedFile" class="easyui-filebox" style="width:300px;">
+                            <label>Notes:</label>
+                            <input id="notes" name="notes" class="easyui-textbox" name="notes" disabled="true"
+                                   data-options="multiline:true" style="width:400px;height: 200px">
                         </div>
-                        <div class="fitem">
-                            <label>Or</label>
 
-                        </div>
-                        <div class="fitem">
-                            <label>Paste Text:</label>
-                            <input id='msText' name="msText" class="easyui-textbox" data-options="multiline:true"
-                                   style="width:530px;height: 300px">
-                        </div>
+                        <!--                        <div class="fitem">-->
+                        <!--                            <label>Upload File:</label>-->
+                        <!--                            <input id='uploadedFile' name="uploadedFile" class="easyui-filebox" style="width:300px;">-->
+                        <!--                        </div>-->
+                        <!--                        <div class="fitem">-->
+                        <!--                            <label>Or</label>-->
+                        <!---->
+                        <!--                        </div>-->
+                        <!--                        <div class="fitem">-->
+                        <!--                            <label>Paste Text:</label>-->
+                        <!--                            <input id='msText' name="msText" class="easyui-textbox" data-options="multiline:true"-->
+                        <!--                                   style="width:530px;height: 300px">-->
+                        <!--                        </div>-->
                     </form>
 
                 </div>
-                <div id="manuscript-dlg-buttons">
+
+                <div id="addManuscriptDlg" class="easyui-dialog"
+                     style="top: 30% ;width:600px;height:400px;padding:10px 20px"
+                     closed="true" buttons="#add-manuscript-dlg-buttons">
+                    <div class="ftitle">Add Manuscript</div>
+                    <!--                    <form id="manuscriptFm" method="post" >-->
+                    <form id="editManuscriptFm" method="post" enctype="multipart/form-data">
+                        <div class="fitem">
+                            <label>Title:</label>
+                            <input id='title' name="title" class="easyui-textbox" style="width: 300px" required="true">
+                        </div>
+                        <div class="fitem">
+                            <label>Author:</label>
+                            <input id='authorName' name="authorName" class="easyui-combobox" style="width: 300px"
+                                   data-options="valueField:'id', textField:'authorName',url:'getAuthorSummary.php'"
+                                   required="true">
+                        </div>
+                        <div class="fitem">
+                            <label>Category:</label>
+                            <input id="category" name="category" class="easyui-combobox" name="category"
+                                   data-options="valueField:'id',textField:'categoryName',url:'getCategorySummary.php',panelHeight:'auto',">
+                        </div>
+
+                        <div class="fitem">
+                            <label>Received Date:</label>
+                            <input id='dateSubmitted' name="dateSubmitted" class="easyui-datebox"
+                                   data-options="required:true,showSeconds:false,showHours:false" value="3/4/2015 2:3"
+                                   style="width:150px">
+                        </div>
+                        <div class="fitem">
+                            <label>Status:</label>
+                            <input id="status" name="status" class="easyui-combobox" name="status"
+                                   data-options="valueField:'stat_id',textField:'stat_text',url:'getStatusSummary.php',panelHeight:'auto',">
+                        </div>
+
+                        <div class="fitem">
+                            <label>Notes:</label>
+                            <input id="notes" name="notes" class="easyui-textbox" name="notes"
+                                   data-options="multiline:true" style="width:400px;height: 200px">
+                        </div>
+
+                        <div class="fitem">
+                            <label>Upload File:</label>
+                            <input id='uploadedFile' name="uploadedFile" class="easyui-filebox" style="width:300px;">
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+                <div id="edit-manuscript-dlg-buttons">
                     <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok"
                        onclick="saveManuscript()"
                        style="width:90px">Save</a>
                     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel"
-                       onclick="javascript:$('#manuscriptDlg').dialog('close')" style="width:90px">Cancel</a>
+                       onclick="javascript:$('#editManuscriptDlg').dialog('close')" style="width:90px">Cancel</a>
+                </div>
+                <div id="add-manuscript-dlg-buttons">
+                    <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok"
+                       onclick="saveManuscript()"
+                       style="width:90px">Save</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel"
+                       onclick="javascript:$('#addManuscriptDlg').dialog('close')" style="width:90px">Cancel</a>
                 </div>
             </div>
+
             <!--review section-->
             <div id="reviewMainContainer" style="padding: 5px">
                 <table id="associateReviewTable" title="Related Reviews" class="easyui-datagrid"
@@ -136,7 +201,8 @@
                     </thead>
                 </table>
                 <div id="associateReviewToolbar">
-                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true"
+                    <a id="assignButton" href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add"
+                       plain="true"
                        onclick="assignReviewer()">Assign New Reviewer</a>
                     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true"
                        onclick="deleteAssignedReviewer()">Delete Assigned Reviewer</a>
@@ -144,31 +210,34 @@
                 </div>
 
                 <div id="associateReviewerDlg" class="easyui-dialog" title="Select Reviewer"
-                     style="top: 30%;width:400px;height:310px;padding:10px"
+                     style="top: 30%;width:550px;height:200px;padding:10px"
                      data-options="
-                iconCls: 'icon-save',
-                toolbar: '#addAssociateReviewToolbar',
-                buttons: '#review-dlg-buttons',
+                        iconCls: 'icon-save',
+                        toolbar: '#addAssociateReviewToolbar',
+                        buttons: '#review-dlg-buttons',
+                        closed:'true'">
 
-                 closed:'true'">
+                    <form id="associateReviewerFm" method="post" enctype="multipart/form-data">
+                        <div class="fitem">
+                            <label>Select Reviewer:</label>
+                            <select id="selectedReviewerRow" class="easyui-combogrid" style="width:400px" data-options="
+                            panelWidth: 400,
+                            idField: 'per_id',
+                            textField: 'authorName',
+                            url: 'getReviewerSummary.php',
+                            method: 'get',
+                            columns: [[
+                                {field:'authorName',title:'Reviewer Name',width:30},
 
-
-                    <select id="selectedReviewerRow" class="easyui-combogrid" style="width:300px" data-options="
-                    panelWidth: 350,
-                    idField: 'per_id',
-                    textField: 'uname',
-                    url: 'getReviewer.php',
-                    method: 'get',
-                    columns: [[
-                        {field:'uname',title:'First Name',width:40},
-                        {field:'fname',title:'Last Name',width:40},
-                        {field:'stree',title:'Street',width:20,align:'right'}
-                    ]],
-                    fitColumns: true">
-                    </select>
+                                {field:'street',title:'Street',width:40,align:'right'}
+                            ]],
+                            fitColumns: true">
+                            </select>
+                        </div>
+                    </form>
                 </div>
                 <div id="review-dlg-buttons">
-                    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="addNewReviewer()">Add</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="assignNewReviewer()">Add</a>
                     <a href="javascript:void(0)" class="easyui-linkbutton"
                        onclick="javascript:$('#associateReviewerDlg').dialog('close')">Close</a>
                 </div>
@@ -178,7 +247,7 @@
         <!--reviewer section -->
 
         <div title="Reviewers" style="padding:20px;">
-            <table id="reviewerTable" title="Reviewers" class="easyui-datagrid" style="width:100%;height:600px"
+            <table id="reviewerTable" title="Reviewers" class="easyui-datagrid" style="width:100%;height:710px"
                    url="getReviewer.php"
                    toolbar="#reviewerToolbar"
                    pagination="true"
@@ -278,7 +347,7 @@
 
         <!--Author section -->
         <div title="Authors" style="padding:20px;">
-            <table id="authorTable" title="Authors" class="easyui-datagrid" style="width:100%;height:600px"
+            <table id="authorTable" title="Authors" class="easyui-datagrid" style="width:100%;height:710px"
                    url="getAuthor.php"
                    toolbar="#authorToolbar"
                    pagination="true"

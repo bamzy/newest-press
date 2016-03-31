@@ -56,35 +56,88 @@ function deleteReviewer() {
     }
 }
 
-function addNewReviewer() {
-
-    //$('#associateReviewTable').datagrid('reload', {
-    //    //id: row.id,
-    //
-    //});
-    var val = $('#selectedReviewerRow').combogrid('getValue');
+function assignReviewer() {
     var row = $('#manuscriptTable').datagrid('getSelected');
-    console.log('0');
-    var data = {};
-    var id = 1, idd = 2;
-    data["Method"] = "test";
+    if (row == null) {
+        alert("Select a Manuscript First");
+        $('#associateReviewerDlg').dialog('close');
+    }
+    else
+        $('#associateReviewerDlg').dialog('open').dialog('setTitle', 'New Manuscript');
+    //$('#manuscriptFm').form('clear');
+    //url = 'saveManuscript.php';
+}
+function deleteAssignedReviewer() {
+    var row = $('#associateReviewTable').datagrid('getSelected');
+    console.log('-1');
+    if (row == null) {
+        console.log('0');
+        alert("Select a Reviewer First");
+        $('#associateReviewerDlg').dialog('close');
+    }
+    console.log(row);
+    console.log(row.comment);
+    if (row['comment'] != null) {
+        console.log('1');
+        var r = confirm("This reviewer already submitted a review, are you sure you want to remove them?");
+        if (r == false) {
+            return;
+        }
+    }
     jQuery.ajax({
-        url: 'saveReview.php',
-        //data: data,
+        url: 'unassignReviewer.php',
         type: "POST",
         dataType: 'json',
-        data: {functionName: 'addNewReview', arguments: [id, idd]},
-
+        //data: { reviewID: row.id},
+        data: {functionName: 'unassignReviewer', arguments: [row.rev_id]},
         success: function (obj, textstatus) {
             if (!('error' in obj)) {
-                console.log('1');
+
+                $('#associateReviewTable').datagrid('reload');
                 yourVariable = obj.result;
             }
             else {
-                console.log(2)
+
                 console.log(obj.error);
             }
         }
     });
-    console.log(3);
+
+
+}
+
+
+function assignNewReviewer() {
+
+
+    var val = $('#selectedReviewerRow').combogrid('getValue');
+    var row = $('#manuscriptTable').datagrid('getSelected');
+    jQuery.ajax({
+        url: 'assignNewReviewer.php',
+        type: "POST",
+        dataType: 'json',
+        //data: { arguments: [row.id, val]},
+        data: {functionName: 'assignNewReview', arguments: [row.id, val]},
+        success: function (obj, textstatus) {
+            if (!('error' in obj)) {
+
+                $('#associateReviewTable').datagrid('reload');
+                yourVariable = obj.result;
+            }
+            else {
+
+                console.log(obj.error);
+            }
+        }
+    });
+}
+
+
+function loadAssociatedReviewers() {
+
+    var row = $('#manuscriptTable').datagrid('getSelected');
+    $('#associateReviewTable').datagrid('reload', {
+        id: row.id,
+    });
+
 }

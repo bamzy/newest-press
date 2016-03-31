@@ -7,6 +7,7 @@ $_POST = parse_str($rest_json, $parameters);
 $page = isset($parameters['page']) ? intval($parameters['page']) : 1;
 $rows = isset($parameters['rows']) ? intval($parameters['rows']) : 11;
 $id = isset($parameters['id']) ? intval($parameters['id']) : -1;
+//$mode = isset($parameters['']) ? intval($parameters['id']) : -1;
 $offset = ($page - 1) * $rows;
 $result = array();
 $reviewerRoleId = 2;
@@ -20,7 +21,9 @@ if(!$res = $conn->query($query)){
 }
 $result["total"] = $res->num_rows;
 //$rs = mysql_query($query);
-
+//if ($parameters['mode'] == 'all')
+//    $query = "select * from tbl_people where role_id = {$reviewerRoleId} ";
+//else
 $query = "select * from tbl_people where role_id = {$reviewerRoleId} limit $offset,$rows";
 if(!$res = $conn->query($query)){
     die('There was an error running the query [' . $query->error . ']');

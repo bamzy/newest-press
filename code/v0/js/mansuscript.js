@@ -3,15 +3,15 @@
  */
 var url;
 function newManuscript() {
-    $('#manuscriptDlg').dialog('open').dialog('setTitle', 'New Manuscript');
-    $('#manuscriptFm').form('clear');
+    $('#addManuscriptDlg').dialog('open').dialog('setTitle', 'New Manuscript');
+    $('#addManuscriptDlg').form('clear');
     url = 'saveManuscript.php';
 }
 function editManuscript() {
     var row = $('#manuscriptTable').datagrid('getSelected');
     if (row) {
-        $('#manuscriptDlg').dialog('open').dialog('setTitle', 'Edit Manuscript');
-        $('#manuscriptFm').form('load', row);
+        $('#editManuscriptDlg').dialog('open').dialog('setTitle', 'Edit Manuscript');
+        $('#editManuscriptFm').form('load', row);
         url = 'updateManuscript.php?id=' + row.id;
     }
 }

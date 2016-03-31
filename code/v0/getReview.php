@@ -11,9 +11,6 @@ $offset = ($page - 1) * $rows;
 $result = array();
 
 
-if (isset($output['id']))
-    $id = $output['id'];
-else $id = -1;
 
 include './model/conn.php';
 
