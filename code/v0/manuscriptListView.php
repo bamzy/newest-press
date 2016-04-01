@@ -8,9 +8,10 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <script type="text/javascript" src="./resources/jeasyui/jquery.min.js"></script>
 <script type="text/javascript" src="./resources/jeasyui/jquery.easyui.min.js"></script>
-<script type="text/javascript" src="js/mansuscript.js"></script>
+<script type="text/javascript" src="js/manuscript.js"></script>
 <script type="text/javascript" src="js/reviewer.js"></script>
 <script type="text/javascript" src="js/review.js"></script>
+<script type="text/javascript" src="js/notification.js"></script>
 <script type="text/javascript" src="js/author.js"></script>
 
 <div id="sidebarMainManuscriptContainer">
@@ -445,6 +446,70 @@
                    style="width:90px">Save</a>
                 <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel"
                    onclick="javascript:$('#authorDlg').dialog('close')" style="width:90px">Cancel</a>
+            </div>
+        </div>
+
+        <!--Notification section -->
+        <div title="Notification" style="padding:20px;">
+            <div id="notificationMainContainer" style="padding: 5px">
+                <table id="notificationTable" title="Notification" class="easyui-datagrid"
+                       style="width: 100% ;height:710px; "
+                       url="getEditorSummary.php?mode=notified_enabled"
+                       toolbar="#notificationToolbar"
+                       pagination="false"
+                       rownumbers="false"
+                       fitColumns="true"
+                       singleSelect="true">
+                    <thead>
+                    <tr>
+                        <th field="per_id" width="0" hidden="true">ID</th>
+                        <th field="editorName" width="50">Editor Name</th>
+                        <th field="email" width="50">email</th>
+                    </tr>
+                    </thead>
+                </table>
+                <div id="notificationToolbar">
+                    <a id="" href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add"
+                       plain="true"
+                       onclick="newNotification()">Add Notification Receiver</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true"
+                       onclick="deleteNotification()">Remove Notification Receiver</a>
+
+                </div>
+
+                <div id="notificationDlg" class="easyui-dialog" title="Select Receiver"
+                     style="top: 30%;width:550px;height:200px;padding:10px"
+                     data-options="
+                            iconCls: 'icon-save',
+                            toolbar: '#addNotificationToolbar',
+                            buttons: '#notification-dlg-buttons',
+                            closed:'true'">
+
+                    <form id="notificationFm" method="post" enctype="multipart/form-data">
+                        <div class="fitem">
+                            <label>Select Editor:</label>
+                            <select id="selectedEditorRow" class="easyui-combogrid" style="width:400px" data-options="
+                                panelWidth: 400,
+                                idField: 'per_id',
+                                textField: 'editorName',
+                                url: 'getEditorSummary.php?mode=notified_disabled',
+                                method: 'get',
+                                columns: [[
+                                    {field:'editorName',title:'Editor Name',width:30},
+
+                                    {field:'email',title:'email',width:40,align:'right'}
+                                ]],
+                                fitColumns: true">
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div id="notification-dlg-buttons">
+                    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="addNotification()">Add</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton"
+                       onclick="javascript:$('#notificationDlg').dialog('close')">Close</a>
+                </div>
+
             </div>
         </div>
     </div>
