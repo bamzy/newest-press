@@ -2,8 +2,8 @@
 //function to connect to database
 function connect(){
 
-<<<<<<< HEAD
-$link = mysql_connect("localhost","newest", "OZqXiGU&]D","");
+
+$link = mysql_connect('localhost','newest', 'OZqXiGU&]D');
 
 	if (!$link) {
 
@@ -20,7 +20,7 @@ $db = mysql_select_db('newest', $link);
 	}
 
 return true;
-=======
+
     return include_once('./model/conn.php');
 
 //	$link = mysql_pconnect("localhost", "root", "salam");
@@ -40,7 +40,7 @@ return true;
 //	}
 //	include './model/conn.php';
 // true;
->>>>>>> abd81482364f328cb1e30ff10902557ca2c7bb12
+
 
 } //end connect
 
@@ -115,14 +115,9 @@ session_regenerate_id();
 
 	if (isset($_REQUEST['_SESSION'])) die("Nothing for you.");
 	
-	printf('<html>
-<head>
-<!DOCTYPE html>
-<title>NeWest Press - Manuscript Tracking System</title>
+	printf('
 <link rel="stylesheet" href="newest.css" type="text/css">
-</head>
-<body> 
-   <div id="wrap">');
+');
 	
 	//printf ('<p>You are logged in as <span class="username">'.$_SESSION['user'].'</span>.</p>');
 }
@@ -999,7 +994,7 @@ function getauthbyrole($roleid){
 			
 			printf('
 			<div id="account">
-			<table>
+			<table style="margin-left:222px;">
 			<tr><td>Account #:</td><td>'.$perid.'</td><td></td></tr>
 			<tr><td>Name:</td><td><a href="viewauthor.php?perid='.$perid.'">'.$name.'</a></td><td></td></tr>
 			<tr><td>Username:</td><td>'.$arr['uname'].'</td><td></td></tr>

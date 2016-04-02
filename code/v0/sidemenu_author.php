@@ -7,7 +7,7 @@ printf(
 		<p><a href="myaccount.php">My Account</a></p>
 		<p><a href="mymanuscripts.php">My Manuscripts</a></p>
 		<p><a href="logout.php">Logout</a></p>');
-		printf ('Hi, <br /><span class="username">'.$_SESSION['user'].'</span>.
+		printf ('
 </div> <!---close menucolumn--->'
 );
 ?>

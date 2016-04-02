@@ -55,7 +55,7 @@ if (auth($username, $userpass)) {
 			
 			else{
 			printf('<script type="text/javascript">
-			location.replace("newManuscripts.php");
+			location.replace("author.php");
 			</script>');
 			}
 } 

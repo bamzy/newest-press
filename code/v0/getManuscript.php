@@ -28,5 +28,6 @@ while ($row = $res->fetch_assoc()) {
 $result["rows"] = $items;
 
 echo json_encode($result);
+//print_r ($result);
 
 ?>

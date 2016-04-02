@@ -1,3 +1,4 @@
+<div class="clear"></div>
 <div class="footer">
 	<div class="footer-inner">
 		THANKS TO OUR SPONSORS
@@ -26,6 +27,11 @@
 	</div>
 
 </div>
+
+<script type="text/javascript">
+
+
+</script> 
 
 </body>
 </html>

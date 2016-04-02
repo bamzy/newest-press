@@ -118,18 +118,18 @@ return true;
 		
 		<form name="reg" action="reg.php" onsubmit="return validateForm();" method="post" >
 			
-					<p><span class="pagetitle" style="margin:50px;">Author Registration</span></p>
+					<p><span class="pagetitle" style="margin:50px;">Author Registration</span><br><span class="note" style="margin:50px;">Input with * should be filled out.</span></p>
 			<p style="margin-left:222px">
-					Username:<br><span class="note">(It must be unique, and cannot be changed)</span><br><input type="text" size=50 maxlength="25" name="uname"><br>
+					Username:<br><span class="note">(It must be unique, and cannot be changed)</span><br><input type="text" size=50 maxlength="25" name="uname">*<br>
 					
 					
-					 First name:<br><input type="text" size=50 maxlength="50" name="ufname"> <br>
+					 First name:<br><input type="text" size=50 maxlength="50" name="ufname">* <br>
 					  
-					 Last name:<br><input type="text" size=50 maxlength="75" name="ulname"> <br>
+					 Last name:<br><input type="text" size=50 maxlength="75" name="ulname">* <br>
 					  
-					 Street:<br><input type="text" size=50 maxlength="75" name="street"><br>
+					 Street:<br><input type="text" size=50 maxlength="75" name="street">*<br>
 					 
-					 City:<br><input type="text" size=50 maxlength="75" name="city"><br>
+					 City:<br><input type="text" size=50 maxlength="75" name="city">*<br>
 					 
 					 Province:<br><select name ="province">
   						<option value="AB">Alberta</option>
@@ -145,15 +145,15 @@ return true;
   						<option value="QC">Quebec</option>
   						<option value="SK">Saskatchewan</option>
   						<option value="YT">Yukon</option>
-					</select><br> 
+					</select>*<br> 
 					
-					 Postal code:<br><input type="text" size=7 maxlength="7" name="postal"><br>
+					 Postal code:<br><input type="text" size=7 maxlength="7" name="postal">*<br>
 					 
-					 Email address:<br><span class="note">(This is necessary in case you forget your password)</span><br><input type="text" size=50 maxlength="75" name="uemail"><br>
+					 Email address:<br><span class="note">(This is necessary in case you forget your password)</span><br><input type="text" size=50 maxlength="75" name="uemail">*<br>
 					      
-					 Password:<br><input type="password" size=50 maxlength="20" name="upass1"><br>  
+					 Password:<br><input type="password" size=50 maxlength="20" name="upass1">*<br>  
 					 
-					 Enter password again:<br><input type="password" size=50 maxlength="20" name="upass2"><br>  
+					 Enter password again:<br><input type="password" size=50 maxlength="20" name="upass2">*<br>  
 					 <input type="submit" value="Register" style="height:25px;">  
 			</p>
 			</form>

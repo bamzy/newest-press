@@ -3,10 +3,6 @@ include 'manutrack.php';
 sess2();
 ?>
 
-<html>
-<head>
-<!DOCTYPE html>
-<title>NeWest Press - Manuscript Tracking System</title>
 <link rel="stylesheet" href="newest.css" type="text/css">
 
 <script type="text/javascript">
@@ -77,30 +73,35 @@ return true;
 
 </script>
 
-</head>
 
-<body> 
-   <div id="wrap">
-		<div id="header"></div>
-		<div id="main"><p>
+
+<?php include'header.php'?>
+<div id="main" class='main'>
+	<div id="sidebar">
+			<?php $file=menuselect($_SESSION['role_id']); 
+			include $file;
+			?>
+		</div>
+		
+	<p>
 		<p><span class="pagetitle">My Account</span></p>
 
-<?php
-connect();
+		<?php
+		connect();
 
-$uid=$_SESSION['per_id'];
-$arruser=getuser($uid);
+		$uid=$_SESSION['per_id'];
+		$arruser=getuser($uid);
 
-$fname=$arruser['fname'];
-$lname=$arruser['lname'];
-$street=$arruser['street'];
-$city=$arruser['city'];
-$province=$arruser['province'];
-$postal=$arruser['postal'];
-$email=$arruser['email'];
-$uid=$arruser['per_id'];
+		$fname=$arruser['fname'];
+		$lname=$arruser['lname'];
+		$street=$arruser['street'];
+		$city=$arruser['city'];
+		$province=$arruser['province'];
+		$postal=$arruser['postal'];
+		$email=$arruser['email'];
+		$uid=$arruser['per_id'];
 			
-			printf('<form name="reg" action="updateuser.php" onsubmit="return validateForm();" method="post" >');
+		printf('<form name="reg" action="updateuser.php" onsubmit="return validateForm();" method="post" >');
 			printf('<table>');
 					printf('<tr><td></td><td><input type=hidden name="uid" value="'.$uid.'"></td></tr>');
 					printf('<tr><td>Username:</td><td>'.$arruser['uname'].'</td></tr>');
@@ -113,17 +114,11 @@ $uid=$arruser['per_id'];
 					printf('<tr><td>Email address:</td><td><input type=text name="uemail" value="'.$email.'" size="50"></td></tr>');
 					printf('<tr><td></td><td><input type="submit" value="Edit Account"></td></tr>');
 			printf('</table>');
-			printf('</form>');
-			printf('<a href="changepass.php?uid='.$uid.'">Change Password</a>');
-?>
-			
-		</p></div>
-		<div id="sidebar">
-		<?php $file=menuselect($_SESSION['role_id']); 
-		include $file;
+		printf('</form>');
+		printf('<a href="changepass.php?uid='.$uid.'">Change Password</a>');
 		?>
-		</div>
-		<div id="footer">footer stuff</div>
-    </div>
-</body>
-</html>
+			
+	</p>
+</div>
+<?php include 'footer.php'?>	
+

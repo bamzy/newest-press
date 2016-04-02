@@ -37,7 +37,6 @@ a:visited{
 }
 
 
-
 /***** Start: extend the background *********************************/
 .top,.main-clear{
 	background: url(images/wave-bg.png);
@@ -155,4 +154,4 @@ a:visited{
 			Basic style of main. 
 
 ************ of Newest pages *********************/
-
+.hover{color:yellow}

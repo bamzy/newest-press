@@ -54,6 +54,7 @@ February 2012
     position: relative;
     margin-left: 20px;
     overflow: hidden;
+    height:400px;
     /*left:72%;*/
 }
 
@@ -106,7 +107,9 @@ February 2012
     width: 130px;
     background: #db966b;
 }
-
+.hover{
+	
+}
 /*#footer {
     clear: both;
     background: #fffbcf;

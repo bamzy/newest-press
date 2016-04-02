@@ -1,9 +1,16 @@
 <?php
 
 include 'manutrack.php';
+include 'header.php';
 sess();
 connect();
-
+?>
+<div class='main' id='main'>
+<div id="sidebar">
+		<?php $file=menuselect($_SESSION['role_id']); 
+		include $file;
+		?></div>
+<?php
 		if ($_SESSION['role_id'] == 3){
 		
 			include 'people_search_menu.php';
@@ -38,11 +45,8 @@ connect();
 		
 		
 		</p></div>
-		<div id="sidebar">
-		<?php $file=menuselect($_SESSION['role_id']); 
-		include $file;
-		?></div>
-		<div id="footer">footer stuff</div>
+		
+		
     </div>
 </body>
 </html>
