@@ -2,7 +2,7 @@
 
 $id = intval($_REQUEST['id']);
 
-include 'conn.php';
+include 'mysqlConnection.php';
 
 $sql = "delete from reviewer where id=$id";
 $result = @mysql_query($sql);

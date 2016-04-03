@@ -451,7 +451,7 @@
 
         <!--Notification section -->
         <div title="Notification" style="padding:20px;">
-            <div id="notificationMainContainer" style="padding: 5px">
+            <div id="notificationMainContainer" style="padding: 0px">
                 <table id="notificationTable" title="Notification" class="easyui-datagrid"
                        style="width: 100% ;height:710px; "
                        url="getEditorSummary.php?mode=notified_enabled"

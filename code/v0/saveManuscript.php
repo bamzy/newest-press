@@ -9,7 +9,7 @@ $title = htmlspecialchars($_POST['title']);
 //$receivedDate = htmlspecialchars($_POST['receivedDate']);
 //$msText = htmlspecialchars($_POST['msText']);
 
-include 'conn.php';
+include 'mysqlConnection.php';
 
 
 

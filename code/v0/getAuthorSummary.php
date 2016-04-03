@@ -3,11 +3,11 @@
 $result = array();
 
 
-include './model/conn.php';
+include './model/mysqlConnection.php';
 
 
 $query = "select per_id as id, concat(fname,' ',lname) as authorName from tbl_people where role_id = '1'";
-if (!$res = $conn->query($query)) {
+if (!$res = mysqlConnection::getConnection()->query($query)) {
     die('There was an error running the query [' . $query->error . ']');
 }
 

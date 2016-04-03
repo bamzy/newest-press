@@ -11,17 +11,17 @@ $result = array();
 $authorRoleId = 1;
 
 
-include './model/conn.php';
+include './model/mysqlConnection.php';
 
 $query = "select *  from tbl_people where role_id = {$authorRoleId}";
-if (!$res = $conn->query($query)) {
+if (!$res = mysqlConnection::getConnection()->query($query)) {
     die('There was an error running the query [' . $query->error . ']');
 }
 $result["total"] = $res->num_rows;
 //$rs = mysql_query($query);
 
 $query = "select * from tbl_people where role_id = {$authorRoleId} limit $offset,$rows";
-if (!$res = $conn->query($query)) {
+if (!$res = mysqlConnection::getConnection()->query($query)) {
     die('There was an error running the query [' . $query->error . ']');
 }
 //$result["total"] = $res->num_rows;

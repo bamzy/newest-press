@@ -8,7 +8,7 @@ $rest_json = file_get_contents("php://input");
 $_POST = json_decode($rest_json, true);
 $_POST = parse_str($rest_json);
 
-include 'conn.php';
+include 'mysqlConnection.php';
 
 $sql = "insert into tbl_people(name,phone,email,address) values('$fullNmae','$phone','$email','$address')";
 $result = @mysql_query($sql);

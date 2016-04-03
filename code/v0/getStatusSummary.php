@@ -3,11 +3,11 @@
 $result = array();
 
 
-include './model/conn.php';
+include './model/mysqlConnection.php';
 
 
 $query = "select * from tbl_status";
-if (!$res = $conn->query($query)) {
+if (!$res = mysqlConnection::getConnection()->query($query)) {
     die('There was an error running the query [' . $query->error . ']');
 }
 

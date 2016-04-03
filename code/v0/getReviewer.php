@@ -13,10 +13,10 @@ $result = array();
 $reviewerRoleId = 2;
 
 
-include './model/conn.php';
+include './model/mysqlConnection.php';
 
 $query = "select *  from tbl_people where role_id = {$reviewerRoleId}";
-if(!$res = $conn->query($query)){
+if (!$res = mysqlConnection::getConnection()->query($query)) {
     die('There was an error running the query [' . $query->error . ']');
 }
 $result["total"] = $res->num_rows;
@@ -25,7 +25,7 @@ $result["total"] = $res->num_rows;
 //    $query = "select * from tbl_people where role_id = {$reviewerRoleId} ";
 //else
 $query = "select * from tbl_people where role_id = {$reviewerRoleId} limit $offset,$rows";
-if(!$res = $conn->query($query)){
+if (!$res = mysqlConnection::getConnection()->query($query)) {
     die('There was an error running the query [' . $query->error . ']');
 }
 //$result["total"] = $res->num_rows;

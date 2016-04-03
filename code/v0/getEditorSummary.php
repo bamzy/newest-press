@@ -14,13 +14,13 @@ $editorRoleId = 3;
 $result = array();
 
 
-include './model/conn.php';
+include './model/mysqlConnection.php';
 
 if ($_GET['mode'] == "notified_disabled")
     $query = "select concat(fname,' ',lname) AS editorName, per_id AS per_id , email AS email from tbl_people where role_id = {$editorRoleId} AND notify = 'No'";
 if ($_GET['mode'] == "notified_enabled")
     $query = "select concat(fname,' ',lname) AS editorName, per_id AS per_id , email AS email from tbl_people where role_id = {$editorRoleId} AND notify = 'Yes'";
-if (!$res = $conn->query($query)) {
+if (!$res = mysqlConnection::getConnection()->query($query)) {
     die('There was an error running the query [' . $query->error . ']');
 }
 $result["total"] = $res->num_rows;
