@@ -627,9 +627,14 @@ function getedreq($edreq_id)
 function getstatus($statid)
 {
 
-    $cloud = mysql_query("SELECT stat_text FROM tbl_status WHERE stat_id=$statid") or die(mysql_error());
+//    $cloud = mysql_query("SELECT stat_text FROM tbl_status WHERE stat_id=$statid") or die(mysql_error());
+    $query = "SELECT stat_text FROM tbl_status WHERE stat_id={$statid}";
+    if (!$res = mysqlConnection::getConnection()->query($query)) {
+        die('There was an error running the query [' . $query->error . ']');
+    }
 
-    $arr = mysql_fetch_assoc($cloud);
+    $arr = $res->fetch_assoc();
+//    $arr = mysql_fetch_assoc($cloud);
     $status = $arr['stat_text'];
     printf('<tr><td>Status</td><td>' . $status . '</td></tr>');
 }
@@ -647,9 +652,15 @@ function getstatnohtml($statid)
 function authname($perid)
 {
 
-    $cloud = mysql_query("SELECT fname, lname FROM tbl_people WHERE per_id=$perid") or die(mysql_error());
+//    $cloud = mysql_query("SELECT fname, lname FROM tbl_people WHERE per_id=$perid") or die(mysql_error());
+    $query = "SELECT fname, lname FROM tbl_people WHERE per_id=$perid";
+    if (!$res = mysqlConnection::getConnection()->query($query)) {
+        die('There was an error running the query [' . $query->error . ']');
+    }
 
-    $arr = mysql_fetch_assoc($cloud);
+    $arr = $res->fetch_assoc();
+
+//    $arr = mysql_fetch_assoc($cloud);
     $author = $arr['fname'] . ' ' . $arr['lname'];
 
     return $author;
@@ -795,7 +806,7 @@ function getmanfullrevall($manid)
 
 //$cloud = mysql_query("SELECT man_id, title_orig, genre, notes, stat_id, per_id, datesubmitted FROM tbl_manuscript WHERE man_id=$manid") or die(mysql_error());
     $query = "SELECT man_id, title_orig, genre, notes, stat_id, per_id, datesubmitted FROM tbl_manuscript WHERE man_id={$manid}";
-    if (!$res = getConnection()->query($query)) {
+    if (!$res = mysqlConnection::getConnection()->query($query)) {
         die('There was an error running the query [' . $query->error . ']');
     }
     $num_rows = $res->num_rows;
@@ -815,7 +826,7 @@ function getmanfullrevall($manid)
         $author = authname($perid);
 
         printf('
-		<div id=review><table>
+		<div id="review" class="main" ><table>
 		<tr><td>Manuscript ref #:</td><td>' . $arr['man_id'] . '&nbsp&nbsp<a href="reviewmanuscript.php?manid=' . $arr['man_id'] . '">My Review</a></td></tr>
 		<tr><td>Author:</td><td>' . $author . '</td></tr>
 		<tr><td>Title:</td><td>' . $title . '</td></tr>

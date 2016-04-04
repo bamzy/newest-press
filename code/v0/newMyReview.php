@@ -1,6 +1,6 @@
 <?php
 include "header.php";
-include 'manutrack.php';
+include_once('manutrack.php');
 sess();
 connect();
 ?>
