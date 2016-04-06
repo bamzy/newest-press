@@ -154,4 +154,29 @@ a:visited{
 			Basic style of main. 
 
 ************ of Newest pages *********************/
+<<<<<<< HEAD
 .hover{color:yellow}
+=======
+
+section {
+    width: 100%;
+    height: 700px;
+    /*background: aqua;*/
+    margin: auto;
+    padding: 10px;
+}
+
+div#sidebarMainManuscriptContainer {
+    width: 15%;
+    height: 100%;
+    /*background: red;*/
+    float: left;
+}
+
+div#reviewerProfileContent {
+    /*margin-left: 15%;*/
+    /*float: left;*/
+    height: 100%;
+    /*background: black;*/
+}
+>>>>>>> 33121a5b575299d1aecf6186b9da3f8ce08f332a

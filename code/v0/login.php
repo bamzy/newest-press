@@ -35,7 +35,7 @@ return true;
 <?php include'header.php' ?>
 
 		<div class="main" id="main">
-			<div id="sidebar"><?php include 'sidemenu.php' ?></div>
+			<div id="sidebar" style="width: 15%!important"><?php include 'sidemenu.php' ?></div>
 			<p>Welcome to the NeWest Press Manuscript Tracking System. If you wish to submit a manuscript for consideration you must first <a href="./register.php">register</a> with the press. Once you have registered you can submit your manuscript information. You may also submit an electronic copy of your manuscript, although this is not required. You must mail us a printed copy of your manuscript, regardless of whether you submit an electronic manuscript. Hold on to your login, in the event that you wish to submit another manuscript in the future.</p>
 
 

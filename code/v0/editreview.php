@@ -1,4 +1,9 @@
 <?php
+include_once('./model/mysqlConnection.php');
+$rest_json = file_get_contents("php://input");
+$_POST = json_decode($rest_json, true);
+$_POST = parse_str($rest_json, $parameters);
+
 session_start();
 
 printf('<html>
@@ -16,29 +21,29 @@ printf('<html>
 include 'manutrack.php'; 
 connect();
 
-$revid=$_POST['revid'];
-$edreqid=$_POST['edreqid'];
-$recid=$_POST['recid'];
-$comments="'".mysql_real_escape_string( $_POST['comments'] )."'";
+$revid = $parameters['revid'];
+$edreqid = $parameters['edreqid'];
+$recid = $parameters['recid'];
+//$comments="'".mysql_real_escape_string( $parameters['comments'] )."'";
+$comments = "'" . mysqlConnection::getConnection()->real_escape_string($parameters['comments']) . "'";
 
-printf('revid:'.$revid.'');
-printf('edreqid'.$edreqid.'');
-printf('recid'.$recid.'');
-printf('comments'.$comments.'');
+//printf('revid:'.$revid.'');
+//printf('edreqid'.$edreqid.'');
+//printf('recid'.$recid.'');
+//printf('comments'.$comments.'');
 
-$success = mysql_query("UPDATE tbl_review SET rec_id=$recid, edreq_id=$edreqid, comments=$comments, date_rec=CURDATE() where rev_id=$revid") 
+//$success = mysql_query("UPDATE tbl_review SET rec_id=$recid, edreq_id=$edreqid, comments=$comments, date_rec=CURDATE() where rev_id=$revid")
+$query = "UPDATE tbl_review SET rec_id={$recid}, edreq_id={$edreqid}, comments={$comments}, date_rec=CURDATE() where rev_id={$revid}";
+if (TRUE == mysqlConnection::getConnection()->query($query)) {
 
-or die(mysql_error());  
-
-If ($success == true){
 
 
 	printf('<script type="text/javascript">
 	alert("Your review has been submitted. Thank you.");
-	location.replace("myreviews.php");
+	location.replace("newMyReview.php");
 	</script>');
-    
-   } 
+
+}
      
 else {
      

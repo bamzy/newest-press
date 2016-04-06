@@ -1,188 +1,517 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="MySQL - newest@127.0.0.1" uuid="8539a6bd-e914-4ecb-93b4-8c54f23f2c65">
-    <database-info product="MySQL" version="5.5.5-10.1.9-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+  <data-source name="MySQL - @127.0.0.1" uuid="8539a6bd-e914-4ecb-93b4-8c54f23f2c65">
+    <database-info product="MySQL" version="5.7.11-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
-    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.2">
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
       <schema id="1" name="newest"/>
-      <table id="2" parent="1" name="manuscript"/>
-      <table id="3" parent="1" name="review"/>
-      <table id="4" parent="1" name="reviewer"/>
-      <table id="5" parent="1" name="category"/>
-      <table id="6" parent="1" name="notification"/>
-      <table id="7" parent="1" name="user"/>
-      <column id="8" parent="2" name="id">
+      <table id="2" parent="1" name="tbl_category"/>
+      <table id="3" parent="1" name="tbl_disposal"/>
+      <table id="4" parent="1" name="tbl_editreq"/>
+      <table id="5" parent="1" name="tbl_letters"/>
+      <table id="6" parent="1" name="tbl_manuscript"/>
+      <table id="7" parent="1" name="tbl_people"/>
+      <table id="8" parent="1" name="tbl_rec"/>
+      <table id="9" parent="1" name="tbl_review"/>
+      <table id="10" parent="1" name="tbl_role"/>
+      <table id="11" parent="1" name="tbl_status"/>
+      <table id="12" parent="1" name="user"/>
+      <table id="13" parent="1" name="tbl_doc"/>
+      <table id="14" parent="1" name="tbl_notification"/>
+      <column id="15" parent="2" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="9" parent="2" name="title">
+      <column id="16" parent="2" name="categoryName">
         <mandatory>1</mandatory>
         <data-type>char(100)</data-type>
-      </column>
-      <column id="10" parent="2" name="author">
-        <mandatory>1</mandatory>
-        <data-type>char(100)</data-type>
-      </column>
-      <column id="11" parent="2" name="category">
-        <mandatory>1</mandatory>
-        <data-type>char(50)</data-type>
-      </column>
-      <column id="12" parent="2" name="uploadedFile">
-        <data-type>blob</data-type>
-      </column>
-      <column id="13" parent="2" name="msText">
-        <data-type>text</data-type>
-      </column>
-      <column id="14" parent="2" name="receivedDate">
-        <mandatory>1</mandatory>
-        <data-type>date</data-type>
-      </column>
-      <column id="15" parent="2" name="status">
-        <mandatory>1</mandatory>
-        <data-type>enum(&apos;Rejected&apos;, &apos;Accepted&apos;, &apos;Undetermined&apos;)</data-type>
-        <default-expression>&apos;Undetermined&apos;</default-expression>
-      </column>
-      <column id="16" parent="2" name="finalizedDate">
-        <data-type>date</data-type>
       </column>
       <key id="17" parent="2" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="18" parent="3" name="id">
+      <column id="18" parent="3" name="disp_id">
+        <comment>Unique id added by database</comment>
         <mandatory>1</mandatory>
-        <data-type>bigint(20)</data-type>
+        <data-type>int(11)</data-type>
       </column>
-      <column id="19" parent="3" name="manuscriptId">
-        <data-type>bigint(20)</data-type>
-      </column>
-      <column id="20" parent="3" name="reviewerId">
+      <column id="19" parent="3" name="desc">
+        <comment>Values: Returned, Recycled, Pulped</comment>
         <mandatory>1</mandatory>
-        <data-type>bigint(20)</data-type>
+        <data-type>varchar(50)</data-type>
       </column>
-      <column id="21" parent="3" name="reviewContent">
-        <data-type>text</data-type>
-      </column>
-      <column id="22" parent="3" name="finalDecision">
-        <data-type>enum(&apos;Accepted&apos;, &apos;Rejected&apos;, &apos;Not Submitted&apos;)</data-type>
-      </column>
-      <column id="23" parent="3" name="assignmentDate">
-        <mandatory>1</mandatory>
-        <data-type>date</data-type>
-      </column>
-      <column id="24" parent="3" name="decisionDate">
-        <mandatory>1</mandatory>
-        <data-type>date</data-type>
-      </column>
-      <key id="25" parent="3" name="PRIMARY">
-        <columns>id</columns>
+      <key id="20" parent="3" name="PRIMARY">
+        <columns>disp_id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="26" parent="3" name="review_ibfk_2">
-        <columns>reviewerId</columns>
-        <ref-key>reviewer.PRIMARY</ref-key>
-        <cascade-update-rule>restrict</cascade-update-rule>
-        <cascade-delete-rule>restrict</cascade-delete-rule>
-      </foreign-key>
-      <foreign-key id="27" parent="3" name="review_ibfk_3">
-        <columns>manuscriptId</columns>
-        <ref-key>manuscript.PRIMARY</ref-key>
-        <cascade-update-rule>restrict</cascade-update-rule>
-        <cascade-delete-rule>restrict</cascade-delete-rule>
-      </foreign-key>
-      <column id="28" parent="4" name="id">
+      <column id="21" parent="4" name="edreq_id">
+        <comment>Unique Id added by database.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="22" parent="4" name="edreq_text">
+        <comment>Values: Substantive OR Copyediting and proofing only</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <key id="23" parent="4" name="PRIMARY">
+        <columns>edreq_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="24" parent="5" name="let_id">
+        <comment>Unique id for each letter added by database.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="25" parent="5" name="let_title">
+        <comment>Title of letter. This will appear in drop down menu.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="26" parent="5" name="let_text">
+        <comment>Textual content of letter.</comment>
+        <data-type>mediumtext</data-type>
+      </column>
+      <column id="27" parent="5" name="active">
+        <comment>INdicates whetehr this letter is in active use. Titles of active letters will show in drop down menu. Values Y OR N.</comment>
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+        <default-expression>&apos;Y&apos;</default-expression>
+      </column>
+      <key id="28" parent="5" name="PRIMARY">
+        <columns>let_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="29" parent="6" name="man_id">
+        <comment>Unique id for each manuscript record. Automatically added by database.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="30" parent="6" name="per_id">
+        <comment>Unique ID of author.</comment>
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="29" parent="4" name="name">
+      <column id="31" parent="6" name="stat_id">
+        <comment>ID of manuscript status. Actual status messages are held in tbl_stat.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="32" parent="6" name="let_id">
+        <comment>ID of letter sent to author. Will reamin blank until a letter is chosen and assigned by editor.</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="33" parent="6" name="active">
+        <comment>Manuscript is active by default, and remains so until assigned a final status of REJECTED or CONTRCTED by editor. ONce inactive manuscripts appear from reports and menus that display only manuscripts that are in process.</comment>
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+        <default-expression>&apos;Y&apos;</default-expression>
+      </column>
+      <column id="34" parent="6" name="dateSubmitted">
+        <comment>Date on which the manuscript record was created.</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="35" parent="6" name="dateStatus">
+        <comment>Date on which the status was last changed.</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="36" parent="6" name="title_orig">
+        <comment>Title of manuscript as submitted by author.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="37" parent="6" name="title_published">
+        <comment>Title of final publication.</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="38" parent="6" name="genre">
+        <comment>Optional free text field.</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="39" parent="6" name="notes">
+        <comment>Free text field for manuscript related notes by authors or editors.</comment>
+        <data-type>mediumtext</data-type>
+      </column>
+      <column id="40" parent="6" name="SASE">
+        <comment>Self-addressed stamped envelope enclosed? Values: Y OR N.</comment>
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+        <default-expression>&apos;N&apos;</default-expression>
+      </column>
+      <index id="41" parent="6" name="let_id">
+        <columns>let_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="42" parent="6" name="per_id">
+        <columns>per_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="43" parent="6" name="stat_id">
+        <columns>stat_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="44" parent="6" name="PRIMARY">
+        <columns>man_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="45" parent="6" name="tbl_manuscript_ibfk_3">
+        <columns>stat_id</columns>
+        <ref-key>~.tbl_status.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="46" parent="6" name="tbl_manuscript_ibfk_4">
+        <columns>let_id</columns>
+        <ref-key>~.tbl_letters.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="47" parent="6" name="tbl_manuscript_ibfk_6">
+        <columns>per_id</columns>
+        <ref-key>~.tbl_people.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="48" parent="7" name="per_id">
+        <comment>Unique id for user record. Automatically created by database.</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="49" parent="7" name="uname">
+        <comment>Username selected by user. Along with password this will be user login.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(25)</data-type>
+      </column>
+      <column id="50" parent="7" name="pass">
+        <comment>Password selected by user. Stored as MD5 hash. If an email address is provided the user can change the password if forgotten.</comment>
+        <mandatory>1</mandatory>
+        <data-type>char(64)</data-type>
+      </column>
+      <column id="51" parent="7" name="fname">
+        <comment>First name as entered by the user.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(150)</data-type>
+      </column>
+      <column id="52" parent="7" name="lname">
+        <comment>Last name as entered by the user.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(150)</data-type>
+      </column>
+      <column id="53" parent="7" name="street">
+        <comment>Street number and name.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="54" parent="7" name="city">
+        <comment>Name of city/town/village.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="55" parent="7" name="province">
+        <comment>Name of province or state. Should this be a query table?</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="56" parent="7" name="postal">
+        <comment>Postal code.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="57" parent="7" name="email">
+        <comment>Email address. Optional but necessary for password retrieval and electronic messaging.</comment>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <column id="58" parent="7" name="role_id">
+        <comment>ID of role assigned to this use account (author, reviewer, editor).</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(50)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="59" parent="7" name="active">
+        <comment>Indicates whether this is an active user account. Effects whether hte name appears in searches, etc.</comment>
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+        <default-expression>&apos;Y&apos;</default-expression>
+      </column>
+      <column id="60" parent="7" name="created">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="61" parent="7" name="phone">
+        <mandatory>1</mandatory>
+        <data-type>char(20)</data-type>
+      </column>
+      <column id="62" parent="7" name="notify">
+        <data-type>enum(&apos;Yes&apos;, &apos;No&apos;)</data-type>
+      </column>
+      <index id="63" parent="7" name="role_id">
+        <columns>role_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="64" parent="7" name="uname">
+        <columns>uname</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="65" parent="7" name="PRIMARY">
+        <columns>per_id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="66" parent="7" name="uname">
+        <columns>uname</columns>
+        <underlying-index>uname</underlying-index>
+      </key>
+      <foreign-key id="67" parent="7" name="tbl_people_ibfk_1">
+        <columns>role_id</columns>
+        <ref-key>~.tbl_role.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="68" parent="8" name="rec_id">
+        <comment>Unique id for recommendation. Automatically added by database.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="69" parent="8" name="rec_text">
+        <comment>Reviewer recommendation. Values: Ask for full manuscript/Reject, return to author/Send to another reader/Present to board for possible publication</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="70" parent="8" name="active">
+        <comment>If inactive this status won&apos;t appear in reviewer drop down menu.</comment>
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+        <default-expression>&apos;Y&apos;</default-expression>
+      </column>
+      <key id="71" parent="8" name="PRIMARY">
+        <columns>rec_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="72" parent="9" name="rev_id">
+        <comment>Unique id of a single review (one reviewer&apos;s comments on one manuscript).</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="73" parent="9" name="per_id">
+        <comment>Id of the person who submitted the review.</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="74" parent="9" name="man_id">
+        <comment>ID of the manuscript that is the subject of this review.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="75" parent="9" name="rev_no">
+        <comment>Reviewer number (first, second, third, fourth, fifth).</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="76" parent="9" name="rec_id">
+        <comment>Links to recommendation selected from rec_table (e.g. Reject, return to author).</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="77" parent="9" name="edreq_id">
+        <comment>LInks to editing requirements table (e.g. Copyediting and proofing only).</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="78" parent="9" name="date_rec">
+        <comment>Date on which the recommendation field was filled in.</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="79" parent="9" name="date_in">
+        <comment>Date on which manuscript was returned from reviewer.</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="80" parent="9" name="date_out">
+        <comment>Date on which manuscript was sent to reviewer.</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="81" parent="9" name="comments">
+        <comment>Free text notes field for additional reviewer comments.</comment>
+        <data-type>mediumtext</data-type>
+      </column>
+      <index id="82" parent="9" name="edreq_id">
+        <columns>edreq_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="83" parent="9" name="man_id">
+        <columns>man_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="84" parent="9" name="per_id">
+        <columns>per_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="85" parent="9" name="rec_id">
+        <columns>rec_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="86" parent="9" name="PRIMARY">
+        <columns>rev_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="87" parent="9" name="tbl_review_ibfk_2">
+        <columns>man_id</columns>
+        <ref-key>~.tbl_manuscript.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="88" parent="9" name="tbl_review_ibfk_3">
+        <columns>rec_id</columns>
+        <ref-key>~.tbl_rec.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="89" parent="9" name="tbl_review_ibfk_4">
+        <columns>edreq_id</columns>
+        <ref-key>~.tbl_editreq.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="90" parent="9" name="tbl_review_ibfk_5">
+        <columns>per_id</columns>
+        <ref-key>~.tbl_people.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="91" parent="10" name="role_id">
+        <comment>Unique id for role automatically added by database.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="92" parent="10" name="role_desc">
+        <comment>User role. Values: author OR reviewer OR editor.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <key id="93" parent="10" name="PRIMARY">
+        <columns>role_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="94" parent="11" name="stat_id">
+        <comment>Unique id for status added by database</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="95" parent="11" name="stat_text">
+        <comment>Manuscript status assigned by editor. Default is &apos;New&apos;. Values: New/Under Review/Recommend/Discuss/Withdrawn/Rejected/Accepted/Contracted/Proposal</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="96" parent="11" name="active">
+        <comment>If inactive this status won&apos;t appear in editor drop down menu.</comment>
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+      </column>
+      <key id="97" parent="11" name="PRIMARY">
+        <columns>stat_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="98" parent="12" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="99" parent="12" name="username">
+        <mandatory>1</mandatory>
         <data-type>char(50)</data-type>
       </column>
-      <column id="30" parent="4" name="phone">
-        <data-type>char(12)</data-type>
-      </column>
-      <column id="31" parent="4" name="email">
-        <data-type>char(50)</data-type>
-      </column>
-      <column id="32" parent="4" name="address">
+      <column id="100" parent="12" name="password">
+        <mandatory>1</mandatory>
         <data-type>char(255)</data-type>
       </column>
-      <column id="33" parent="4" name="biography">
-        <data-type>text</data-type>
-      </column>
-      <column id="34" parent="4" name="userId">
-        <mandatory>1</mandatory>
-        <data-type>bigint(20)</data-type>
-      </column>
-      <key id="35" parent="4" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <foreign-key id="36" parent="4" name="reviewer_ibfk_1">
-        <columns>userId</columns>
-        <ref-key>newest.user|id</ref-key>
-        <cascade-update-rule>restrict</cascade-update-rule>
-        <cascade-delete-rule>restrict</cascade-delete-rule>
-      </foreign-key>
-      <column id="37" parent="5" name="id">
-        <mandatory>1</mandatory>
-        <data-type>bigint(20)</data-type>
-      </column>
-      <column id="38" parent="5" name="categoryName">
-        <mandatory>1</mandatory>
-        <data-type>char(100)</data-type>
-      </column>
-      <key id="39" parent="5" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <column id="40" parent="6" name="id">
-        <mandatory>1</mandatory>
-        <data-type>bigint(20)</data-type>
-      </column>
-      <column id="41" parent="6" name="email">
-        <mandatory>1</mandatory>
-        <data-type>char(100)</data-type>
-      </column>
-      <column id="42" parent="6" name="phone">
-        <data-type>char(12)</data-type>
-      </column>
-      <key id="43" parent="6" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <column id="44" parent="7" name="id">
-        <mandatory>1</mandatory>
-        <data-type>bigint(20)</data-type>
-      </column>
-      <column id="45" parent="7" name="username">
-        <mandatory>1</mandatory>
-        <data-type>char(50)</data-type>
-      </column>
-      <column id="46" parent="7" name="password">
-        <mandatory>1</mandatory>
-        <data-type>char(255)</data-type>
-      </column>
-      <column id="47" parent="7" name="creationDate">
+      <column id="101" parent="12" name="creationDate">
         <mandatory>1</mandatory>
         <data-type>date</data-type>
       </column>
-      <column id="48" parent="7" name="locked">
+      <column id="102" parent="12" name="locked">
         <mandatory>1</mandatory>
         <data-type>tinyint(1)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="49" parent="7" name="type">
+      <column id="103" parent="12" name="type">
         <mandatory>1</mandatory>
         <data-type>enum(&apos;Reviewer&apos;, &apos;Administrator&apos;, &apos;Author&apos;)</data-type>
       </column>
-      <column id="50" parent="7" name="lastLogin">
+      <column id="104" parent="12" name="lastLogin">
         <data-type>date</data-type>
       </column>
-      <key id="51" parent="7" name="PRIMARY">
+      <index id="105" parent="12" name="id">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="106" parent="12" name="PRIMARY">
         <columns>username</columns>
+        <primary>1</primary>
+      </key>
+      <column id="107" parent="13" name="doc_id">
+        <comment>Unque ID for document.</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="108" parent="13" name="doc_size">
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="109" parent="13" name="doc_filename">
+        <comment>Filename &amp; extension as applied by user.</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="110" parent="13" name="doc_date">
+        <comment>Tiemstamp when doc was uploaded.</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="111" parent="13" name="full_partial">
+        <comment>Full or Partial indicator. Values: F or P.</comment>
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;F&apos;, &apos;P&apos;)</data-type>
+        <default-expression>&apos;F&apos;</default-expression>
+      </column>
+      <column id="112" parent="13" name="doc_type">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="113" parent="13" name="man_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="114" parent="13" name="man_id">
+        <columns>man_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="115" parent="13" name="PRIMARY">
+        <columns>doc_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="116" parent="13" name="tbl_doc_ibfk_1">
+        <columns>man_id</columns>
+        <ref-key>~.tbl_manuscript.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="117" parent="14" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="118" parent="14" name="email">
+        <mandatory>1</mandatory>
+        <data-type>char(100)</data-type>
+      </column>
+      <column id="119" parent="14" name="phone">
+        <data-type>char(12)</data-type>
+      </column>
+      <key id="120" parent="14" name="PRIMARY">
+        <columns>id</columns>
         <primary>1</primary>
       </key>
     </database-model>
