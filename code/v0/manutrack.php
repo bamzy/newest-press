@@ -449,14 +449,18 @@ function getmankw($field, $text)
 function getfileinfo($man_id)
 {
 
-    $cloud = mysql_query("SELECT doc_size, doc_filename, doc_date, full_partial FROM tbl_doc WHERE man_id=$man_id") or die(mysql_error());
-    $rows = mysql_num_rows($cloud);
+//    $cloud = mysql_query("SELECT doc_size, doc_filename, doc_date, full_partial FROM tbl_doc WHERE man_id=$man_id") or die(mysql_error());
+    $query = "SELECT doc_size, doc_filename, doc_date, full_partial FROM tbl_doc WHERE man_id={$man_id}";
+    if (!$res = mysqlConnection::getConnection()->query($query)) {
+        die('There was an error running the query [' . $query->error . ']');
+    }
+    $rows = $res->num_rows;
 
     if ($rows < 1) {
         print('<tr><td>File:</td><td>No file submitted.</td><td></td></tr></table></p>');
     } else {
 
-        while ($arr = mysql_fetch_assoc($cloud)) {
+        while ($arr = $res->fetch_assoc()) {
             printf('
 					<tr><td>File:</td><td><a href="./upload/' . $arr['doc_filename'] . '">' . $arr['doc_filename'] . '</a>&nbsp;&nbsp;(' . $arr['doc_size'] . ' kB)&nbsp;&nbsp;');
 
@@ -530,66 +534,55 @@ function getreview($revid)
 
 function getreviewedit($revid)
 {
+    $query = "SELECT per_id, man_id, rev_no, rec_id, edreq_id, date_rec, date_in, date_out, comments FROM tbl_review WHERE rev_id=$revid ORDER BY rev_no";
+    if (!$res = mysqlConnection::getConnection()->query($query)) {
+        die('There was an error running the query [' . $query->error . ']');
+    }
 
-    $cloud = mysql_query("SELECT per_id, man_id, rev_no, rec_id, edreq_id, date_rec, date_in, date_out, comments FROM tbl_review WHERE rev_id=$revid ORDER BY rev_no") or die(mysql_error());
-
-    while ($arr = mysql_fetch_assoc($cloud)) {
-
+    while ($arr = $res->fetch_assoc()) {
         $perid = $arr['per_id'];
         $reviewer = authname($arr['per_id']);
         $recid = $arr['rec_id'];
         $edreqid = $arr['edreq_id'];
-
         printf('<form name="reg" action="editreview.php" onsubmit="return validateForm();" method="post" >');
         printf('<table>');
         printf('<tr><td></td><td><input type=hidden name="revid" value="' . $revid . '"></td></tr>');
         printf('<tr><td>Reviewer:</td><td><a href="viewauthor.php?perid=' . $perid . '">' . $reviewer . '</a></td></tr>');
         printf('<tr><td>Reader #:</td><td>' . $arr['rev_no'] . '</td></tr>');
         printf('<tr><td>Date assigned:</td><td>' . $arr['date_in'] . '</td></tr>');
-
-        printf('<tr><td>Recommendation:</td><td><select name="recid" size="4">');
-
-        $cloud2 = mysql_query("SELECT rec_id, rec_text FROM tbl_rec WHERE active LIKE 'Y'");
-
-        while ($arr2 = mysql_fetch_assoc($cloud2)) {
-
+        printf('<tr><td>Recommendation:</td><td><select id="recid" name="recid" onchange="selectRecommendation()" size="6">');
+        $query = "SELECT rec_id, rec_text FROM tbl_rec WHERE active LIKE 'Y'";
+        if (!$res = mysqlConnection::getConnection()->query($query)) {
+            die('There was an error running the query [' . $query->error . ']');
+        }
+        while ($arr2 = $res->fetch_assoc()) {
             $recid2 = $arr2['rec_id'];
             $rectext = $arr2['rec_text'];
-
             if ($recid2 == $recid) {
                 printf('<option selected value="' . $recid2 . '">' . $rectext . '</option>');
             } else {
-
                 printf('<option value="' . $recid2 . '">' . $rectext . '</option>');
-
             }
         }
-
         printf('</select></td></tr>');
-
-
-        printf('<tr><td>Editing Requirements:</td><td><select name="edreqid" size="2">');
-
-        $cloud3 = mysql_query("SELECT edreq_id, edreq_text FROM tbl_editreq");
-
-        while ($arr3 = mysql_fetch_assoc($cloud3)) {
-
+        printf('<tr><td>Editing Requirements:</td><td><select id="edreqid" name="edreqid" onchange="selectEditRequirement()" size="5">');
+        $query = "SELECT edreq_id, edreq_text FROM tbl_editreq";
+        if (!$res = mysqlConnection::getConnection()->query($query)) {
+            die('There was an error running the query [' . $query->error . ']');
+        }
+        while ($arr3 = $res->fetch_assoc()) {
             $edreq2 = $arr3['edreq_id'];
             $reqtext = $arr3['edreq_text'];
-
             if ($edreq2 == $edreqid) {
                 printf('<option selected value="' . $edreq2 . '">' . $reqtext . '</option>');
             } else {
-
-                printf('<option value="' . $edreq2 . '">' . $reqtext . '</option>');
-
+                printf('<option  value="' . $edreq2 . '">' . $reqtext . '</option>');
             }
         }
-
         printf('</select></td></tr>');
-        printf('<tr><td>Reviewer comments:</td><td><textarea name="comments" cols=50 rows=4>' . $arr['comments'] . '</textarea></td></tr>');
+        printf('<tr><td>Reviewer comments:</td><td><textarea name="comments" cols=100 rows=20>' . $arr['comments'] . '</textarea></td></tr>');
         printf('<tr><td>Date reviewed:</td><td>' . $arr['date_rec'] . '</td></tr>');
-        printf('<tr><td></td><td><input type="submit" value="Submit Review"></td></tr>');
+        printf('<tr><td><input id="reviewSubmitButton" type="submit" value="Submit Review" ></td><td></td></tr>');
         printf('</table>');
         printf('</form>');
     }
@@ -642,9 +635,13 @@ function getstatus($statid)
 function getstatnohtml($statid)
 {
 
-    $cloud = mysql_query("SELECT stat_text FROM tbl_status WHERE stat_id=$statid") or die(mysql_error());
+//    $cloud = mysql_query("SELECT stat_text FROM tbl_status WHERE stat_id=$statid") or die(mysql_error());
+    $query = "SELECT stat_text FROM tbl_status WHERE stat_id={$statid}";
+    if (!$res = mysqlConnection::getConnection()->query($query)) {
+        die('There was an error running the query [' . $query->error . ']');
+    }
 
-    $arr = mysql_fetch_assoc($cloud);
+    $arr = $res->fetch_assoc();
     $status = $arr['stat_text'];
     printf('Status:&nbsp;' . $status . '');
 }
