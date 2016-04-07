@@ -14,7 +14,7 @@ printf('<html>
 </head>
 
 <body> 
-   <div id="wrap">
+   <div id="wrap" class="main">
 		<div id="header"></div>
 		<div id="main"><p>');
 
@@ -42,6 +42,19 @@ if (TRUE == mysqlConnection::getConnection()->query($query)) {
 	alert("Your review has been submitted. Thank you.");
 	location.replace("newMyReview.php");
 	</script>');
+    $query = "SELECT email from tbl_notification";
+    if (!$res = mysqlConnection::getConnection()->query($query)) {
+        die('There was an error running the query [' . $query->error . ']');
+    }
+    $subject = 'Newest Review Submission Notification';
+    $message = 'hello';
+    $headers = 'From: notifier@newestpress.com' . "\r\n" .
+        'Reply-To: webmaster@example.com' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+    while ($row = $res->fetch_assoc()) {
+        $to = $row['email'];
+        mail($to, $subject, $message, $headers);
+    }
 
 }
      

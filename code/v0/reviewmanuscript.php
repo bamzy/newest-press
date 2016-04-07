@@ -21,7 +21,7 @@ if ($_SESSION['role_id'] == 3) {
     location.replace("author.php");
     </script>');
 }
-printf('<div id="sidebar" style="width: 150px;min-height: 700px">');
+printf('<div id="sidebar" style="width: 150px;height: 700px">');
 $file = menuselect($_SESSION['role_id']);
 include $file;
 printf('</div>');

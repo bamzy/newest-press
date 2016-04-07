@@ -125,7 +125,7 @@ function sess()
 <link rel="stylesheet" href="newest.css" type="text/css">
 </head>
 <body>
-   <div id="wrap">');
+   <div id="wrap" class="main">');
 
     //printf ('<p>You are logged in as <span class="username">'.$_SESSION['user'].'</span>.</p>');
 >>>>>>> 33121a5b575299d1aecf6186b9da3f8ce08f332a
@@ -265,16 +265,20 @@ function getmanper($per_id)
 
 //printf('perid: '.$per_id.'');
 
-    $cloud = mysql_query("SELECT title_orig, genre, notes, stat_id, man_id, datesubmitted FROM tbl_manuscript WHERE per_id=$per_id AND active LIKE 'Y' ORDER BY datesubmitted DESC") or die(mysql_error());
+//    $cloud = mysql_query("SELECT title_orig, genre, notes, stat_id, man_id, datesubmitted FROM tbl_manuscript WHERE per_id=$per_id AND active LIKE 'Y' ORDER BY datesubmitted DESC") or die(mysql_error());
+    $query = "SELECT title_orig, genre, notes, stat_id, man_id, datesubmitted FROM tbl_manuscript WHERE per_id=$per_id AND active LIKE 'Y' ORDER BY datesubmitted DESC";
+    if (!$res = mysqlConnection::getConnection()->query($query)) {
+        die('There was an error running the query [' . $query->error . ']');
+    }
 
-    $num_rows = mysql_num_rows($cloud);
+    $num_rows = $res->num_rows;
 
 
     if ($num_rows < 1) {
         printf("<p>You haven't submitted a manuscript yet.<br /> <br /> See the left hand menu for your options.</p>");
     } else {
 
-        while ($arr = mysql_fetch_assoc($cloud)) {
+        while ($arr = $res->fetch_assoc()) {
             $author = authname($per_id);
             printf('
 				<p>

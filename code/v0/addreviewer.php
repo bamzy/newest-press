@@ -9,7 +9,7 @@ printf('<html>
 </head>
 
 <body> 
-   <div id="wrap">
+   <div id="wrap" class="main">
 		<div id="header"></div>
 		<div id="main"><p>');
 
