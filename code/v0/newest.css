@@ -10,8 +10,8 @@ February 2012
 * 
 *******************************/
 #main {
-    float: right;
-    width: 86%;
+    /*float: right;*/
+    width: 100%;
     min-height: 500px;
     padding-right: 0px;
 }
@@ -54,7 +54,7 @@ February 2012
     position: relative;
     margin-left: 20px;
     overflow: hidden;
-    height:400px;
+    height: 100%;
 
 }
 
