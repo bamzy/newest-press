@@ -14,12 +14,10 @@
 <script type="text/javascript" src="js/notification.js"></script>
 <script type="text/javascript" src="js/author.js"></script>
 <section>
-    <div id="sidebarMainManuscriptContainer">
-        <div id="sidebar">
-            <?php include "sidemenu_reviewer.php"; ?>
-        </div>
-
-    </div>
+    <!--    <div id="sidebarMainManuscriptContainer">-->
+    <!--
+    <!---->
+    <!--    </div>-->
 
     <!--    <div id="inlinemenu" >-->
     <!--        <a href="myreviews.php?search=newreviews">New Reviews</a>-->
