@@ -59,8 +59,8 @@ February 2012
 }
 
 #mainManuscriptContainer {
-    float: left;
-    width: 85%;
+    /*float: left;*/
+    /*width: 85%;*/
     position: relative;
     margin-left: 5px;
     overflow: hidden;
