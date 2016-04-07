@@ -4,7 +4,7 @@ include_once('./model/mysqlConnection.php');
 function connect()
 {
 
-<<<<<<< HEAD
+
 
 $link = mysql_connect('localhost','newest', 'OZqXiGU&]D');
 
@@ -25,7 +25,7 @@ $db = mysql_select_db('newest', $link);
 return true;
 
     return include_once('./model/conn.php');
-=======
+
 //<<<<<<< HEAD
 //$link = mysql_connect("localhost","newest", "OZqXiGU&]D","");
 //
@@ -46,7 +46,7 @@ return true;
 //return true;
 //=======
     return include_once('./model/mysqlConnection.php');
->>>>>>> 33121a5b575299d1aecf6186b9da3f8ce08f332a
+
 
 //	$link = mysql_pconnect("localhost", "root", "salam");
 //
@@ -65,11 +65,7 @@ return true;
 //	}
 //	include './model/mysqlConnection.php';
 // true;
-<<<<<<< HEAD
 
-=======
-//>>>>>>> abd81482364f328cb1e30ff10902557ca2c7bb12
->>>>>>> 33121a5b575299d1aecf6186b9da3f8ce08f332a
 
 } //end connect
 
@@ -109,7 +105,7 @@ function sess()
 
     if (isset($_REQUEST['_SESSION'])) die("Nothing for you.");
 
-<<<<<<< HEAD
+
 	if (isset($_REQUEST['_SESSION'])) die("Nothing for you.");
 	
 	printf('
@@ -117,7 +113,7 @@ function sess()
 ');
 	
 	//printf ('<p>You are logged in as <span class="username">'.$_SESSION['user'].'</span>.</p>');
-=======
+
     printf('<html>
 <head>
 <!DOCTYPE html>
@@ -128,7 +124,7 @@ function sess()
    <div id="wrap">');
 
     //printf ('<p>You are logged in as <span class="username">'.$_SESSION['user'].'</span>.</p>');
->>>>>>> 33121a5b575299d1aecf6186b9da3f8ce08f332a
+
 }
 
 function sess2()
@@ -1014,7 +1010,7 @@ function getauthbyrole($roleid)
 
         printf('
 			<div id="account">
-<<<<<<< HEAD
+
 			<table style="margin-left:222px;">
 			<tr><td>Account #:</td><td>'.$perid.'</td><td></td></tr>
 			<tr><td>Name:</td><td><a href="viewauthor.php?perid='.$perid.'">'.$name.'</a></td><td></td></tr>
@@ -1026,19 +1022,20 @@ function getauthbyrole($roleid)
 			<tr><td>Date created:</td><td>'.$arr['created'].'</td><td></td></tr>');
 			printf('</table></div>');
 		}
-=======
-			<table>
-			<tr><td>Account #:</td><td>' . $perid . '</td><td></td></tr>
-			<tr><td>Name:</td><td><a href="viewauthor.php?perid=' . $perid . '">' . $name . '</a></td><td></td></tr>
-			<tr><td>Username:</td><td>' . $arr['uname'] . '</td><td></td></tr>
-			<tr><td>Address:</td><td>' . $arr['street'] . '</td><td></td></tr>
-			<tr><td></td></tr></td><td>' . $arr['city'] . ', ' . $arr['province'] . '</td><td></td></tr>
-			<tr><td></td></tr></td><td>' . $arr['postal'] . '</td><td></td></tr>
-			<tr><td>Email:</td><td>' . $arr['email'] . '</td><td></td></tr>
-			<tr><td>Date created:</td><td>' . $arr['created'] . '</td><td></td></tr>');
+
+			printf('<table>
+            <tr><td>Account #:</td><td>' . $perid . '</td><td></td></tr>
+            <tr><td>Name:</td><td><a href="viewauthor.php?perid=' . $perid . '">' . $name . '</a></td><td></td></tr>
+            <tr><td>Username:</td><td>' . $arr['uname'] . '</td><td></td></tr>
+            <tr><td>Address:</td><td>' . $arr['street'] . '</td><td></td></tr>
+            <tr><td></td></tr></td><td>' . $arr['city'] . ', ' . $arr['province'] . '</td><td></td></tr>
+            <tr><td></td></tr></td><td>' . $arr['postal'] . '</td><td></td></tr>
+            <tr><td>Email:</td><td>' . $arr['email'] . '</td><td></td></tr>
+            <tr><td>Date created:</td><td>' . $arr['created'] . '</td><td></td></tr>');
+            
         printf('</table></div>');
-    }
->>>>>>> 33121a5b575299d1aecf6186b9da3f8ce08f332a
+    
+
 }
 
 function peoplebyuname()

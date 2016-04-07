@@ -32,6 +32,9 @@ $city="'".mysql_real_escape_string( $_POST['city'] )."'";
 $province="'".mysql_real_escape_string( $_POST['province'] )."'";
 $postal="'".mysql_real_escape_string( $_POST['postal'] )."'";
 
+// Use email server to validate the registration.
+
+
 $success = mysql_query("INSERT INTO tbl_people (uname, pass, fname, lname, street, city, province, postal, email) 
 
 VALUES($uname,$upass,$ufname,$ulname,$street,$city,$province,$postal,$uemail)") 

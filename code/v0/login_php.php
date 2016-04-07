@@ -40,11 +40,11 @@ if (auth($username, $userpass)) {
 
 	$_SESSION['per_id'] = $uid;
     $_SESSION['role_id'] = $roleid;
-<<<<<<< HEAD
+
         
 			if ($roleid==3){
 			printf('<script type="text/javascript">
-			location.replace("newManuscripts.php");
+			location.replace("newMyAdministrator.php");
 			</script>');
 			}
 			
@@ -59,7 +59,6 @@ if (auth($username, $userpass)) {
 			location.replace("author.php");
 			</script>');
 			}
-=======
 
 	if ($roleid == 3) {
 		printf('<script type="text/javascript">
@@ -76,7 +75,7 @@ if (auth($username, $userpass)) {
 	location.replace("mymanuscripts.php");
 	</script>');
 	}
->>>>>>> 33121a5b575299d1aecf6186b9da3f8ce08f332a
+
 } 
      
 else {
