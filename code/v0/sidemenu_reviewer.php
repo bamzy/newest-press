@@ -11,11 +11,6 @@ printf(
 		<p><a href="logout.php">Logout</a></p>
 </div>
 	
-		
-    <div id=\"menucolumn\">
-
-
-</div>
 
 ');
 

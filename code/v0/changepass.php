@@ -39,12 +39,15 @@ return true;
 </head>
 
 <body> 
-   <div id="wrap">
-		<div id="header"></div>
-		<div id="main"><p>
+   
+		<?php include 'header.php'?>
+		<div id="main" class="main"><p>
+		<div id="sidebar"><?php $file=menuselect($_SESSION['role_id']); 
+		include $file;
+		?></div>
+		<div>
 <?php 
-$uid=$_GET['uid'];
-
+	$uid=$_GET['uid'];
 		printf('<form name="reg" action="changep.php" onsubmit="return validateForm();" method="post">');
 		printf('<table>');
 		printf('<tr><td align="right"></td><td><input type="hidden" name="uid" value="'.$uid.'"></td></tr>');
@@ -54,12 +57,7 @@ $uid=$_GET['uid'];
 		<tr><td align="right"></td><td><input type="submit" value="Change Password"></td></tr>
 		</table>
 		</form>
-		</p></div>
-		<div id="sidebar"><?php $file=menuselect($_SESSION['role_id']); 
-		include $file;
-		?>
 		</div>
-		<div id="footer">footer stuff</div>
-    </div>
-</body>
-</html>
+
+    
+<?php include 'footer.php'?>
