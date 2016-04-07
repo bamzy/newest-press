@@ -59,7 +59,10 @@ February 2012
 }
 
 #mainManuscriptContainer {
-
+    /*float: left;*/
+    /*width: 85%;*/
+    position: relative;
+    margin-left: 5px;
     overflow: hidden;
     height: auto;
     /*background:#000;*/
@@ -85,9 +88,6 @@ February 2012
     /*height:500px;*/
 /*}*/
 
-#sidebar{
-	width:200px;
-}
 
 #sidebar a:hover {
     color: #FFFbcf;
