@@ -126,9 +126,13 @@ function getuname($uid)
 function getuser($uid)
 {
 
-    $cloud = mysql_query("SELECT * FROM tbl_people where per_id=$uid") or die(mysql_error());
+//    $cloud = mysql_query("SELECT * FROM tbl_people where per_id=$uid") or die(mysql_error());
+    $query = "SELECT * FROM tbl_people where per_id={$uid}";
+    if (!$res = mysqlConnection::getConnection()->query($query)) {
+        die('There was an error running the query [' . $query->error . ']');
+    }
 
-    $arr = mysql_fetch_assoc($cloud);
+    $arr = $res->fetch_assoc();
 
     return $arr;
 

@@ -1,5 +1,9 @@
 <?php
 session_start();
+$rest_json = file_get_contents("php://input");
+$_POST = json_decode($rest_json, true);
+$_POST = parse_str($rest_json, $parameters);
+
 
 printf('<html>
 <head>
@@ -16,20 +20,18 @@ printf('<html>
 include 'manutrack.php'; 
 connect();
 
-$uid=$_POST['uid'];
-$ufname="'".mysql_real_escape_string( $_POST['ufname'] )."'";
-$ulname="'".mysql_real_escape_string( $_POST['ulname'] )."'";
-$street="'".mysql_real_escape_string( $_POST['street'] )."'";
-$city="'".mysql_real_escape_string( $_POST['city'] )."'";
-$province="'".mysql_real_escape_string( $_POST['province'] )."'";
-$postal="'".mysql_real_escape_string( $_POST['postal'] )."'";
-$uemail="'".mysql_real_escape_string( $_POST['uemail'] )."'";
+$uid = $parameters['uid'];
+$ufname = "'" . mysqlConnection::getConnection()->real_escape_string($parameters['ufname']) . "'";
+$ulname = "'" . mysqlConnection::getConnection()->real_escape_string($parameters['ulname']) . "'";
+$street = "'" . mysqlConnection::getConnection()->real_escape_string($parameters['street']) . "'";
+$city = "'" . mysqlConnection::getConnection()->real_escape_string($parameters['city']) . "'";
+$province = "'" . mysqlConnection::getConnection()->real_escape_string($parameters['province']) . "'";
+$postal = "'" . mysqlConnection::getConnection()->real_escape_string($parameters['postal']) . "'";
+$uemail = "'" . mysqlConnection::getConnection()->real_escape_string($parameters['uemail']) . "'";
 
-$success = mysql_query("UPDATE tbl_people SET fname=$ufname, lname=$ulname, street=$street, city=$city, province=$province, postal=$postal, email=$uemail WHERE per_id=$uid") 
-
-or die(mysql_error());  
-
-If ($success == true){
+//$success = mysql_query("UPDATE tbl_people SET fname=$ufname, lname=$ulname, street=$street, city=$city, province=$province, postal=$postal, email=$uemail WHERE per_id=$uid")
+$query = "UPDATE tbl_people SET fname={$ufname}, lname={$ulname}, street={$street}, city={$city}, province={$province}, postal={$postal}, email={$uemail} WHERE per_id={$uid}";
+if ($res = mysqlConnection::getConnection()->query($query)) {
 
 
 	printf('<script type="text/javascript">

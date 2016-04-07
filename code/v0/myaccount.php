@@ -100,8 +100,8 @@ return true;
 		$postal=$arruser['postal'];
 		$email=$arruser['email'];
 		$uid=$arruser['per_id'];
-			
-		printf('<form name="reg" action="updateuser.php" onsubmit="return validateForm();" method="post" >');
+
+        printf('<form name="reg" action="updateuser.php" onsubmit="return validateForm();" method="post" style="font-size: 12px" >');
 			printf('<table>');
 					printf('<tr><td></td><td><input type=hidden name="uid" value="'.$uid.'"></td></tr>');
 					printf('<tr><td>Username:</td><td>'.$arruser['uname'].'</td></tr>');
