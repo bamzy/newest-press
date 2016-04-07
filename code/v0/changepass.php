@@ -6,7 +6,7 @@ sess2();
 <html>
 <head>
 <!DOCTYPE html>
-<title>NeWest Press - Manuscript Tracking System</title>
+	<!--<title>NeWest Press - Manuscript Tracking System</title>-->
 <link rel="stylesheet" href="newest.css" type="text/css">
 
 <script type="text/javascript">

@@ -13,14 +13,14 @@
 			<!--<a href="#">Sign in</a>&nbsp;&nbsp;|&nbsp;
 			<a href="#">Contact</a>
 			-->
-			<?php 
-				session_start();
-				$userName = $_SESSION['user'];
-				if($_SESSION['user']){
-					echo "Hi, {$userName}!";
-				}
-				
-			 ?>
+			<!--			--><?php //
+			//				session_start();
+			//				$userName = $_SESSION['user'];
+			//				if($_SESSION['user']){
+			//					echo "Hi, {$userName}!";
+			//				}
+			//
+			//			 ?>
 		</div>
 	</div>
 	

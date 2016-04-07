@@ -87,9 +87,10 @@ function sess()
 <!DOCTYPE html>
 <title>NeWest Press - Manuscript Tracking System</title>
 <link rel="stylesheet" href="newest.css" type="text/css">
+<title>Newest Manuscript Tracking System</title>
 </head>
 <body>
-   <div id="wrap" class="main">');
+   <div id="wrap" class="main" >');
 
     //printf ('<p>You are logged in as <span class="username">'.$_SESSION['user'].'</span>.</p>');
 }
