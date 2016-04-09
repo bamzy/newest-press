@@ -10,9 +10,9 @@ February 2012
 * 
 *******************************/
 #main {
-    /*float: right;*/
+    float: right;
     width: 100%;
-    height: 80%;
+    height: auto;
     min-height: 500px;
     padding-right: 0px;
 }

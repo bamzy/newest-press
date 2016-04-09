@@ -17,10 +17,12 @@ include 'manutrack.php';
 sess();
 connect();
 ?>
-<div id="sidebar">
-    <?php include "sidemenu_editor.php"; ?>
-</div>
+
+
 <div class="main" id="main">
+	<div id="sidebar">
+		<?php include "sidemenu_editor.php"; ?>
+	</div>
 	<?php include "manuscriptListView.php";?>
 </div>
 

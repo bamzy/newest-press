@@ -4,10 +4,11 @@ include_once('manutrack.php');
 sess();
 connect();
 ?>
+
+<div class="main" id="main">
 <div id="sidebar">
     <?php include "sidemenu_reviewer.php"; ?>
 </div>
-<div class="main" id="main">
     <?php include "reviewerListView.php"; ?>
 </div>
 

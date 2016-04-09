@@ -17,7 +17,7 @@ body{
     background-repeat: repeat;
     border: none;
     padding: 0;
-    font-size: 14px;
+    font-size: 12px;
 
 }
 
@@ -54,6 +54,7 @@ a:visited{
 .main{
 	background: url(images/dot-bg-brown.png);
 	background-repeat: repeat;
+	font-size:12px;
 }
 .footer{
 	background: url(images/wave-bg.png);
@@ -65,6 +66,7 @@ a:visited{
 }
 .main-clear{
 	margin-top: 0px;
+	padding:0;
 }
 /***** End: extend the background **********************************/
 
@@ -177,3 +179,6 @@ div#reviewerProfileContent {
     /*background: black;*/
 }
 
+form, table{
+	font-size:12px;
+}

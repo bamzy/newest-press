@@ -50,7 +50,7 @@ if (auth($username, $userpass)) {
 			
 			if ($roleid==2){
 			printf('<script type="text/javascript">
-			location.replace("newMyReview.php");
+			location.replace("myaccount.php");
 			</script>');
 			}
 			

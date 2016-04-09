@@ -14,13 +14,13 @@
 			<a href="#">Contact</a>
 			-->
 			<!--			--><?php //
-			//				session_start();
-			//				$userName = $_SESSION['user'];
-			//				if($_SESSION['user']){
-			//					echo "Hi, {$userName}!";
-			//				}
-			//
-			//			 ?>
+							session_start();
+		  					$userName = $_SESSION['user'];
+							if($_SESSION['user']){
+								echo "Hi, {$userName}!" .'&nbsp;&nbsp;&nbsp;'.'<a href="logout.php">Logout</a>';
+							}
+			
+						 ?>
 		</div>
 	</div>
 	

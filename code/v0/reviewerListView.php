@@ -25,6 +25,7 @@
     <!--        <a href="myreviews.php?search=allreviews">All Reviews</a>-->
     <!--    </div>-->
     <div id="reviewerProfileContent">
+    <span class="pagetitle">My Review </span>
         <?php
         include_once('manutrack.php');
         $per_id = $_SESSION['per_id'];

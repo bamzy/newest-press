@@ -10,16 +10,21 @@
 <script type="text/javascript" src="./resources/jeasyui/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="js/edit.js"></script>
 <?php
-include "header.php";
+
 include 'manutrack.php';
+include "header.php";
+
 sess();
+?>
+<div class="main" id="main">
+<?php
 printf('<div id="sidebar" style="width: 150px;height: 700px">');
 $file = menuselect($_SESSION['role_id']);
 include $file;
 printf('</div>');
-
+printf('<p>');
 printf('<p><span class="pagetitle">My Manuscripts</span></p>');
-printf('<p>Please review our <a href="http://www.newestpress.com/catalog/content/view/18/32/" target="_blank">submission guidelines</a> before submitting a manuscript, then click "New Submission" in the side menu.</p>');
+printf('<p>Please review our <a href="http://www.newestpress.com/submissions" target="_blank">submission guidelines</a> before submitting a manuscript, then click "New Submission" in the side menu.</p>');
 connect();
 $per_id=$_SESSION['per_id'];
 getmanper($per_id);
@@ -35,7 +40,9 @@ getmanper($per_id);
 <!--		--><?php //$file=menuselect($_SESSION['role_id']);
 //		include $file;
 //		?><!--</div>-->
+</p>
 
+</div>
 <?php include "footer.php"; ?>
 
 

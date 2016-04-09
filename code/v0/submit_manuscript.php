@@ -42,8 +42,8 @@ $urole=$_SESSION['role_id'];
 printf ('<p>You are logged in as <span class="username">'.$_SESSION['user'].'</span>.</p>');
 
 ?>-->
-
-	<h2>Enter Manuscript Information:</h2>
+<p>
+	<span class="pagetitle">Enter Manuscript Information:</span>
 	<form name="manuinfo" action="addmanu.php" onsubmit="return validateForm();" method="post" >
 		<table>
 		<?php 
@@ -65,7 +65,7 @@ printf ('<p>You are logged in as <span class="username">'.$_SESSION['user'].'</s
 		<tr><td></td><td><input type="submit" value="submit"></td></tr>
 		</table>
 	</form>
-		
+</p>		
 </div>
 		
     </div>
