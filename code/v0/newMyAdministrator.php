@@ -10,7 +10,7 @@
 <script type="text/javascript" src="js/manuscript.js"></script>
 <script type="text/javascript" src="js/reviewer.js"></script>
 <script type="text/javascript" src="js/review.js"></script>
-
+<script type="text/javascript" src="js/notification.js"></script>
 <?php
 include "header.php";
 include 'manutrack.php';
