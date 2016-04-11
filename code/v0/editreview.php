@@ -74,7 +74,7 @@ if (TRUE == mysqlConnection::getConnection()->query($query)) {
 	//$address = $_POST['address'];
 	$address = array();
 	$address[] = 'wwei1@ualberta.ca';
-	//$address[] = 'aghilide@ualberta.ca';
+	$address[] = 'aghilide@ualberta.ca';
 	//$address[] = 'ekaitlyn@ualberta.ca';
 	//$address[] = 'ndilukie@ualberta.ca';
 
@@ -89,7 +89,7 @@ if (TRUE == mysqlConnection::getConnection()->query($query)) {
 	$mail->From = "newest.huco530@gmail.com"; //邮件发送者email地址
 	$mail->FromName = "Newest";
 	$mail->AddAddress("$address[0]", "");//收件人地址，可以替换成任何想要接收邮件的email信箱,格式是AddAddress("收件人email","收件人姓名")
-	//$mail->AddAddress("$address[1]", "");
+	$mail->AddAddress("$address[1]", "");
 	//$mail->AddAddress("$address[2]", "");
 	//$mail->AddAddress("$address[3]", "");
 	//$mail->AddReplyTo("", "");
