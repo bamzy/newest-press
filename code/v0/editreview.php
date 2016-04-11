@@ -6,17 +6,7 @@ $_POST = parse_str($rest_json, $parameters);
 
 session_start();
 
-printf('<html>
-<head>
-<!DOCTYPE html>
-<title>NewWest Press - Manuscript Tracking System</title>
-<link rel="stylesheet" href="newest.css" type="text/css">
-</head>
 
-<body> 
-   <div id="wrap" class="main">
-		<div id="header"></div>
-		<div id="main"><p>');
 
 include 'manutrack.php'; 
 connect();
@@ -31,6 +21,30 @@ $comments = "'" . mysqlConnection::getConnection()->real_escape_string($paramete
 //printf('edreqid'.$edreqid.'');
 //printf('recid'.$recid.'');
 //printf('comments'.$comments.'');
+$user = $_SESSION['user'];
+
+
+// get reccomendation text
+$query = "SELECT * FROM tbl_rec";
+$res = mysqlConnection::getConnection()->query($query);
+while ($arr_rec = $res->fetch_assoc()) {
+	$rec_text[] = $arr_rec['rec_text'];
+}
+//print_r($rec_text);
+//echo $rec_text[$recid-1];
+$body_rec = $rec_text[$recid-1];
+
+
+
+// get editing requirement
+$query = "SELECT * FROM tbl_editreq";
+$res = mysqlConnection::getConnection()->query($query);
+while ($arr_rec = $res->fetch_assoc()) {
+	$edreq_text[] = $arr_rec['edreq_text'];
+}
+//print_r($edreq_text);
+//echo $edreq_text[$edreqid-1];
+$body_edreq = $edreq_text[$edreqid-1];
 
 //$success = mysql_query("UPDATE tbl_review SET rec_id=$recid, edreq_id=$edreqid, comments=$comments, date_rec=CURDATE() where rev_id=$revid")
 $query = "UPDATE tbl_review SET rec_id={$recid}, edreq_id={$edreqid}, comments={$comments}, date_rec=CURDATE() where rev_id={$revid}";
@@ -39,22 +53,58 @@ if (TRUE == mysqlConnection::getConnection()->query($query)) {
 
 
 	printf('<script type="text/javascript">
-	alert("Your review has been submitted. Thank you.");
+	alert("Your review has been submitted. Thank you. Administrators will recieve an email about your review.");
 	location.replace("newMyReview.php");
 	</script>');
     $query = "SELECT email from tbl_notification";
     if (!$res = mysqlConnection::getConnection()->query($query)) {
         die('There was an error running the query [' . $query->error . ']');
     }
-    $subject = 'Newest Review Submission Notification';
-    $message = 'hello';
-    $headers = 'From: notifier@newestpress.com' . "\r\n" .
-        'Reply-To: webmaster@example.com' . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
-    while ($row = $res->fetch_assoc()) {
-        $to = $row['email'];
-        mail($to, $subject, $message, $headers);
-    }
+    //$subject = 'Newest Review Submission Notification';
+    //$message = 'hello';
+    //$headers = 'From: notifier@newestpress.com' . "\r\n" .
+    //   'Reply-To: webmaster@example.com' . "\r\n" .
+    //    'X-Mailer: PHP/' . phpversion();
+    //while ($row = $res->fetch_assoc()) {
+    //   $address = $row['email'];
+    //    mail($to, $subject, $message, $headers);
+    //}
+    require("PHPMailer/class.phpmailer.php"); //下载的文件必须放在该文件所在目录
+	$mail = new PHPMailer(); //建立邮件发送类
+	//$address = $_POST['address'];
+	$address = array();
+	$address[] = 'wwei1@ualberta.ca';
+	//$address[] = 'aghilide@ualberta.ca';
+	//$address[] = 'ekaitlyn@ualberta.ca';
+	//$address[] = 'ndilukie@ualberta.ca';
+
+	$mail->IsSMTP(); // 使用SMTP方式发送
+	$mail->CharSet='UTF-8';// 设置邮件的字符编码
+	$mail->Host = "smtp.gmail.com"; // 您的企业邮局域名smtp.gmail.com.
+	$mail->SMTPAuth = true; // 启用SMTP验证功能
+	//$mail->SMTPSecure = "ssl";
+	$mail->Port = "25"; //SMTP端口
+	$mail->Username = "newest.huco530@gmail.com"; // 邮局用户名(请填写完整的email地址)
+	$mail->Password = "huco530huco"; // 邮局密码
+	$mail->From = "newest.huco530@gmail.com"; //邮件发送者email地址
+	$mail->FromName = "Newest";
+	$mail->AddAddress("$address[0]", "");//收件人地址，可以替换成任何想要接收邮件的email信箱,格式是AddAddress("收件人email","收件人姓名")
+	//$mail->AddAddress("$address[1]", "");
+	//$mail->AddAddress("$address[2]", "");
+	//$mail->AddAddress("$address[3]", "");
+	//$mail->AddReplyTo("", "");
+	//$mail->AddAttachment("/var/tmp/file.tar.gz"); // 添加附件
+	$mail->IsHTML(true); // set email format to HTML //是否使用HTML格式
+	$mail->Subject = "Newest Review Submission Notification"; //邮件标题
+	$mail->Body = "Reviewer: $user<br><br>Recommendation: $body_rec <br><br>Editing requirement: $body_edreq<br><br> Reviewer comments: $comments"; //邮件内容
+
+	if(!$mail->send())
+	{
+		echo "Failed. <p>";
+		echo "Error: " . $mail->ErrorInfo;
+		exit;
+	}
+	echo "successfully\n\n\n";
 
 }
      
@@ -72,9 +122,3 @@ else {
 
 ?>
 
-		</div> <!-- close main -->
-		<div id="sidebar"><?php include 'sidemenu.php' ?></div>
-		<div id="footer">footer stuff</div>
-    </div>
-</body>
-</html>

@@ -594,6 +594,7 @@ function getreviewedit($revid)
         printf('<tr><td><input id="reviewSubmitButton" type="submit" value="Submit Review" ></td><td></td></tr>');
         printf('</table>');
         printf('</form>');
+        printf('<span  style="margin-left:170px;color:red;font-size:12px">*NOTE: Every time you submit your review, system will automatically send an email to administrators.</span><br><span  style="margin-left:170px;color:red;font-size:12px">Please review your submission before submit it.</span><br><br>');
     }
 
 
@@ -832,14 +833,16 @@ function getmanfullrevall($manid)
         $author = authname($perid);
 
         printf('
-		<div id="review" class="main" ><table>
-		<tr><td>Manuscript ref #:</td><td>' . $arr['man_id'] . '&nbsp&nbsp<a href="reviewmanuscript.php?manid=' . $arr['man_id'] . '">My Review</a></td></tr>
+		<div id="review" style="border-top:1px solid #ccc;">
+		<table>
+		<tr><td style="width:105px">Manuscript ref #:</td><td>' . $arr['man_id'] . '&nbsp&nbsp<a href="reviewmanuscript.php?manid=' . $arr['man_id'] . '">My Review</a></td></tr>
 		<tr><td>Author:</td><td>' . $author . '</td></tr>
 		<tr><td>Title:</td><td>' . $title . '</td></tr>
 		<tr><td>Genre:</td><td>' . $genre . '</td></tr>
 		<tr><td>Notes:</td><td>' . $notes . '</td></tr>');
         getstatus($arr['stat_id']);
         printf('<tr><td>Date submitted:&nbsp;&nbsp;</td><td>' . $submitted . '</td></tr>
+        
 		</table></div>'
         );
     }
