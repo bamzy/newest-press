@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee094df4-b9bf-444c-b84f-6ce4b41ecfc6" name="Default" comment="set main height to 100% as well">
+    <list default="true" id="ee094df4-b9bf-444c-b84f-6ce4b41ecfc6" name="Default" comment="fixed my account page template">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/newMyAuthor.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/code/v0/addmanu.php" afterPath="$PROJECT_DIR$/code/v0/submitManuscript.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/header.php" afterPath="$PROJECT_DIR$/code/v0/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/js/manuscript.js" afterPath="$PROJECT_DIR$/code/v0/js/manuscript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/login_php.php" afterPath="$PROJECT_DIR$/code/v0/login_php.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/manutrack.php" afterPath="$PROJECT_DIR$/code/v0/manutrack.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/model/mysqlConnection.php" afterPath="$PROJECT_DIR$/code/v0/model/mysqlConnection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/myaccount.php" afterPath="$PROJECT_DIR$/code/v0/myaccount.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/newest.css" afterPath="$PROJECT_DIR$/code/v0/newest.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/sidemenu_reviewer.php" afterPath="$PROJECT_DIR$/code/v0/sidemenu_reviewer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/updateuser.php" afterPath="$PROJECT_DIR$/code/v0/updateuser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/submit_manuscript.php" afterPath="$PROJECT_DIR$/code/v0/submit_manuscript.php" />
     </list>
     <ignored path="jtable.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,202 +66,135 @@
       <file leaf-file-name="manutrack.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/v0/manutrack.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8846154">
-              <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="595" column="26" selection-start-line="595" selection-start-column="26" selection-end-line="595" selection-end-column="26" />
               <folding>
-                <marker date="1460065252153" expanded="true" signature="1093:1159" placeholder="SELECT pass tbl_people" />
-                <marker date="1460065252153" expanded="true" signature="1893:2128" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="1900:2088" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="2095:2128" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="2511:2553" placeholder="SELECT uname... tbl_people" />
-                <marker date="1460065252153" expanded="true" signature="2729:2767" placeholder="SELECT * FRO... tbl_people" />
-                <marker date="1460065252153" expanded="true" signature="2811:2849" placeholder="SELECT * FRO... tbl_people" />
-                <marker date="1460065252153" expanded="true" signature="2811:2855" placeholder="SELECT * FRO... tbl_people" />
-                <marker date="1460065252153" expanded="true" signature="3590:3687" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460065252153" expanded="true" signature="3975:4024" placeholder="SELECT fname... tbl_people" />
-                <marker date="1460065252153" expanded="true" signature="4173:4220" placeholder="SELECT stat_... tbl_status" />
-                <marker date="1460065252153" expanded="true" signature="4345:4670" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="4741:4864" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460065252153" expanded="true" signature="5036:5415" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="5892:6044" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460065252153" expanded="true" signature="6504:6509" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="6516:6919" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="7205:7380" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460065252153" expanded="true" signature="7553:8002" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="8266:8400" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460065252153" expanded="true" signature="8573:9022" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="9278:9391" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460065252153" expanded="true" signature="9564:10013" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="10269:10410" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460065252153" expanded="true" signature="10583:11032" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="11285:11340" placeholder="SELECT per_i... tbl_manuscript" />
-                <marker date="1460065252153" expanded="true" signature="11511:11582" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460065252153" expanded="true" signature="11775:11880" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460065252153" expanded="true" signature="12092:12100" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="12107:12591" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="13024:13115" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460065252153" expanded="true" signature="13287:13736" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="14044:14163" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460065252153" expanded="true" signature="14335:14784" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="15172:15252" placeholder="SELECT doc_s... tbl_doc" />
-                <marker date="1460065252153" expanded="true" signature="16171:16251" placeholder="SELECT doc_s... tbl_doc" />
-                <marker date="1460065252153" expanded="true" signature="17124:17262" placeholder="SELECT per_i... tbl_review" />
-                <marker date="1460065252153" expanded="true" signature="17452:17723" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="17462:17723" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="18089:18227" placeholder="SELECT per_i... tbl_review" />
-                <marker date="1460065252153" expanded="true" signature="19240:19298" placeholder="SELECT rec_i... tbl_rec" />
-                <marker date="1460065252153" expanded="true" signature="20046:20090" placeholder="SELECT edreq... tbl_editreq" />
-                <marker date="1460065252153" expanded="true" signature="21251:21293" placeholder="SELECT rec_t... tbl_rec" />
-                <marker date="1460065252153" expanded="true" signature="21645:21695" placeholder="SELECT edreq... tbl_editreq" />
-                <marker date="1460065252153" expanded="true" signature="22050:22097" placeholder="SELECT stat_... tbl_status" />
-                <marker date="1460065252153" expanded="true" signature="22589:22636" placeholder="SELECT stat_... tbl_status" />
-                <marker date="1460065252153" expanded="true" signature="23063:23112" placeholder="SELECT fname... tbl_people" />
-                <marker date="1460065252153" expanded="true" signature="23474:23533" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460065252153" expanded="true" signature="23949:24200" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="24013:24200" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="24395:24438" placeholder="SELECT man_i... tbl_review" />
-                <marker date="1460065252153" expanded="true" signature="25001:25044" placeholder="SELECT man_i... tbl_review" />
-                <marker date="1460065252153" expanded="true" signature="25485:25555" placeholder="SELECT man_i... tbl_review" />
-                <marker date="1460065252153" expanded="true" signature="25992:26118" placeholder="SELECT man_i... tbl_manuscript" />
-                <marker date="1460065252153" expanded="true" signature="26672:27033" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="26679:27033" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="27446:27551" placeholder="SELECT man_i... tbl_manuscript" />
-                <marker date="1460065252153" expanded="true" signature="28283:28645" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="28291:28645" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="28868:28998" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460065252153" expanded="true" signature="29313:29942" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="29323:29942" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="30044:30182" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460065252153" expanded="true" signature="30523:31152" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="30533:31152" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="31415:31556" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460065252153" expanded="true" signature="31763:31904" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460065252153" expanded="true" signature="32378:33012" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="32389:33012" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="33135:33286" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460065252153" expanded="true" signature="33872:34506" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="33883:34506" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="34608:34738" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460065252153" expanded="true" signature="35053:35682" placeholder="..." />
-                <marker date="1460065252153" expanded="true" signature="35063:35682" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="1093:1159" placeholder="SELECT pass tbl_people" />
+                <marker date="1460421611700" expanded="true" signature="1893:2128" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="1900:2088" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="2095:2128" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="2511:2553" placeholder="SELECT uname... tbl_people" />
+                <marker date="1460421611700" expanded="true" signature="2729:2767" placeholder="SELECT * FRO... tbl_people" />
+                <marker date="1460421611700" expanded="true" signature="2811:2849" placeholder="SELECT * FRO... tbl_people" />
+                <marker date="1460421611700" expanded="true" signature="2811:2855" placeholder="SELECT * FRO... tbl_people" />
+                <marker date="1460421611700" expanded="true" signature="3590:3687" placeholder="SELECT title... tbl_manuscript" />
+                <marker date="1460421611700" expanded="true" signature="3975:4024" placeholder="SELECT fname... tbl_people" />
+                <marker date="1460421611700" expanded="true" signature="4173:4220" placeholder="SELECT stat_... tbl_status" />
+                <marker date="1460421611700" expanded="true" signature="4345:4670" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="4741:4864" placeholder="SELECT title... tbl_manuscript" />
+                <marker date="1460421611700" expanded="true" signature="5036:5415" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="5892:6044" placeholder="SELECT title... tbl_manuscript" />
+                <marker date="1460421611700" expanded="true" signature="6504:6509" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="6516:6919" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="7205:7380" placeholder="SELECT title... tbl_manuscript" />
+                <marker date="1460421611700" expanded="true" signature="7553:8002" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="8266:8400" placeholder="SELECT title... tbl_manuscript" />
+                <marker date="1460421611700" expanded="true" signature="8573:9022" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="9278:9391" placeholder="SELECT title... tbl_manuscript" />
+                <marker date="1460421611700" expanded="true" signature="9564:10013" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="10269:10410" placeholder="SELECT title... tbl_manuscript" />
+                <marker date="1460421611700" expanded="true" signature="10583:11032" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="11285:11340" placeholder="SELECT per_i... tbl_manuscript" />
+                <marker date="1460421611700" expanded="true" signature="11511:11582" placeholder="SELECT per_i... tbl_people" />
+                <marker date="1460421611700" expanded="true" signature="11775:11880" placeholder="SELECT title... tbl_manuscript" />
+                <marker date="1460421611700" expanded="true" signature="12092:12100" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="12107:12591" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="13024:13115" placeholder="SELECT title... tbl_manuscript" />
+                <marker date="1460421611700" expanded="true" signature="13287:13736" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="14044:14163" placeholder="SELECT title... tbl_manuscript" />
+                <marker date="1460421611700" expanded="true" signature="14335:14784" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="15172:15252" placeholder="SELECT doc_s... tbl_doc" />
+                <marker date="1460421611700" expanded="true" signature="16171:16251" placeholder="SELECT doc_s... tbl_doc" />
+                <marker date="1460421611700" expanded="true" signature="17124:17262" placeholder="SELECT per_i... tbl_review" />
+                <marker date="1460421611700" expanded="true" signature="17452:17723" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="17462:17723" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="18089:18227" placeholder="SELECT per_i... tbl_review" />
+                <marker date="1460421611700" expanded="true" signature="19240:19298" placeholder="SELECT rec_i... tbl_rec" />
+                <marker date="1460421611700" expanded="true" signature="20046:20090" placeholder="SELECT edreq... tbl_editreq" />
+                <marker date="1460421611700" expanded="true" signature="21117:21159" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="21286:21328" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="21573:21615" placeholder="SELECT rec_t... tbl_rec" />
+                <marker date="1460421611700" expanded="true" signature="21967:22017" placeholder="SELECT edreq... tbl_editreq" />
+                <marker date="1460421611700" expanded="true" signature="22372:22419" placeholder="SELECT stat_... tbl_status" />
+                <marker date="1460421611700" expanded="true" signature="22911:22958" placeholder="SELECT stat_... tbl_status" />
+                <marker date="1460421611700" expanded="true" signature="23385:23434" placeholder="SELECT fname... tbl_people" />
+                <marker date="1460421611700" expanded="true" signature="23796:23855" placeholder="SELECT per_i... tbl_people" />
+                <marker date="1460421611700" expanded="true" signature="24271:24522" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="24335:24522" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="24717:24760" placeholder="SELECT man_i... tbl_review" />
+                <marker date="1460421611700" expanded="true" signature="25323:25366" placeholder="SELECT man_i... tbl_review" />
+                <marker date="1460421611700" expanded="true" signature="25807:25877" placeholder="SELECT man_i... tbl_review" />
+                <marker date="1460421611700" expanded="true" signature="26314:26440" placeholder="SELECT man_i... tbl_manuscript" />
+                <marker date="1460421611700" expanded="true" signature="26994:27355" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="27001:27355" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="27768:27873" placeholder="SELECT man_i... tbl_manuscript" />
+                <marker date="1460421611700" expanded="false" signature="28600:28626" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="28627:29011" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="28637:29011" placeholder="..." />
+                <marker date="1460421611700" expanded="false" signature="28656:28667" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="29243:29373" placeholder="SELECT per_i... tbl_people" />
+                <marker date="1460421611700" expanded="true" signature="29688:30317" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="29698:30317" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="30419:30557" placeholder="SELECT per_i... tbl_people" />
+                <marker date="1460421611700" expanded="true" signature="30898:31527" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="30908:31527" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="31790:31931" placeholder="SELECT per_i... tbl_people" />
+                <marker date="1460421611700" expanded="true" signature="32138:32279" placeholder="SELECT per_i... tbl_people" />
+                <marker date="1460421611700" expanded="true" signature="32753:33387" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="32764:33387" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="33510:33661" placeholder="SELECT per_i... tbl_people" />
+                <marker date="1460421611700" expanded="true" signature="34247:34881" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="34258:34881" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="34983:35113" placeholder="SELECT per_i... tbl_people" />
+                <marker date="1460421611700" expanded="true" signature="35428:36057" placeholder="..." />
+                <marker date="1460421611700" expanded="true" signature="35438:36057" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="updateuser.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/v0/updateuser.php">
+      <file leaf-file-name="manuscript.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/v0/js/manuscript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.846153">
-              <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
               <folding>
-                <marker date="1460065603870" expanded="true" signature="170:392" placeholder="..." />
-                <marker date="1460065603870" expanded="true" signature="177:317" placeholder="..." />
-                <marker date="1460065603870" expanded="true" signature="325:392" placeholder="..." />
-                <marker date="1460065603870" expanded="true" signature="345:392" placeholder="..." />
-                <marker date="1460065603870" expanded="true" signature="1153:1296" placeholder="UPDATE tbl_p... " />
-                <marker date="1460065603870" expanded="true" signature="1313:1470" placeholder="UPDATE tbl_p... " />
-                <marker date="1460065603870" expanded="true" signature="1313:1476" placeholder="UPDATE tbl_p... " />
-                <marker date="1460065603870" expanded="true" signature="1582:1696" placeholder="..." />
-                <marker date="1460065603870" expanded="true" signature="1770:1882" placeholder="..." />
+                <marker date="1460492529984" expanded="true" signature="1025:1227" placeholder="//..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myaccount.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/v0/myaccount.php">
+      <file leaf-file-name="submitManuscript.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/v0/submitManuscript.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.346153">
-              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.41632652">
+              <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
               <folding>
-                <marker date="1460066683778" expanded="true" signature="2341:2356" placeholder="..." />
+                <marker date="1460492509831" expanded="true" signature="2661:2849" placeholder="insert into tbl_manuscript... " />
+                <marker date="1460492509831" expanded="true" signature="3095:3283" placeholder="insert into tbl_doc... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mysqlConnection.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/code/v0/model/mysqlConnection.php">
+      <file leaf-file-name="saveManuscript.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/v0/saveManuscript.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1388889">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getReview.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/v0/getReview.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3076923">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="41" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="43" />
               <folding>
-                <marker date="1460053480987" expanded="true" signature="615:1092" placeholder="SELECT DISTI... tbl_review" />
-                <marker date="1460053480987" expanded="true" signature="1730:2227" placeholder="SELECT DISTI... tbl_review" />
-                <marker date="1460053480987" expanded="true" signature="2712:3210" placeholder="SELECT DISTI... tbl_review" />
+                <marker date="1460053481683" expanded="true" signature="5150:5315" placeholder="insert into manuscript... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newMyReview.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/v0/newMyReview.php">
+      <file leaf-file-name="newMyAuthor.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/v0/newMyAuthor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923">
-              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidemenu_reviewer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/v0/sidemenu_reviewer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-              <folding>
-                <marker date="1460065006143" expanded="true" signature="67:437" placeholder="..." />
-                <marker date="1460065006143" expanded="false" signature="185:204" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login_php.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/v0/login_php.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846">
-              <caret line="14" column="19" selection-start-line="10" selection-start-column="0" selection-end-line="14" selection-end-column="19" />
-              <folding>
-                <marker date="1460059584419" expanded="true" signature="613:683" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460059584419" expanded="true" signature="1265:1325" placeholder="..." />
-                <marker date="1460059584419" expanded="true" signature="1400:1453" placeholder="..." />
-                <marker date="1460059584419" expanded="true" signature="1517:1565" placeholder="..." />
-                <marker date="1460059584419" expanded="true" signature="1637:1693" placeholder="..." />
-                <marker date="1460059584419" expanded="true" signature="1763:1812" placeholder="..." />
-                <marker date="1460059584419" expanded="true" signature="1867:1918" placeholder="..." />
-                <marker date="1460059584419" expanded="true" signature="2011:2043" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reviewerListView.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/v0/reviewerListView.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.0">
-              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/v0/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-39.576923">
-              <caret line="172" column="4" selection-start-line="172" selection-start-column="4" selection-end-line="172" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="63" column="83" selection-start-line="63" selection-start-column="83" selection-end-line="63" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -283,11 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/code/v0/mymanuscripts.php" />
-        <option value="$PROJECT_DIR$/code/v0/manuscripts.php" />
-        <option value="$PROJECT_DIR$/code/v0/model/getManuscript.php" />
-        <option value="$PROJECT_DIR$/code/v0/manuscriptListView.html" />
-        <option value="$PROJECT_DIR$/code/v0/sidemenu_editor.php" />
         <option value="$PROJECT_DIR$/code/v0/sidemenu_author.php" />
         <option value="$PROJECT_DIR$/code/v0/test.php" />
         <option value="$PROJECT_DIR$/code/v0/newManuscripts.php" />
@@ -320,20 +250,25 @@
         <option value="$PROJECT_DIR$/code/v0/updateAuthor.php" />
         <option value="$PROJECT_DIR$/code/v0/updateReviewer.php" />
         <option value="$PROJECT_DIR$/code/v0/login.php" />
-        <option value="$PROJECT_DIR$/code/v0/header.php" />
         <option value="$PROJECT_DIR$/code/v0/newMyAdministrator.php" />
         <option value="$PROJECT_DIR$/code/v0/style.css" />
-        <option value="$PROJECT_DIR$/code/v0/manuscriptListView.php" />
         <option value="$PROJECT_DIR$/code/v0/changepass.php" />
-        <option value="$PROJECT_DIR$/code/v0/login_php.php" />
         <option value="$PROJECT_DIR$/code/v0/reviewerListView.php" />
         <option value="$PROJECT_DIR$/code/v0/newMyReview.php" />
         <option value="$PROJECT_DIR$/code/v0/newest.css" />
         <option value="$PROJECT_DIR$/code/v0/sidemenu_reviewer.php" />
-        <option value="$PROJECT_DIR$/code/v0/manutrack.php" />
         <option value="$PROJECT_DIR$/code/v0/updateuser.php" />
         <option value="$PROJECT_DIR$/code/v0/myaccount.php" />
         <option value="$PROJECT_DIR$/code/v0/model/mysqlConnection.php" />
+        <option value="$PROJECT_DIR$/code/v0/header.php" />
+        <option value="$PROJECT_DIR$/code/v0/manutrack.php" />
+        <option value="$PROJECT_DIR$/code/v0/manuscriptListView.php" />
+        <option value="$PROJECT_DIR$/code/v0/submit_manuscript.php" />
+        <option value="$PROJECT_DIR$/code/v0/login_php.php" />
+        <option value="$PROJECT_DIR$/code/v0/addManuscript.php" />
+        <option value="$PROJECT_DIR$/code/v0/newMyAuthor.php" />
+        <option value="$PROJECT_DIR$/code/v0/js/manuscript.js" />
+        <option value="$PROJECT_DIR$/code/v0/submitManuscript.php" />
       </list>
     </option>
   </component>
@@ -409,47 +344,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newest-press" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="code" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="v0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newest-press" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="v0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -475,34 +374,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newest-press" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="v0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="C:/xampp/php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -527,19 +404,19 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\workspace\newest-press\code\v0" />
-      <recent name="C:\workspace\newest-press\code\v0\js" />
-      <recent name="C:\workspace\newest-press\Database" />
-      <recent name="C:\workspace\newest\code\v0" />
-      <recent name="C:\workspace\newest\code\v0\model" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\workspace\newest-press\code\v0" />
       <recent name="C:\workspace\newest\code\v0" />
       <recent name="C:\workspace\newest\Samples\resources\jeasyui" />
       <recent name="C:\workspace\newest\Samples\public_html" />
       <recent name="C:\workspace\newest\Database" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\newest-press\code\v0" />
+      <recent name="C:\workspace\newest-press\code\v0\js" />
+      <recent name="C:\workspace\newest-press\Database" />
+      <recent name="C:\workspace\newest\code\v0" />
+      <recent name="C:\workspace\newest\code\v0\model" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -611,7 +488,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Web Application.manutrack.php">
+  <component name="RunManager" selected="PHP Web Application.submitManuscript">
     <configuration default="false" name="login.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" uri="http://localhost:63342/newest/code/v0/login.php">
       <method />
     </configuration>
@@ -670,7 +547,10 @@
     <configuration default="false" name="getEditorSummary" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Apache" start_url="http://localhost:63342/newest/code/v0/getEditorSummary.php">
       <method />
     </configuration>
-    <configuration default="false" name="manutrack.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Apache" start_url="http://localhost:63342/newest/code/v0/manutrack.php">
+    <configuration default="false" name="submitManuscript.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Apache" start_url="http://localhost:63342/newest/code/v0/submitManuscript.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="submitManuscript" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Apache" start_url="http://localhost:63342/newest/code/v0/submitManuscript.php">
       <method />
     </configuration>
     <configuration default="false" name="updateReviewer" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Apache" start_url="http://localhost:63342/newest-press/code/v0/updateReviewer.php">
@@ -712,29 +592,30 @@
     <configuration default="false" name="associatedReview" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Apache" start_url="http://localhost:63342/jtable/Samples/public_html/getReview.php">
       <method />
     </configuration>
-    <list size="22">
+    <list size="23">
       <item index="0" class="java.lang.String" itemvalue="PHP Web Application.assignNewReviewer" />
       <item index="1" class="java.lang.String" itemvalue="PHP Web Application.unassigned" />
       <item index="2" class="java.lang.String" itemvalue="PHP Web Application.getEditorSummary" />
-      <item index="3" class="java.lang.String" itemvalue="PHP Web Application.manutrack.php" />
-      <item index="4" class="java.lang.String" itemvalue="PHP Web Application.updateReviewer" />
-      <item index="5" class="java.lang.String" itemvalue="PHP Web Application.login_php.php" />
-      <item index="6" class="java.lang.String" itemvalue="PHP Web Application.getManuscript" />
-      <item index="7" class="java.lang.String" itemvalue="PHP Web Application.getReviewer" />
-      <item index="8" class="java.lang.String" itemvalue="PHP Web Application.getReviewerSummary" />
-      <item index="9" class="java.lang.String" itemvalue="PHP Web Application.deleteManuscript" />
-      <item index="10" class="java.lang.String" itemvalue="PHP Web Application.getUsers" />
-      <item index="11" class="java.lang.String" itemvalue="PHP Web Application.download" />
-      <item index="12" class="java.lang.String" itemvalue="PHP Web Application.getReview" />
-      <item index="13" class="java.lang.String" itemvalue="PHP Web Application.newManuscript" />
-      <item index="14" class="java.lang.String" itemvalue="PHP Web Application.saveManuscript" />
-      <item index="15" class="java.lang.String" itemvalue="PHP Web Application.getCategory" />
-      <item index="16" class="java.lang.String" itemvalue="PHP Web Application.associatedReview" />
-      <item index="17" class="java.lang.String" itemvalue="JavaScript Debug.login.php" />
-      <item index="18" class="java.lang.String" itemvalue="JavaScript Debug.manuscriptListView.php" />
-      <item index="19" class="java.lang.String" itemvalue="JavaScript Debug.test.php" />
-      <item index="20" class="java.lang.String" itemvalue="JavaScript Debug.updateReviewer.php" />
-      <item index="21" class="java.lang.String" itemvalue="PHP Script.test.php" />
+      <item index="3" class="java.lang.String" itemvalue="PHP Web Application.submitManuscript.php" />
+      <item index="4" class="java.lang.String" itemvalue="PHP Web Application.submitManuscript" />
+      <item index="5" class="java.lang.String" itemvalue="PHP Web Application.updateReviewer" />
+      <item index="6" class="java.lang.String" itemvalue="PHP Web Application.login_php.php" />
+      <item index="7" class="java.lang.String" itemvalue="PHP Web Application.getManuscript" />
+      <item index="8" class="java.lang.String" itemvalue="PHP Web Application.getReviewer" />
+      <item index="9" class="java.lang.String" itemvalue="PHP Web Application.getReviewerSummary" />
+      <item index="10" class="java.lang.String" itemvalue="PHP Web Application.deleteManuscript" />
+      <item index="11" class="java.lang.String" itemvalue="PHP Web Application.getUsers" />
+      <item index="12" class="java.lang.String" itemvalue="PHP Web Application.download" />
+      <item index="13" class="java.lang.String" itemvalue="PHP Web Application.getReview" />
+      <item index="14" class="java.lang.String" itemvalue="PHP Web Application.newManuscript" />
+      <item index="15" class="java.lang.String" itemvalue="PHP Web Application.saveManuscript" />
+      <item index="16" class="java.lang.String" itemvalue="PHP Web Application.getCategory" />
+      <item index="17" class="java.lang.String" itemvalue="PHP Web Application.associatedReview" />
+      <item index="18" class="java.lang.String" itemvalue="JavaScript Debug.login.php" />
+      <item index="19" class="java.lang.String" itemvalue="JavaScript Debug.manuscriptListView.php" />
+      <item index="20" class="java.lang.String" itemvalue="JavaScript Debug.test.php" />
+      <item index="21" class="java.lang.String" itemvalue="JavaScript Debug.updateReviewer.php" />
+      <item index="22" class="java.lang.String" itemvalue="PHP Script.test.php" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -854,7 +735,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460060857035</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fixed my account page template">
+      <created>1460066781467</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1460066781467</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -864,27 +751,27 @@
     <frame x="0" y="0" width="1280" height="1410" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17786886" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18606557" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20109546" sideWeight="0.50491804" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1532787" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27308294" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3688" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38897398" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32924962" sideWeight="0.49676377" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32707354" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32707354" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20109546" sideWeight="0.49508196" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20093824" sideWeight="0.49508196" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -942,7 +829,8 @@
     <MESSAGE value="fixed problem with sidebar on my review page" />
     <MESSAGE value="changed main width back to 100% and sidebar height to 100% as well" />
     <MESSAGE value="set main height to 100% as well" />
-    <option name="LAST_COMMIT_MESSAGE" value="set main height to 100% as well" />
+    <MESSAGE value="fixed my account page template" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed my account page template" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1027,7 +915,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="90" />
+      <option name="time" value="96" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="updateReviewer.php">
@@ -1053,66 +941,13 @@
         <watch expression="$res-&gt;fetch_all()" language="PHP" />
         <watch expression="$res" language="PHP" />
         <watch expression="mysqli_fetch_row($res)" language="PHP" />
+        <watch expression="$_POST['uploadedFile']" language="PHP" />
+        <watch expression="$res = Cannot evaluate expression" />
+        <watch expression="$_FILES['uploadedFile']['error']" language="PHP" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8539a6bd-e914-4ecb-93b4-8c54f23f2c65/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/addmanu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/js/manuscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="65" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/updateManuscript.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615">
-          <caret line="22" column="1" selection-start-line="12" selection-start-column="0" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/js/review.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/js/reviewer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.137931">
-          <caret line="112" column="62" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/js/notification.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/submit_manuscript.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="16.73077">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/v0/sidemenu_editor.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.5384617">
@@ -1152,31 +987,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/manuscripts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5483871">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/v0/reviewer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/addNotification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/assignNewReviewer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1203,13 +1017,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/v0/getAuthorSummary.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/getCategorySummary.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8846154">
           <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
@@ -1280,34 +1087,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615">
-          <caret line="22" column="15" selection-start-line="15" selection-start-column="19" selection-end-line="22" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/session.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34285715">
           <caret line="175" column="9" selection-start-line="175" selection-start-column="9" selection-end-line="175" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/manuscriptListView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/newMyAdministrator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1315,7 +1098,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1323,15 +1105,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1339,155 +1112,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.153846">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/v0/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-39.576923">
-          <caret line="172" column="4" selection-start-line="172" selection-start-column="4" selection-end-line="172" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/reviewerListView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/newMyReview.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="178" column="4" selection-start-line="178" selection-start-column="4" selection-end-line="178" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/v0/sidemenu_reviewer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding>
-            <marker date="1460065006143" expanded="true" signature="67:437" placeholder="..." />
-            <marker date="1460065006143" expanded="false" signature="185:204" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/manutrack.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding>
-            <marker date="1460065252153" expanded="true" signature="1093:1159" placeholder="SELECT pass tbl_people" />
-            <marker date="1460065252153" expanded="true" signature="1893:2128" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="1900:2088" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="2095:2128" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="2511:2553" placeholder="SELECT uname... tbl_people" />
-            <marker date="1460065252153" expanded="true" signature="2729:2767" placeholder="SELECT * FRO... tbl_people" />
-            <marker date="1460065252153" expanded="true" signature="2811:2849" placeholder="SELECT * FRO... tbl_people" />
-            <marker date="1460065252153" expanded="true" signature="2811:2855" placeholder="SELECT * FRO... tbl_people" />
-            <marker date="1460065252153" expanded="true" signature="3590:3687" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460065252153" expanded="true" signature="3975:4024" placeholder="SELECT fname... tbl_people" />
-            <marker date="1460065252153" expanded="true" signature="4173:4220" placeholder="SELECT stat_... tbl_status" />
-            <marker date="1460065252153" expanded="true" signature="4345:4670" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="4741:4864" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460065252153" expanded="true" signature="5036:5415" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="5892:6044" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460065252153" expanded="true" signature="6504:6509" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="6516:6919" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="7205:7380" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460065252153" expanded="true" signature="7553:8002" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="8266:8400" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460065252153" expanded="true" signature="8573:9022" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="9278:9391" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460065252153" expanded="true" signature="9564:10013" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="10269:10410" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460065252153" expanded="true" signature="10583:11032" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="11285:11340" placeholder="SELECT per_i... tbl_manuscript" />
-            <marker date="1460065252153" expanded="true" signature="11511:11582" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460065252153" expanded="true" signature="11775:11880" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460065252153" expanded="true" signature="12092:12100" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="12107:12591" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="13024:13115" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460065252153" expanded="true" signature="13287:13736" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="14044:14163" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460065252153" expanded="true" signature="14335:14784" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="15172:15252" placeholder="SELECT doc_s... tbl_doc" />
-            <marker date="1460065252153" expanded="true" signature="16171:16251" placeholder="SELECT doc_s... tbl_doc" />
-            <marker date="1460065252153" expanded="true" signature="17124:17262" placeholder="SELECT per_i... tbl_review" />
-            <marker date="1460065252153" expanded="true" signature="17452:17723" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="17462:17723" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="18089:18227" placeholder="SELECT per_i... tbl_review" />
-            <marker date="1460065252153" expanded="true" signature="19240:19298" placeholder="SELECT rec_i... tbl_rec" />
-            <marker date="1460065252153" expanded="true" signature="20046:20090" placeholder="SELECT edreq... tbl_editreq" />
-            <marker date="1460065252153" expanded="true" signature="21251:21293" placeholder="SELECT rec_t... tbl_rec" />
-            <marker date="1460065252153" expanded="true" signature="21645:21695" placeholder="SELECT edreq... tbl_editreq" />
-            <marker date="1460065252153" expanded="true" signature="22050:22097" placeholder="SELECT stat_... tbl_status" />
-            <marker date="1460065252153" expanded="true" signature="22589:22636" placeholder="SELECT stat_... tbl_status" />
-            <marker date="1460065252153" expanded="true" signature="23063:23112" placeholder="SELECT fname... tbl_people" />
-            <marker date="1460065252153" expanded="true" signature="23474:23533" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460065252153" expanded="true" signature="23949:24200" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="24013:24200" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="24395:24438" placeholder="SELECT man_i... tbl_review" />
-            <marker date="1460065252153" expanded="true" signature="25001:25044" placeholder="SELECT man_i... tbl_review" />
-            <marker date="1460065252153" expanded="true" signature="25485:25555" placeholder="SELECT man_i... tbl_review" />
-            <marker date="1460065252153" expanded="true" signature="25992:26118" placeholder="SELECT man_i... tbl_manuscript" />
-            <marker date="1460065252153" expanded="true" signature="26672:27033" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="26679:27033" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="27446:27551" placeholder="SELECT man_i... tbl_manuscript" />
-            <marker date="1460065252153" expanded="true" signature="28283:28645" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="28291:28645" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="28868:28998" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460065252153" expanded="true" signature="29313:29942" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="29323:29942" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="30044:30182" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460065252153" expanded="true" signature="30523:31152" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="30533:31152" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="31415:31556" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460065252153" expanded="true" signature="31763:31904" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460065252153" expanded="true" signature="32378:33012" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="32389:33012" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="33135:33286" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460065252153" expanded="true" signature="33872:34506" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="33883:34506" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="34608:34738" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460065252153" expanded="true" signature="35053:35682" placeholder="..." />
-            <marker date="1460065252153" expanded="true" signature="35063:35682" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/login_php.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="14" column="19" selection-start-line="10" selection-start-column="0" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <marker date="1460059584419" expanded="true" signature="613:683" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460059584419" expanded="true" signature="1265:1325" placeholder="..." />
-            <marker date="1460059584419" expanded="true" signature="1400:1453" placeholder="..." />
-            <marker date="1460059584419" expanded="true" signature="1517:1565" placeholder="..." />
-            <marker date="1460059584419" expanded="true" signature="1637:1693" placeholder="..." />
-            <marker date="1460059584419" expanded="true" signature="1763:1812" placeholder="..." />
-            <marker date="1460059584419" expanded="true" signature="1867:1918" placeholder="..." />
-            <marker date="1460059584419" expanded="true" signature="2011:2043" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/v0/getReview.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923">
+        <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <marker date="1460053480987" expanded="true" signature="615:1092" placeholder="SELECT DISTI... tbl_review" />
-            <marker date="1460053480987" expanded="true" signature="1730:2227" placeholder="SELECT DISTI... tbl_review" />
-            <marker date="1460053480987" expanded="true" signature="2712:3210" placeholder="SELECT DISTI... tbl_review" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/myaccount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/model/mysqlConnection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153">
+          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1495,35 +1161,231 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-24.846153">
           <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.42307693">
+          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/reviewmanuscript.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.615385">
+          <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/login_php.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.538462">
+          <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/reviewerListView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="63" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/newMyReview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25442177">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/newMyAdministrator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5782313">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/submit_manuscript.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.692308">
+          <caret line="99" column="10" selection-start-line="76" selection-start-column="2" selection-end-line="99" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/manutrack.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="595" column="26" selection-start-line="595" selection-start-column="26" selection-end-line="595" selection-end-column="26" />
           <folding>
-            <marker date="1460065603870" expanded="true" signature="170:392" placeholder="..." />
-            <marker date="1460065603870" expanded="true" signature="177:317" placeholder="..." />
-            <marker date="1460065603870" expanded="true" signature="325:392" placeholder="..." />
-            <marker date="1460065603870" expanded="true" signature="345:392" placeholder="..." />
-            <marker date="1460065603870" expanded="true" signature="1153:1296" placeholder="UPDATE tbl_p... " />
-            <marker date="1460065603870" expanded="true" signature="1313:1470" placeholder="UPDATE tbl_p... " />
-            <marker date="1460065603870" expanded="true" signature="1313:1476" placeholder="UPDATE tbl_p... " />
-            <marker date="1460065603870" expanded="true" signature="1582:1696" placeholder="..." />
-            <marker date="1460065603870" expanded="true" signature="1770:1882" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="1093:1159" placeholder="SELECT pass tbl_people" />
+            <marker date="1460421611700" expanded="true" signature="1893:2128" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="1900:2088" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="2095:2128" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="2511:2553" placeholder="SELECT uname... tbl_people" />
+            <marker date="1460421611700" expanded="true" signature="2729:2767" placeholder="SELECT * FRO... tbl_people" />
+            <marker date="1460421611700" expanded="true" signature="2811:2849" placeholder="SELECT * FRO... tbl_people" />
+            <marker date="1460421611700" expanded="true" signature="2811:2855" placeholder="SELECT * FRO... tbl_people" />
+            <marker date="1460421611700" expanded="true" signature="3590:3687" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460421611700" expanded="true" signature="3975:4024" placeholder="SELECT fname... tbl_people" />
+            <marker date="1460421611700" expanded="true" signature="4173:4220" placeholder="SELECT stat_... tbl_status" />
+            <marker date="1460421611700" expanded="true" signature="4345:4670" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="4741:4864" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460421611700" expanded="true" signature="5036:5415" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="5892:6044" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460421611700" expanded="true" signature="6504:6509" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="6516:6919" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="7205:7380" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460421611700" expanded="true" signature="7553:8002" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="8266:8400" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460421611700" expanded="true" signature="8573:9022" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="9278:9391" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460421611700" expanded="true" signature="9564:10013" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="10269:10410" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460421611700" expanded="true" signature="10583:11032" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="11285:11340" placeholder="SELECT per_i... tbl_manuscript" />
+            <marker date="1460421611700" expanded="true" signature="11511:11582" placeholder="SELECT per_i... tbl_people" />
+            <marker date="1460421611700" expanded="true" signature="11775:11880" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460421611700" expanded="true" signature="12092:12100" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="12107:12591" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="13024:13115" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460421611700" expanded="true" signature="13287:13736" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="14044:14163" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460421611700" expanded="true" signature="14335:14784" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="15172:15252" placeholder="SELECT doc_s... tbl_doc" />
+            <marker date="1460421611700" expanded="true" signature="16171:16251" placeholder="SELECT doc_s... tbl_doc" />
+            <marker date="1460421611700" expanded="true" signature="17124:17262" placeholder="SELECT per_i... tbl_review" />
+            <marker date="1460421611700" expanded="true" signature="17452:17723" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="17462:17723" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="18089:18227" placeholder="SELECT per_i... tbl_review" />
+            <marker date="1460421611700" expanded="true" signature="19240:19298" placeholder="SELECT rec_i... tbl_rec" />
+            <marker date="1460421611700" expanded="true" signature="20046:20090" placeholder="SELECT edreq... tbl_editreq" />
+            <marker date="1460421611700" expanded="true" signature="21117:21159" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="21286:21328" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="21573:21615" placeholder="SELECT rec_t... tbl_rec" />
+            <marker date="1460421611700" expanded="true" signature="21967:22017" placeholder="SELECT edreq... tbl_editreq" />
+            <marker date="1460421611700" expanded="true" signature="22372:22419" placeholder="SELECT stat_... tbl_status" />
+            <marker date="1460421611700" expanded="true" signature="22911:22958" placeholder="SELECT stat_... tbl_status" />
+            <marker date="1460421611700" expanded="true" signature="23385:23434" placeholder="SELECT fname... tbl_people" />
+            <marker date="1460421611700" expanded="true" signature="23796:23855" placeholder="SELECT per_i... tbl_people" />
+            <marker date="1460421611700" expanded="true" signature="24271:24522" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="24335:24522" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="24717:24760" placeholder="SELECT man_i... tbl_review" />
+            <marker date="1460421611700" expanded="true" signature="25323:25366" placeholder="SELECT man_i... tbl_review" />
+            <marker date="1460421611700" expanded="true" signature="25807:25877" placeholder="SELECT man_i... tbl_review" />
+            <marker date="1460421611700" expanded="true" signature="26314:26440" placeholder="SELECT man_i... tbl_manuscript" />
+            <marker date="1460421611700" expanded="true" signature="26994:27355" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="27001:27355" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="27768:27873" placeholder="SELECT man_i... tbl_manuscript" />
+            <marker date="1460421611700" expanded="false" signature="28600:28626" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="28627:29011" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="28637:29011" placeholder="..." />
+            <marker date="1460421611700" expanded="false" signature="28656:28667" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="29243:29373" placeholder="SELECT per_i... tbl_people" />
+            <marker date="1460421611700" expanded="true" signature="29688:30317" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="29698:30317" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="30419:30557" placeholder="SELECT per_i... tbl_people" />
+            <marker date="1460421611700" expanded="true" signature="30898:31527" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="30908:31527" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="31790:31931" placeholder="SELECT per_i... tbl_people" />
+            <marker date="1460421611700" expanded="true" signature="32138:32279" placeholder="SELECT per_i... tbl_people" />
+            <marker date="1460421611700" expanded="true" signature="32753:33387" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="32764:33387" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="33510:33661" placeholder="SELECT per_i... tbl_people" />
+            <marker date="1460421611700" expanded="true" signature="34247:34881" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="34258:34881" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="34983:35113" placeholder="SELECT per_i... tbl_people" />
+            <marker date="1460421611700" expanded="true" signature="35428:36057" placeholder="..." />
+            <marker date="1460421611700" expanded="true" signature="35438:36057" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/myaccount.php">
+    <entry file="file://$PROJECT_DIR$/code/v0/getCategorySummary.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/manuscripts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5483871">
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/manuscriptListView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.615385">
+          <caret line="138" column="26" selection-start-line="134" selection-start-column="20" selection-end-line="138" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/assignNewReviewer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5272953">
+          <caret line="25" column="160" selection-start-line="25" selection-start-column="160" selection-end-line="25" selection-end-column="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/author.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/addNotification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="17" column="1" selection-start-line="15" selection-start-column="0" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/addreviewer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/saveManuscript.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="41" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="43" />
           <folding>
-            <marker date="1460066683778" expanded="true" signature="2341:2356" placeholder="..." />
+            <marker date="1460053481683" expanded="true" signature="5150:5315" placeholder="insert into manuscript... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/model/mysqlConnection.php">
+    <entry file="file://$PROJECT_DIR$/code/v0/newMyAuthor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1388889">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="83" selection-start-line="63" selection-start-column="83" selection-end-line="63" selection-end-column="83" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/js/manuscript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <marker date="1460492529984" expanded="true" signature="1025:1227" placeholder="//..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/submitManuscript.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41632652">
+          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+          <folding>
+            <marker date="1460492509831" expanded="true" signature="2661:2849" placeholder="insert into tbl_manuscript... " />
+            <marker date="1460492509831" expanded="true" signature="3095:3283" placeholder="insert into tbl_doc... " />
+          </folding>
         </state>
       </provider>
     </entry>

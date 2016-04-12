@@ -15,6 +15,28 @@ function editManuscript() {
         url = 'updateManuscript.php?id=' + row.id;
     }
 }
+function addManuscript() {
+    $('#submitManuscriptFm').form('submit', {
+        url: 'submitManuscript.php',
+        onSubmit: function () {
+            //return $(this).form('validate');
+        },
+        success: function (result) {
+            var result = eval('(' + result + ')');
+            if (result.errorMsg) {
+                $.messager.show({
+                    title: 'Error',
+                    msg: result.errorMsg
+                });
+            } else {
+                alert('Submission was Successfull');
+                $('#submit-manuscript-dlg').dialog('close');		// close the dialog
+                //$('#manuscriptTable').datagrid('reload');	// reload the user data
+            }
+        }
+    });
+}
+
 function saveManuscript() {
     $('#manuscriptFm').form('submit', {
         url: url,
@@ -53,6 +75,12 @@ function deleteManuscript() {
             }
         });
     }
+}
+function displayManuscriptDialog() {
+    $('#submit-manuscript-dlg').dialog('open').dialog('setTitle', 'New Submission');
+    console.log(1);
+
+
 }
 //
 //$("#manuscriptTable").datagrid.(function() {

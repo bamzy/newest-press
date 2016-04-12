@@ -594,7 +594,7 @@ function getreviewedit($revid)
         printf('<tr><td><input id="reviewSubmitButton" type="submit" value="Submit Review" ></td><td></td></tr>');
         printf('</table>');
         printf('</form>');
-        printf('<span  style="margin-left:170px;color:red;font-size:12px">*NOTE: Every time you submit your review, system will automatically send an email to administrators.</span><br><span  style="margin-left:170px;color:red;font-size:12px">Please review your submission before submit it.</span><br><br>');
+        printf('<span  style="margin-left:170px;color:red;font-size:12px">*NOTE: Every time you submit your review, system will automatically send an email to administrators.</span><br><span  style="margin-left:170px;color:red;font-size:12px">Please carefully check your submission before submitting it.</span><br><br>');
     }
 
 

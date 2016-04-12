@@ -13,10 +13,10 @@
 			<!--<a href="#">Sign in</a>&nbsp;&nbsp;|&nbsp;
 			<a href="#">Contact</a>
 			-->
-			<!--			--><?php //
-							session_start();
-		  					$userName = $_SESSION['user'];
-							if($_SESSION['user']){
+						<?php
+							if(isset($_SESSION['user'])) {
+//								session_start();
+		  						$userName = $_SESSION['user'];
 								echo "Hi, {$userName}!" .'&nbsp;&nbsp;&nbsp;'.'<a href="logout.php">Logout</a>';
 							}
 			
