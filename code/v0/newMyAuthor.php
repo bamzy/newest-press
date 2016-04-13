@@ -47,7 +47,7 @@ include 'header.php';
             <div class="fitem">
                 <label>Category:</label>
                 <input id="category" name="category" class="easyui-combobox" name="category" required="true"
-                       data-options="valueField:'id',textField:'categoryName',url:'getCategorySummary.php',panelHeight:'auto',">
+                       data-options="valueField:'categoryName',textField:'categoryName',url:'getCategorySummary.php',panelHeight:'auto',">
             </div>
 
 

@@ -6,8 +6,8 @@ class mysqlConnection
 
     private static function initiateConnection()
     {
-//        self::$conn = new mysqli('localhost', 'root', 'salam', 'newest');
-        self::$conn = new mysqli('localhost', 'newest', 'OZqXiGU&]D', 'newest');
+        self::$conn = new mysqli('localhost', 'root', 'salam', 'newest');
+//        self::$conn = new mysqli('localhost', 'newest', 'OZqXiGU&]D', 'newest');
 
         if (self::$conn->connect_errno > 0) {
             die('Unable to connect to database [' . self::$conn->connect_error . ']');
