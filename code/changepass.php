@@ -38,9 +38,9 @@ return true;
 
 </head>
 
-<body> 
-   
-		<?php include 'header.php'?>
+<body>
+
+<?php include 'header.php' ?>
 		<div id="main" class="main"><p>
 		<div id="sidebar"><?php $file=menuselect($_SESSION['role_id']); 
 		include $file;

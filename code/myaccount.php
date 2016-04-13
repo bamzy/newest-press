@@ -121,5 +121,5 @@ return true;
 			
 	</p>
 </div>
-<?php include 'footer.php'?>	
+<?php include 'footer.php' ?>
 

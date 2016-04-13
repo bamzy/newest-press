@@ -10,7 +10,7 @@
 ignore_user_abort(true);
 set_time_limit(0); // disable the time limit for this script
 
-$path = "c:/workspace/newest-press/code/v0/upload/"; // change the path to fit your websites document structure
+$path = "c:/workspace/newest-press/upload/"; // change the path to fit your websites document structure
 
 //$dl_file = preg_replace("([^\w\s\d\-_~,;:\[\]\(\).]|[\.]{2,})", '', $_GET['fileName']); // simple file name validation
 $dl_file = $_GET['fileName'];

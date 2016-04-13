@@ -111,7 +111,7 @@ return true;
 </head>
 
 <body>
-<?php include 'header.php'?>
+<?php include 'header.php' ?>
   <div id="main" class="main">
 
 		<div id="sidebar"> <?php include 'sidemenu.php' ?> </div>
@@ -159,4 +159,4 @@ return true;
 			</form>
 
 	</div>
-	<?php include 'footer.php'?>
+<?php include 'footer.php' ?>

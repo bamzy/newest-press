@@ -104,4 +104,4 @@ printf ('<p>You are logged in as <span class="username">'.$_SESSION['user'].'</s
 </div>
 		
     </div>
-<?php include'footer.php'?>
+<?php include 'footer.php' ?>
