@@ -23,10 +23,11 @@ $file = menuselect($_SESSION['role_id']);
 include $file;
 printf('</div>');
 printf('<p>');
-printf('<p><span class="pagetitle">My Manuscripts</span></p>');
-printf('<p>Please review our <a href="http://www.newestpress.com/submissions" target="_blank">submission guidelines</a> before submitting a manuscript, then click "New Submission" in the side menu.</p>');
+printf('<p style="margin-left:222px;"><span class="pagetitle">My Manuscripts</span></p>');
+printf('<p style="margin-left:222px;">Please review our <a href="http://www.newestpress.com/submissions" target="_blank">submission guidelines</a> before submitting a manuscript, then click "New Submission" in the side menu.</p>');
 connect();
 $per_id=$_SESSION['per_id'];
+
 getmanper($per_id);
 
 //Print_r ($_SESSION);

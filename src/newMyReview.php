@@ -4,7 +4,7 @@ include_once('manutrack.php');
 sess();
 connect();
 ?>
-
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
 <div class="main" id="main">
 <div id="sidebar">
     <?php include "sidemenu_reviewer.php"; ?>

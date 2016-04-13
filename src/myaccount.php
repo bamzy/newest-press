@@ -2,7 +2,7 @@
 include 'manutrack.php';
 sess2();
 ?>
-
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
 <link rel="stylesheet" href="newest.css" type="text/css">
 
 <script type="text/javascript">

@@ -182,3 +182,6 @@ div#reviewerProfileContent {
 form, table{
 	font-size:12px;
 }
+a:visited{
+	color:blue;
+}

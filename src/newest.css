@@ -197,4 +197,7 @@ February 2012
     padding-top: 7px;
     margin: 4px;
 }
+a:visited{
+	color:blue;
+}
 
