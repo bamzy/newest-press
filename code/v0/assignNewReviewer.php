@@ -18,8 +18,8 @@ if (!$res = mysqlConnection::getConnection()->query($query)) {
     die('There was an error running the query [' . $query->error . ']');
 }
 if ($res->num_rows != 0) {
-    echo('Already Exist');
-//    die('Already Exist');
+    echo json_encode(array('errorMsg' => 'Already assigned'));
+    die();
 }
 
 
