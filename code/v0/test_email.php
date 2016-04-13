@@ -1,7 +1,7 @@
 
 	<?php
 
-require("PHPMailer/class.phpmailer.php"); //下载的文件必须放在该文件所在目录
+require("phpMailer/class.phpmailer.php"); //下载的文件必须放在该文件所在目录
 $mail = new PHPMailer(); //建立邮件发送类
 //$address = $_POST['address'];
 $address = array();
@@ -27,7 +27,7 @@ $mail->AddAddress("$address[3]", "");
 //$mail->AddReplyTo("", "");
 //$mail->AddAttachment("/var/tmp/file.tar.gz"); // 添加附件
 //$mail->IsHTML(true); // set email format to HTML //是否使用HTML格式
-$mail->Subject = "PHPMailer-test email server"; //邮件标题
+$mail->Subject = "phpMailer-test email server"; //邮件标题
 $mail->Body = "Hello, I am Wei. this is a test email. I created a gmail for our project: newest.huco530@gmail.com Password is: huco530huco "; //邮件内容
 $mail->AltBody = "This is the body in plain text for non-HTML mail clients"; //附加信息，可以省略
 

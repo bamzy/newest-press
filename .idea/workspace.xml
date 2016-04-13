@@ -1,16 +1,267 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee094df4-b9bf-444c-b84f-6ce4b41ecfc6" name="Default" comment="fixed my account page template">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/newMyAuthor.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/code/v0/addmanu.php" afterPath="$PROJECT_DIR$/code/v0/submitManuscript.php" />
+    <list default="true" id="ee094df4-b9bf-444c-b84f-6ce4b41ecfc6" name="Default" comment="fixed ordering of manuscript and saving new manuscript">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/images/phpmailer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/images/phpmailer_mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/wrapping.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/.scrutinizer.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/PHPMailerAutoload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/VERSION" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/changelog.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/class.phpmailer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/class.phpmaileroauth.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/class.phpmaileroauthgoogle.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/class.pop3.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/class.smtp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/composer.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/docs/Callback_function_notes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/docs/DomainKeys_notes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/docs/Note_for_SMTP_debugging.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/docs/extending.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/docs/faq.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/docs/generatedocs.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/docs/pop3_article.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/code_generator.phps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/contents.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/contentsutf8.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/exceptions.phps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/gmail.phps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/gmail_xoauth.phps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/mail.phps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/mailing_list.phps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/pop_before_smtp.phps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/scripts/XRegExp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/scripts/shAutoloader.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/scripts/shBrushPhp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/scripts/shCore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/scripts/shLegacy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/send_file_upload.phps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/send_multiple_file_upload.phps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/sendmail.phps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/signed-mail.phps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/smtp.phps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/smtp_check.phps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/smtp_no_auth.phps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/ssl_options.phps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shCore.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shCoreDefault.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shCoreDjango.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shCoreEclipse.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shCoreEmacs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shCoreFadeToGrey.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shCoreMDUltra.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shCoreMidnight.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shCoreRDark.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shThemeAppleScript.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shThemeDefault.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shThemeDjango.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shThemeEclipse.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shThemeEmacs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shThemeFadeToGrey.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shThemeMDUltra.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shThemeMidnight.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shThemeRDark.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/examples/styles/shThemeVisualStudio.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/extras/EasyPeasyICS.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/extras/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/extras/htmlfilter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/extras/ntlm_sasl_client.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/get_oauth_token.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-am.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-ar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-az.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-be.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-bg.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-br.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-ca.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-ch.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-cz.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-dk.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-el.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-eo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-et.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-fa.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-fi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-fo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-gl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-he.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-hr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-hu.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-id.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-ja.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-ka.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-ko.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-lt.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-lv.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-ms.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-nl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-no.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-pt.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-ro.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-se.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-si.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-sk.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-sl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-sr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-tr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-uk.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-vi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-zh.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/language/phpmailer.lang-zh_cn.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/test/bootstrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/test/fakepopserver.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/test/fakesendmail.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/test/phpmailerLangTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/test/phpmailerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/test/runfakepopserver.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/test/test_callback.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/test/testbootstrap-dist.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/v0/resources/phpMailer/travis.phpunit.xml.dist" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/.scrutinizer.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/PHPMailerAutoload.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/VERSION" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/changelog.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/class.phpmailer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/class.phpmaileroauth.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/class.phpmaileroauthgoogle.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/class.pop3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/class.smtp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/composer.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/docs/Callback_function_notes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/docs/DomainKeys_notes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/docs/Note_for_SMTP_debugging.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/docs/extending.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/docs/faq.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/docs/generatedocs.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/docs/pop3_article.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/code_generator.phps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/contents.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/contentsutf8.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/exceptions.phps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/gmail.phps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/gmail_xoauth.phps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/images/phpmailer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/images/phpmailer_mini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/mail.phps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/mailing_list.phps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/pop_before_smtp.phps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/scripts/XRegExp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/scripts/shAutoloader.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/scripts/shBrushPhp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/scripts/shCore.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/scripts/shLegacy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/send_file_upload.phps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/send_multiple_file_upload.phps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/sendmail.phps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/signed-mail.phps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/smtp.phps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/smtp_check.phps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/smtp_no_auth.phps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/ssl_options.phps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shCore.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shCoreDefault.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shCoreDjango.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shCoreEclipse.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shCoreEmacs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shCoreFadeToGrey.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shCoreMDUltra.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shCoreMidnight.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shCoreRDark.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shThemeAppleScript.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shThemeDefault.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shThemeDjango.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shThemeEclipse.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shThemeEmacs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shThemeFadeToGrey.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shThemeMDUltra.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shThemeMidnight.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shThemeRDark.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/shThemeVisualStudio.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/examples/styles/wrapping.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/extras/EasyPeasyICS.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/extras/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/extras/htmlfilter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/extras/ntlm_sasl_client.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/get_oauth_token.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-am.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-ar.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-az.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-be.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-bg.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-br.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-ca.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-ch.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-cz.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-de.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-dk.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-el.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-eo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-es.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-et.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-fa.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-fi.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-fo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-fr.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-gl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-he.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-hr.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-hu.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-id.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-it.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-ja.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-ka.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-ko.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-lt.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-lv.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-ms.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-nl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-no.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-pl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-pt.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-ru.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-se.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-si.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-sk.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-sl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-sr.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-tr.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-uk.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-vi.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-zh.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/language/phpmailer.lang-zh_cn.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/test/bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/test/fakepopserver.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/test/fakesendmail.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/test/phpmailerLangTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/test/phpmailerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/test/runfakepopserver.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/test/test_callback.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/test/testbootstrap-dist.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/code/v0/PHPMailer/travis.phpunit.xml.dist" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/header.php" afterPath="$PROJECT_DIR$/code/v0/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/js/manuscript.js" afterPath="$PROJECT_DIR$/code/v0/js/manuscript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/login_php.php" afterPath="$PROJECT_DIR$/code/v0/login_php.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/manutrack.php" afterPath="$PROJECT_DIR$/code/v0/manutrack.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/editreview.php" afterPath="$PROJECT_DIR$/code/v0/editreview.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/model/mysqlConnection.php" afterPath="$PROJECT_DIR$/code/v0/model/mysqlConnection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/submit_manuscript.php" afterPath="$PROJECT_DIR$/code/v0/submit_manuscript.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/v0/test_email.php" afterPath="$PROJECT_DIR$/code/v0/test_email.php" />
     </list>
     <ignored path="jtable.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,139 +314,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="manutrack.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/v0/manutrack.php">
+      <file leaf-file-name="editreview.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/v0/editreview.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="595" column="26" selection-start-line="595" selection-start-column="26" selection-end-line="595" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.4032653">
+              <caret line="71" column="32" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
               <folding>
-                <marker date="1460421611700" expanded="true" signature="1093:1159" placeholder="SELECT pass tbl_people" />
-                <marker date="1460421611700" expanded="true" signature="1893:2128" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="1900:2088" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="2095:2128" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="2511:2553" placeholder="SELECT uname... tbl_people" />
-                <marker date="1460421611700" expanded="true" signature="2729:2767" placeholder="SELECT * FRO... tbl_people" />
-                <marker date="1460421611700" expanded="true" signature="2811:2849" placeholder="SELECT * FRO... tbl_people" />
-                <marker date="1460421611700" expanded="true" signature="2811:2855" placeholder="SELECT * FRO... tbl_people" />
-                <marker date="1460421611700" expanded="true" signature="3590:3687" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460421611700" expanded="true" signature="3975:4024" placeholder="SELECT fname... tbl_people" />
-                <marker date="1460421611700" expanded="true" signature="4173:4220" placeholder="SELECT stat_... tbl_status" />
-                <marker date="1460421611700" expanded="true" signature="4345:4670" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="4741:4864" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460421611700" expanded="true" signature="5036:5415" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="5892:6044" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460421611700" expanded="true" signature="6504:6509" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="6516:6919" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="7205:7380" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460421611700" expanded="true" signature="7553:8002" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="8266:8400" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460421611700" expanded="true" signature="8573:9022" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="9278:9391" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460421611700" expanded="true" signature="9564:10013" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="10269:10410" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460421611700" expanded="true" signature="10583:11032" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="11285:11340" placeholder="SELECT per_i... tbl_manuscript" />
-                <marker date="1460421611700" expanded="true" signature="11511:11582" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460421611700" expanded="true" signature="11775:11880" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460421611700" expanded="true" signature="12092:12100" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="12107:12591" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="13024:13115" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460421611700" expanded="true" signature="13287:13736" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="14044:14163" placeholder="SELECT title... tbl_manuscript" />
-                <marker date="1460421611700" expanded="true" signature="14335:14784" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="15172:15252" placeholder="SELECT doc_s... tbl_doc" />
-                <marker date="1460421611700" expanded="true" signature="16171:16251" placeholder="SELECT doc_s... tbl_doc" />
-                <marker date="1460421611700" expanded="true" signature="17124:17262" placeholder="SELECT per_i... tbl_review" />
-                <marker date="1460421611700" expanded="true" signature="17452:17723" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="17462:17723" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="18089:18227" placeholder="SELECT per_i... tbl_review" />
-                <marker date="1460421611700" expanded="true" signature="19240:19298" placeholder="SELECT rec_i... tbl_rec" />
-                <marker date="1460421611700" expanded="true" signature="20046:20090" placeholder="SELECT edreq... tbl_editreq" />
-                <marker date="1460421611700" expanded="true" signature="21117:21159" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="21286:21328" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="21573:21615" placeholder="SELECT rec_t... tbl_rec" />
-                <marker date="1460421611700" expanded="true" signature="21967:22017" placeholder="SELECT edreq... tbl_editreq" />
-                <marker date="1460421611700" expanded="true" signature="22372:22419" placeholder="SELECT stat_... tbl_status" />
-                <marker date="1460421611700" expanded="true" signature="22911:22958" placeholder="SELECT stat_... tbl_status" />
-                <marker date="1460421611700" expanded="true" signature="23385:23434" placeholder="SELECT fname... tbl_people" />
-                <marker date="1460421611700" expanded="true" signature="23796:23855" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460421611700" expanded="true" signature="24271:24522" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="24335:24522" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="24717:24760" placeholder="SELECT man_i... tbl_review" />
-                <marker date="1460421611700" expanded="true" signature="25323:25366" placeholder="SELECT man_i... tbl_review" />
-                <marker date="1460421611700" expanded="true" signature="25807:25877" placeholder="SELECT man_i... tbl_review" />
-                <marker date="1460421611700" expanded="true" signature="26314:26440" placeholder="SELECT man_i... tbl_manuscript" />
-                <marker date="1460421611700" expanded="true" signature="26994:27355" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="27001:27355" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="27768:27873" placeholder="SELECT man_i... tbl_manuscript" />
-                <marker date="1460421611700" expanded="false" signature="28600:28626" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="28627:29011" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="28637:29011" placeholder="..." />
-                <marker date="1460421611700" expanded="false" signature="28656:28667" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="29243:29373" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460421611700" expanded="true" signature="29688:30317" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="29698:30317" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="30419:30557" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460421611700" expanded="true" signature="30898:31527" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="30908:31527" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="31790:31931" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460421611700" expanded="true" signature="32138:32279" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460421611700" expanded="true" signature="32753:33387" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="32764:33387" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="33510:33661" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460421611700" expanded="true" signature="34247:34881" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="34258:34881" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="34983:35113" placeholder="SELECT per_i... tbl_people" />
-                <marker date="1460421611700" expanded="true" signature="35428:36057" placeholder="..." />
-                <marker date="1460421611700" expanded="true" signature="35438:36057" placeholder="..." />
+                <marker date="1460513812904" expanded="true" signature="709:730" placeholder="SELECT * FRO... tbl_rec" />
+                <marker date="1460513812904" expanded="true" signature="992:1017" placeholder="SELECT * FRO... tbl_editreq" />
+                <marker date="1460513812904" expanded="true" signature="1409:1523" placeholder="UPDATE tbl_r... " />
+                <marker date="1460513812904" expanded="true" signature="1639:1798" placeholder="..." />
+                <marker date="1460513812904" expanded="true" signature="1817:1851" placeholder="SELECT email... tbl_notification" />
+                <marker date="1460513812904" expanded="true" signature="3122:3236" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manuscript.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/v0/js/manuscript.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-              <folding>
-                <marker date="1460492529984" expanded="true" signature="1025:1227" placeholder="//..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="submitManuscript.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/code/v0/submitManuscript.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41632652">
-              <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
-              <folding>
-                <marker date="1460492509831" expanded="true" signature="2661:2849" placeholder="insert into tbl_manuscript... " />
-                <marker date="1460492509831" expanded="true" signature="3095:3283" placeholder="insert into tbl_doc... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="saveManuscript.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/v0/saveManuscript.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="41" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="43" />
-              <folding>
-                <marker date="1460053481683" expanded="true" signature="5150:5315" placeholder="insert into manuscript... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newMyAuthor.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/v0/newMyAuthor.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="63" column="83" selection-start-line="63" selection-start-column="83" selection-end-line="63" selection-end-column="83" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -218,9 +349,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/code/v0/sidemenu_author.php" />
-        <option value="$PROJECT_DIR$/code/v0/test.php" />
-        <option value="$PROJECT_DIR$/code/v0/newManuscripts.php" />
         <option value="$PROJECT_DIR$/code/v0/download.php" />
         <option value="$PROJECT_DIR$/code/v0/getCategory.php" />
         <option value="$PROJECT_DIR$/code/v0/saveManuscript.php" />
@@ -240,7 +368,6 @@
         <option value="$PROJECT_DIR$/code/v0/getAuthorSummary.php" />
         <option value="$PROJECT_DIR$/code/v0/getCategorySummary.php" />
         <option value="$PROJECT_DIR$/code/v0/getEditorSummary.php" />
-        <option value="$PROJECT_DIR$/code/v0/getManuscript.php" />
         <option value="$PROJECT_DIR$/code/v0/getMyReview.php" />
         <option value="$PROJECT_DIR$/code/v0/getReview.php" />
         <option value="$PROJECT_DIR$/code/v0/getReviewer.php" />
@@ -256,19 +383,23 @@
         <option value="$PROJECT_DIR$/code/v0/reviewerListView.php" />
         <option value="$PROJECT_DIR$/code/v0/newMyReview.php" />
         <option value="$PROJECT_DIR$/code/v0/newest.css" />
-        <option value="$PROJECT_DIR$/code/v0/sidemenu_reviewer.php" />
         <option value="$PROJECT_DIR$/code/v0/updateuser.php" />
         <option value="$PROJECT_DIR$/code/v0/myaccount.php" />
-        <option value="$PROJECT_DIR$/code/v0/model/mysqlConnection.php" />
         <option value="$PROJECT_DIR$/code/v0/header.php" />
         <option value="$PROJECT_DIR$/code/v0/manutrack.php" />
         <option value="$PROJECT_DIR$/code/v0/manuscriptListView.php" />
         <option value="$PROJECT_DIR$/code/v0/submit_manuscript.php" />
         <option value="$PROJECT_DIR$/code/v0/login_php.php" />
         <option value="$PROJECT_DIR$/code/v0/addManuscript.php" />
-        <option value="$PROJECT_DIR$/code/v0/newMyAuthor.php" />
         <option value="$PROJECT_DIR$/code/v0/js/manuscript.js" />
         <option value="$PROJECT_DIR$/code/v0/submitManuscript.php" />
+        <option value="$PROJECT_DIR$/code/v0/newMyAuthor.php" />
+        <option value="$PROJECT_DIR$/code/v0/getManuscript.php" />
+        <option value="$PROJECT_DIR$/code/v0/sidemenu_editor.php" />
+        <option value="$PROJECT_DIR$/code/v0/sidemenu_reviewer.php" />
+        <option value="$PROJECT_DIR$/code/v0/sidemenu_author.php" />
+        <option value="$PROJECT_DIR$/code/v0/model/mysqlConnection.php" />
+        <option value="$PROJECT_DIR$/code/v0/editreview.php" />
       </list>
     </option>
   </component>
@@ -330,7 +461,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="newest-press" />
+              <option name="myItemId" value="newest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -340,7 +471,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="newest-press" />
+              <option name="myItemId" value="newest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -358,7 +489,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="newest-press" />
+              <option name="myItemId" value="newest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -370,7 +501,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="v0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -404,19 +557,19 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\workspace\newest-press\code\v0" />
-      <recent name="C:\workspace\newest\code\v0" />
-      <recent name="C:\workspace\newest\Samples\resources\jeasyui" />
-      <recent name="C:\workspace\newest\Samples\public_html" />
-      <recent name="C:\workspace\newest\Database" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\workspace\newest-press\code\v0" />
       <recent name="C:\workspace\newest-press\code\v0\js" />
       <recent name="C:\workspace\newest-press\Database" />
       <recent name="C:\workspace\newest\code\v0" />
       <recent name="C:\workspace\newest\code\v0\model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\newest\code\v0\resources" />
+      <recent name="C:\workspace\newest-press\code\v0" />
+      <recent name="C:\workspace\newest\code\v0" />
+      <recent name="C:\workspace\newest\Samples\resources\jeasyui" />
+      <recent name="C:\workspace\newest\Samples\public_html" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -741,7 +894,19 @@
       <option name="project" value="LOCAL" />
       <updated>1460066781467</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fixed ordering of manuscript and saving new manuscript">
+      <created>1460512837632</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1460512837632</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fixed db address plus removing duplicate jquery lib from side menues">
+      <created>1460512983821</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1460512983821</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -751,10 +916,11 @@
     <frame x="0" y="0" width="1280" height="1410" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18606557" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19262294" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20109546" sideWeight="0.50491804" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1532787" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32681784" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3688" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -769,7 +935,6 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32924962" sideWeight="0.49676377" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32707354" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20093824" sideWeight="0.49508196" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -830,7 +995,9 @@
     <MESSAGE value="changed main width back to 100% and sidebar height to 100% as well" />
     <MESSAGE value="set main height to 100% as well" />
     <MESSAGE value="fixed my account page template" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed my account page template" />
+    <MESSAGE value="fixed ordering of manuscript and saving new manuscript" />
+    <MESSAGE value="fixed db address plus removing duplicate jquery lib from side menues" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed db address plus removing duplicate jquery lib from side menues" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -948,95 +1115,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/v0/sidemenu_editor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="10" column="9" selection-start-line="1" selection-start-column="0" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/mymanuscripts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5694789">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/images/Screen Shot 2016-03-09 at 3.49.39 PM.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/images/opt.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/images/newestpress-logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/images/Screen Shot 2016-03-09 at 3.49.39 PM_MarkMan.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/images/wave-bg.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/reviewer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/deleteManuscript.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/deleteNotification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/getAuthor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/getAuthorSummary.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/getEditorSummary.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/getManuscript.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/v0/getMyReview.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.307693">
@@ -1122,13 +1200,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/sidemenu_reviewer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/v0/getReview.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1143,20 +1214,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/model/mysqlConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/v0/updateuser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-24.846153">
@@ -1168,13 +1225,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.42307693">
           <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/reviewmanuscript.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.615385">
-          <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1210,94 +1260,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-25.692308">
           <caret line="99" column="10" selection-start-line="76" selection-start-column="2" selection-end-line="99" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/manutrack.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="595" column="26" selection-start-line="595" selection-start-column="26" selection-end-line="595" selection-end-column="26" />
-          <folding>
-            <marker date="1460421611700" expanded="true" signature="1093:1159" placeholder="SELECT pass tbl_people" />
-            <marker date="1460421611700" expanded="true" signature="1893:2128" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="1900:2088" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="2095:2128" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="2511:2553" placeholder="SELECT uname... tbl_people" />
-            <marker date="1460421611700" expanded="true" signature="2729:2767" placeholder="SELECT * FRO... tbl_people" />
-            <marker date="1460421611700" expanded="true" signature="2811:2849" placeholder="SELECT * FRO... tbl_people" />
-            <marker date="1460421611700" expanded="true" signature="2811:2855" placeholder="SELECT * FRO... tbl_people" />
-            <marker date="1460421611700" expanded="true" signature="3590:3687" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460421611700" expanded="true" signature="3975:4024" placeholder="SELECT fname... tbl_people" />
-            <marker date="1460421611700" expanded="true" signature="4173:4220" placeholder="SELECT stat_... tbl_status" />
-            <marker date="1460421611700" expanded="true" signature="4345:4670" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="4741:4864" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460421611700" expanded="true" signature="5036:5415" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="5892:6044" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460421611700" expanded="true" signature="6504:6509" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="6516:6919" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="7205:7380" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460421611700" expanded="true" signature="7553:8002" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="8266:8400" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460421611700" expanded="true" signature="8573:9022" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="9278:9391" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460421611700" expanded="true" signature="9564:10013" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="10269:10410" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460421611700" expanded="true" signature="10583:11032" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="11285:11340" placeholder="SELECT per_i... tbl_manuscript" />
-            <marker date="1460421611700" expanded="true" signature="11511:11582" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460421611700" expanded="true" signature="11775:11880" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460421611700" expanded="true" signature="12092:12100" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="12107:12591" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="13024:13115" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460421611700" expanded="true" signature="13287:13736" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="14044:14163" placeholder="SELECT title... tbl_manuscript" />
-            <marker date="1460421611700" expanded="true" signature="14335:14784" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="15172:15252" placeholder="SELECT doc_s... tbl_doc" />
-            <marker date="1460421611700" expanded="true" signature="16171:16251" placeholder="SELECT doc_s... tbl_doc" />
-            <marker date="1460421611700" expanded="true" signature="17124:17262" placeholder="SELECT per_i... tbl_review" />
-            <marker date="1460421611700" expanded="true" signature="17452:17723" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="17462:17723" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="18089:18227" placeholder="SELECT per_i... tbl_review" />
-            <marker date="1460421611700" expanded="true" signature="19240:19298" placeholder="SELECT rec_i... tbl_rec" />
-            <marker date="1460421611700" expanded="true" signature="20046:20090" placeholder="SELECT edreq... tbl_editreq" />
-            <marker date="1460421611700" expanded="true" signature="21117:21159" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="21286:21328" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="21573:21615" placeholder="SELECT rec_t... tbl_rec" />
-            <marker date="1460421611700" expanded="true" signature="21967:22017" placeholder="SELECT edreq... tbl_editreq" />
-            <marker date="1460421611700" expanded="true" signature="22372:22419" placeholder="SELECT stat_... tbl_status" />
-            <marker date="1460421611700" expanded="true" signature="22911:22958" placeholder="SELECT stat_... tbl_status" />
-            <marker date="1460421611700" expanded="true" signature="23385:23434" placeholder="SELECT fname... tbl_people" />
-            <marker date="1460421611700" expanded="true" signature="23796:23855" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460421611700" expanded="true" signature="24271:24522" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="24335:24522" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="24717:24760" placeholder="SELECT man_i... tbl_review" />
-            <marker date="1460421611700" expanded="true" signature="25323:25366" placeholder="SELECT man_i... tbl_review" />
-            <marker date="1460421611700" expanded="true" signature="25807:25877" placeholder="SELECT man_i... tbl_review" />
-            <marker date="1460421611700" expanded="true" signature="26314:26440" placeholder="SELECT man_i... tbl_manuscript" />
-            <marker date="1460421611700" expanded="true" signature="26994:27355" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="27001:27355" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="27768:27873" placeholder="SELECT man_i... tbl_manuscript" />
-            <marker date="1460421611700" expanded="false" signature="28600:28626" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="28627:29011" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="28637:29011" placeholder="..." />
-            <marker date="1460421611700" expanded="false" signature="28656:28667" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="29243:29373" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460421611700" expanded="true" signature="29688:30317" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="29698:30317" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="30419:30557" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460421611700" expanded="true" signature="30898:31527" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="30908:31527" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="31790:31931" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460421611700" expanded="true" signature="32138:32279" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460421611700" expanded="true" signature="32753:33387" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="32764:33387" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="33510:33661" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460421611700" expanded="true" signature="34247:34881" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="34258:34881" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="34983:35113" placeholder="SELECT per_i... tbl_people" />
-            <marker date="1460421611700" expanded="true" signature="35428:36057" placeholder="..." />
-            <marker date="1460421611700" expanded="true" signature="35438:36057" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1354,16 +1316,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="41" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="43" />
-          <folding>
-            <marker date="1460053481683" expanded="true" signature="5150:5315" placeholder="insert into manuscript... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/v0/newMyAuthor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="83" selection-start-line="63" selection-start-column="83" selection-end-line="63" selection-end-column="83" />
           <folding />
         </state>
       </provider>
@@ -1372,19 +1324,266 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <marker date="1460492529984" expanded="true" signature="1025:1227" placeholder="//..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/v0/submitManuscript.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41632652">
-          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/newMyAuthor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/getManuscript.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="641" selection-start-line="21" selection-start-column="641" selection-end-line="21" selection-end-column="641" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/sidemenu_editor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/sidemenu_reviewer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/sidemenu_author.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="64" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/model/mysqlConnection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/reviewmanuscript.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-37.0">
+          <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
           <folding>
-            <marker date="1460492509831" expanded="true" signature="2661:2849" placeholder="insert into tbl_manuscript... " />
-            <marker date="1460492509831" expanded="true" signature="3095:3283" placeholder="insert into tbl_doc... " />
+            <marker date="1460512702419" expanded="true" signature="1033:1083" placeholder="..." />
+            <marker date="1460512702419" expanded="true" signature="1164:1190" placeholder="..." />
+            <marker date="1460512702419" expanded="true" signature="1386:1534" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460512702419" expanded="true" signature="1802:2158" placeholder="..." />
+            <marker date="1460512702419" expanded="true" signature="1814:2158" placeholder="..." />
+            <marker date="1460512702419" expanded="true" signature="2562:2623" placeholder="SELECT rev_i... tbl_review" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/manutrack.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="555" column="48" selection-start-line="555" selection-start-column="48" selection-end-line="555" selection-end-column="48" />
+          <folding>
+            <marker date="1460512700980" expanded="true" signature="1093:1159" placeholder="SELECT pass tbl_people" />
+            <marker date="1460512700980" expanded="true" signature="1893:2128" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="1900:2088" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="2095:2128" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="2511:2553" placeholder="SELECT uname... tbl_people" />
+            <marker date="1460512700980" expanded="true" signature="2811:2849" placeholder="SELECT * FRO... tbl_people" />
+            <marker date="1460512700980" expanded="true" signature="3590:3687" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460512700980" expanded="true" signature="3975:4024" placeholder="SELECT fname... tbl_people" />
+            <marker date="1460512700980" expanded="true" signature="4173:4220" placeholder="SELECT stat_... tbl_status" />
+            <marker date="1460512700980" expanded="true" signature="4345:4670" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="4741:4864" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460512700980" expanded="true" signature="5036:5415" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="5892:6044" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460512700980" expanded="true" signature="6504:6509" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="6516:6919" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="7205:7380" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460512700980" expanded="true" signature="7553:8002" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="8266:8400" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460512700980" expanded="true" signature="8573:9022" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="9278:9391" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460512700980" expanded="true" signature="9564:10013" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="10269:10410" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460512700980" expanded="true" signature="10583:11032" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="11285:11340" placeholder="SELECT per_i... tbl_manuscript" />
+            <marker date="1460512700980" expanded="true" signature="11511:11582" placeholder="SELECT per_i... tbl_people" />
+            <marker date="1460512700980" expanded="true" signature="11775:11880" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460512700980" expanded="true" signature="12092:12100" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="12107:12591" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="13024:13115" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460512700980" expanded="true" signature="13287:13736" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="14044:14163" placeholder="SELECT title... tbl_manuscript" />
+            <marker date="1460512700980" expanded="true" signature="14335:14784" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="15172:15252" placeholder="SELECT doc_s... tbl_doc" />
+            <marker date="1460512700980" expanded="true" signature="16171:16251" placeholder="SELECT doc_s... tbl_doc" />
+            <marker date="1460512700980" expanded="true" signature="17124:17262" placeholder="SELECT per_i... tbl_review" />
+            <marker date="1460512700980" expanded="true" signature="17452:17723" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="17462:17723" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="18089:18227" placeholder="SELECT per_i... tbl_review" />
+            <marker date="1460512700980" expanded="true" signature="19240:19298" placeholder="SELECT rec_i... tbl_rec" />
+            <marker date="1460512700980" expanded="true" signature="20046:20090" placeholder="SELECT edreq... tbl_editreq" />
+            <marker date="1460512700980" expanded="true" signature="21117:21159" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="21286:21328" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="21573:21615" placeholder="SELECT rec_t... tbl_rec" />
+            <marker date="1460512700980" expanded="true" signature="21967:22017" placeholder="SELECT edreq... tbl_editreq" />
+            <marker date="1460512700980" expanded="true" signature="22372:22419" placeholder="SELECT stat_... tbl_status" />
+            <marker date="1460512700980" expanded="true" signature="22911:22958" placeholder="SELECT stat_... tbl_status" />
+            <marker date="1460512700980" expanded="true" signature="23385:23434" placeholder="SELECT fname... tbl_people" />
+            <marker date="1460512700980" expanded="true" signature="23796:23855" placeholder="SELECT per_i... tbl_people" />
+            <marker date="1460512700980" expanded="true" signature="24271:24522" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="24335:24522" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="24717:24760" placeholder="SELECT man_i... tbl_review" />
+            <marker date="1460512700980" expanded="true" signature="25323:25366" placeholder="SELECT man_i... tbl_review" />
+            <marker date="1460512700980" expanded="true" signature="25807:25877" placeholder="SELECT man_i... tbl_review" />
+            <marker date="1460512700980" expanded="true" signature="26314:26440" placeholder="SELECT man_i... tbl_manuscript" />
+            <marker date="1460512700980" expanded="true" signature="26994:27355" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="27001:27355" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="27768:27873" placeholder="SELECT man_i... tbl_manuscript" />
+            <marker date="1460512700980" expanded="false" signature="28600:28626" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="28627:29011" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="28637:29011" placeholder="..." />
+            <marker date="1460512700980" expanded="false" signature="28656:28667" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="29243:29373" placeholder="SELECT per_i... tbl_people" />
+            <marker date="1460512700980" expanded="true" signature="29688:30317" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="29698:30317" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="30419:30557" placeholder="SELECT per_i... tbl_people" />
+            <marker date="1460512700980" expanded="true" signature="30898:31527" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="30908:31527" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="31790:31931" placeholder="SELECT per_i... tbl_people" />
+            <marker date="1460512700980" expanded="true" signature="32138:32279" placeholder="SELECT per_i... tbl_people" />
+            <marker date="1460512700980" expanded="true" signature="32753:33387" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="32764:33387" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="33510:33661" placeholder="SELECT per_i... tbl_people" />
+            <marker date="1460512700980" expanded="true" signature="34247:34881" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="34258:34881" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="34983:35113" placeholder="SELECT per_i... tbl_people" />
+            <marker date="1460512700980" expanded="true" signature="35428:36057" placeholder="..." />
+            <marker date="1460512700980" expanded="true" signature="35438:36057" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/resources/phpMailer/docs/extending.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/resources/phpMailer/docs/generatedocs.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/resources/phpMailer/docs/pop3_article.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/resources/phpMailer/docs/DomainKeys_notes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/resources/phpMailer/docs/Callback_function_notes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/resources/phpMailer/docs/Note_for_SMTP_debugging.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/resources/phpMailer/test/fakepopserver.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/resources/phpMailer/test/fakesendmail.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/resources/phpMailer/test/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/resources/phpMailer/docs/faq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/v0/editreview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4032653">
+          <caret line="71" column="32" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+          <folding>
+            <marker date="1460513812904" expanded="true" signature="709:730" placeholder="SELECT * FRO... tbl_rec" />
+            <marker date="1460513812904" expanded="true" signature="992:1017" placeholder="SELECT * FRO... tbl_editreq" />
+            <marker date="1460513812904" expanded="true" signature="1409:1523" placeholder="UPDATE tbl_r... " />
+            <marker date="1460513812904" expanded="true" signature="1639:1798" placeholder="..." />
+            <marker date="1460513812904" expanded="true" signature="1817:1851" placeholder="SELECT email... tbl_notification" />
+            <marker date="1460513812904" expanded="true" signature="3122:3236" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -60,23 +60,10 @@ if (TRUE == mysqlConnection::getConnection()->query($query)) {
     if (!$res = mysqlConnection::getConnection()->query($query)) {
         die('There was an error running the query [' . $query->error . ']');
     }
-    //$subject = 'Newest Review Submission Notification';
-    //$message = 'hello';
-    //$headers = 'From: notifier@newestpress.com' . "\r\n" .
-    //   'Reply-To: webmaster@example.com' . "\r\n" .
-    //    'X-Mailer: PHP/' . phpversion();
-    //while ($row = $res->fetch_assoc()) {
-    //   $address = $row['email'];
-    //    mail($to, $subject, $message, $headers);
-    //}
-    require("PHPMailer/class.phpmailer.php"); //下载的文件必须放在该文件所在目录
+
+
+    require("./resources/phpMailer/class.phpmailer.php"); //下载的文件必须放在该文件所在目录
 	$mail = new PHPMailer(); //建立邮件发送类
-	//$address = $_POST['address'];
-	$address = array();
-	$address[] = 'wwei1@ualberta.ca';
-	$address[] = 'aghilide@ualberta.ca';
-	//$address[] = 'ekaitlyn@ualberta.ca';
-	//$address[] = 'ndilukie@ualberta.ca';
 
 	$mail->IsSMTP(); // 使用SMTP方式发送
 	$mail->CharSet='UTF-8';// 设置邮件的字符编码
@@ -87,13 +74,10 @@ if (TRUE == mysqlConnection::getConnection()->query($query)) {
 	$mail->Username = "newest.huco530@gmail.com"; // 邮局用户名(请填写完整的email地址)
 	$mail->Password = "huco530huco"; // 邮局密码
 	$mail->From = "newest.huco530@gmail.com"; //邮件发送者email地址
-	$mail->FromName = "Newest";
-	$mail->AddAddress("$address[0]", "");//收件人地址，可以替换成任何想要接收邮件的email信箱,格式是AddAddress("收件人email","收件人姓名")
-	$mail->AddAddress("$address[1]", "");
-	//$mail->AddAddress("$address[2]", "");
-	//$mail->AddAddress("$address[3]", "");
-	//$mail->AddReplyTo("", "");
-	//$mail->AddAttachment("/var/tmp/file.tar.gz"); // 添加附件
+    $mail->FromName = "Newest Press Notification";
+    while ($row = $res->fetch_assoc()) {
+        $mail->addAddress($row['email']);
+    }
 	$mail->IsHTML(true); // set email format to HTML //是否使用HTML格式
 	$mail->Subject = "Newest Review Submission Notification"; //邮件标题
 	$mail->Body = "Reviewer: $user<br><br>Recommendation: $body_rec <br><br>Editing requirement: $body_edreq<br><br> Reviewer comments: $comments"; //邮件内容
@@ -104,7 +88,7 @@ if (TRUE == mysqlConnection::getConnection()->query($query)) {
 		echo "Error: " . $mail->ErrorInfo;
 		exit;
 	}
-	echo "successfully\n\n\n";
+//	echo "successfully\n\n\n";
 
 }
      
@@ -112,7 +96,7 @@ else {
      
 	printf('<script type="text/javascript">
 	alert("There was problem with this update. Please try again.");
-	location.replace("myreviews.php");
+	location.replace("newMyReview.php");
 	</script>');
         
 }
