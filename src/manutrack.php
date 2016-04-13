@@ -249,10 +249,10 @@ function getmanper($per_id)
         while ($arr = $res->fetch_assoc()) {
             $author = authname($per_id);
             printf('
-				<p style="margin-left:222px;">
+				<p style="margin-left:190px;background: antiquewhite">
 				<table>
-				<tr><td>Manuscript ref #:</td><td>' . $arr['man_id'] . '</td><td></td></tr>
-				<tr><td>Author:</td><td><a href="viewauthor.php?perid=' . $per_id . '">' . $author . '</a></td><td></td></tr>
+				<tr><b><td>Manuscript ref #:</td><td>' . $arr['man_id'] . '</td></b><td></td></tr>
+				<tr><td>Author:</td><td>' . $author . '</td><td></td></tr>
 				<tr><td>Title:</td><td>' . $arr['title_orig'] . '</td><td></td></tr>
 				<tr><td>Genre:</td><td>' . $arr['genre'] . '</td><td></td></tr>
 				<tr><td>Notes:</td><td>' . $arr['notes'] . '</td><td></td></tr>');

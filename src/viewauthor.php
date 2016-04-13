@@ -31,7 +31,7 @@ if ($_SESSION['role_id'] == 1){
 		printf('<script type="text/javascript">
 			location.replace("author.php");
 			</script>');
-		}
+}
 
 $uid=$_GET['perid'];
 $arruser=getuser($uid);
