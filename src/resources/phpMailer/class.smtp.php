@@ -119,9 +119,9 @@ class SMTP
      * * `error_log` Output to error log as configured in php.ini
      *
      * Alternatively, you can provide a callable expecting two params: a message string and the debug level:
-     * <code>
+     * <src>
      * $smtp->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
-     * </code>
+     * </src>
      * @var string|callable
      */
     public $Debugoutput = 'echo';
@@ -741,7 +741,7 @@ class SMTP
         $lines = explode("\n", $this->last_reply);
 
         foreach ($lines as $n => $s) {
-            //First 4 chars contain response code followed by - or space
+            //First 4 chars contain response src followed by - or space
             $s = trim(substr($s, 4));
             if (empty($s)) {
                 continue;
@@ -842,7 +842,7 @@ class SMTP
     }
 
     /**
-     * Send a command to an SMTP server and check its return code.
+     * Send a command to an SMTP server and check its return src.
      * @param string $command The command name - not sent to the server
      * @param string $commandstring The actual command to send
      * @param integer|array $expect One or more expected integer success codes
@@ -863,12 +863,12 @@ class SMTP
         $this->client_send($commandstring . self::CRLF);
 
         $this->last_reply = $this->get_lines();
-        // Fetch SMTP code and possible error code explanation
+        // Fetch SMTP src and possible error src explanation
         $matches = array();
         if (preg_match("/^([0-9]{3})[ -](?:([0-9]\\.[0-9]\\.[0-9]) )?/", $this->last_reply, $matches)) {
             $code = $matches[1];
             $code_ex = (count($matches) > 2 ? $matches[2] : null);
-            // Cut off error code from each response line
+            // Cut off error src from each response line
             $detail = preg_replace(
                 "/{$code}[ -]" . ($code_ex ? str_replace('.', '\\.', $code_ex) . ' ' : '') . "/m",
                 '',
@@ -1114,8 +1114,8 @@ class SMTP
      * Set error messages and codes.
      * @param string $message The error message
      * @param string $detail Further detail on the error
-     * @param string $smtp_code An associated SMTP error code
-     * @param string $smtp_code_ex Extended SMTP code
+     * @param string $smtp_code An associated SMTP error src
+     * @param string $smtp_code_ex Extended SMTP src
      */
     protected function setError($message, $detail = '', $smtp_code = '', $smtp_code_ex = '')
     {

@@ -58,7 +58,7 @@ class PHPMailerLangTest extends PHPUnit_Framework_TestCase
             $matches = array();
             //Only look at language files, ignore anything else in there
             if (preg_match('/^phpmailer\.lang-([a-z_]{2,})\.php$/', $fileInfo->getFilename(), $matches)) {
-                $lang = $matches[1]; //Extract language code
+                $lang = $matches[1]; //Extract language src
                 $PHPMAILER_LANG = array(); //Language strings get put in here
                 include $fileInfo->getPathname(); //Get language strings
                 $missing = array_diff(array_keys($definedStrings), array_keys($PHPMAILER_LANG));

@@ -54,8 +54,8 @@ var email=document.forms["reg"]["uemail"].value;
    } 
 	
 	if (postal==null || postal=="") 
-   { 
-      alert('Please enter a postall code.') 
+   {
+       alert('Please enter a postall src.')
       document.forms["reg"]["postal"].focus(); 
       return false; 
    } 
@@ -111,7 +111,7 @@ return true;
 					printf('<tr><td>Street:</td><td><input type=text name="street" value="'.$street.'" size="50"></td></tr>');
 					printf('<tr><td>City:</td><td><input type=text name="city" value="'.$city.'" size="50"></td></tr>');
 					printf('<tr><td>Province:</td><td><input type=text name="province" value="'.$province.'" size="50"></td></tr>');
-					printf('<tr><td>Postal code:</td><td><input type=text name="postal" value="'.$postal.'" size="50"></td></tr>');
+        printf('<tr><td>Postal src:</td><td><input type=text name="postal" value="' . $postal . '" size="50"></td></tr>');
 					printf('<tr><td>Email address:</td><td><input type=text name="uemail" value="'.$email.'" size="50"></td></tr>');
 					printf('<tr><td></td><td><input type="submit" value="Submit changes"></td></tr>');
 			printf('</table>');

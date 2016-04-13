@@ -112,7 +112,7 @@ class Google extends AbstractProvider
             $error = $data['error'];
 
             if (is_array($error)) {
-                $code = $error['code'];
+                $code = $error['src'];
                 $error = $error['message'];
             }
 
@@ -138,8 +138,8 @@ $provider = new Google(
     )
 );
 
-if (!isset($_GET['code'])) {
-    // If we don't have an authorization code then get one
+if (!isset($_GET['src'])) {
+    // If we don't have an authorization src then get one
     $authUrl = $provider->getAuthorizationUrl();
     $_SESSION['oauth2state'] = $provider->getState();
     header('Location: ' . $authUrl);
@@ -149,11 +149,11 @@ if (!isset($_GET['code'])) {
     unset($_SESSION['oauth2state']);
     exit('Invalid state');
 } else {
-    // Try to get an access token (using the authorization code grant)
+    // Try to get an access token (using the authorization src grant)
     $token = $provider->getAccessToken(
         'authorization_code',
         array(
-            'code' => $_GET['code']
+            'src' => $_GET['src']
         )
     );
 

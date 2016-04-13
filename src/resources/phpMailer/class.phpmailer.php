@@ -336,9 +336,9 @@ class PHPMailer
      * * `error_log` Output to error log as configured in php.ini
      *
      * Alternatively, you can provide a callable expecting two params: a message string and the debug level:
-     * <code>
+     * <src>
      * $mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
-     * </code>
+     * </src>
      * @var string|callable
      * @see SMTP::$Debugoutput
      */
@@ -1075,7 +1075,7 @@ class PHPMailer
                  * Uses the same RFC5322 regex on which FILTER_VALIDATE_EMAIL is based, but allows dotless domains.
                  * @link http://squiloople.com/2009/12/20/email-address-validation/
                  * @copyright 2009-2010 Michael Rushton
-                 * Feel free to use and redistribute this code. But please keep this copyright notice.
+                 * Feel free to use and redistribute this src. But please keep this copyright notice.
                  */
                 return (boolean)preg_match(
                     '/^(?!(?>(?1)"?(?>\\\[ -~]|[^"])"?(?1)){255,})(?!(?>(?1)"?(?>\\\[ -~]|[^"])"?(?1)){65,}@)' .
@@ -1652,7 +1652,7 @@ class PHPMailer
      * Set the language for error messages.
      * Returns false if it cannot load the language file.
      * The default language is English.
-     * @param string $langcode ISO 639-1 2-character language code (e.g. French is "fr")
+     * @param string $langcode ISO 639-1 2-character language src (e.g. French is "fr")
      * @param string $lang_path Path to the language file directory, with trailing separator (slash)
      * @return boolean
      * @access public
@@ -3147,7 +3147,7 @@ class PHPMailer
                     $msg .= ' Detail: ' . $lasterror['detail'];
                 }
                 if (!empty($lasterror['smtp_code'])) {
-                    $msg .= ' SMTP code: ' . $lasterror['smtp_code'];
+                    $msg .= ' SMTP src: ' . $lasterror['smtp_code'];
                 }
                 if (!empty($lasterror['smtp_code_ex'])) {
                     $msg .= ' Additional SMTP info: ' . $lasterror['smtp_code_ex'];
@@ -3356,7 +3356,7 @@ class PHPMailer
      * Note - older versions of this function used a bundled advanced converter
      * which was been removed for license reasons in #232
      * Example usage:
-     * <code>
+     * <src>
      * // Use default conversion
      * $plain = $mail->html2text($html);
      * // Use your own custom converter
@@ -3364,7 +3364,7 @@ class PHPMailer
      *     $converter = new MyHtml2text($html);
      *     return $converter->get_text();
      * });
-     * </code>
+     * </src>
      * @param string $html The HTML text to convert
      * @param boolean|callable $advanced Any boolean value to use the internal converter,
      *   or provide your own callable for custom conversion.

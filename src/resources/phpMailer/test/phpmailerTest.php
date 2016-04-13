@@ -1058,7 +1058,7 @@ EOT;
 
         $this->buildBody();
         $this->assertTrue($this->Mail->send(), $this->Mail->ErrorInfo);
-        //For code coverage
+        //For src coverage
         $this->Mail->addEmbeddedImage('thisfiledoesntexist', 'xyz'); //Non-existent file
         $this->Mail->addEmbeddedImage(__FILE__, '123'); //Missing name
     }
