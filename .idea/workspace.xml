@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee094df4-b9bf-444c-b84f-6ce4b41ecfc6" name="Default" comment="removed sample directory and renamed Database to db">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migration v1.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/manuscript.js" afterPath="$PROJECT_DIR$/src/js/manuscript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manutrack.php" afterPath="$PROJECT_DIR$/src/manutrack.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignNewReviewer.php" afterPath="$PROJECT_DIR$/src/assignNewReviewer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/mysqlConnection.php" afterPath="$PROJECT_DIR$/src/model/mysqlConnection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reviewerListView.php" afterPath="$PROJECT_DIR$/src/reviewerListView.php" />
     </list>
     <ignored path="jtable.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,6 +73,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="assignNewReviewer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignNewReviewer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-24.846153">
+              <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+              <folding>
+                <marker date="1460668128145" expanded="true" signature="411:468" placeholder="select * fro... tbl_editreq" />
+                <marker date="1460668128145" expanded="true" signature="411:481" placeholder="select * fro... tbl_editreq" />
+                <marker date="1460668128145" expanded="true" signature="679:739" placeholder="select * fro... tbl_rec" />
+                <marker date="1460668128145" expanded="true" signature="932:1018" placeholder="select * fro... tbl_review" />
+                <marker date="1460668128145" expanded="true" signature="1305:1504" placeholder="insert into tbl_review... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="newMyAuthor.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/newMyAuthor.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -154,11 +170,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manutrack.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manutrack.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/manutrack.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6181411">
-              <caret line="715" column="0" selection-start-line="715" selection-start-column="0" selection-end-line="715" selection-end-column="0" />
+            <state vertical-scroll-proportion="23.884615">
+              <caret line="499" column="20" selection-start-line="499" selection-start-column="20" selection-end-line="499" selection-end-column="20" />
               <folding>
                 <marker date="1460666093730" expanded="true" signature="1093:1159" placeholder="SELECT pass tbl_people" />
                 <marker date="1460666093730" expanded="true" signature="1893:2128" placeholder="..." />
@@ -250,6 +266,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="users.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/users.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="migration v1.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migration v1.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6179775">
+              <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="reviewerListView.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reviewerListView.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -278,8 +314,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/code/v0/getCategorySummary.php" />
-        <option value="$PROJECT_DIR$/code/v0/getEditorSummary.php" />
         <option value="$PROJECT_DIR$/code/v0/getMyReview.php" />
         <option value="$PROJECT_DIR$/code/v0/getReview.php" />
         <option value="$PROJECT_DIR$/code/v0/getReviewer.php" />
@@ -329,6 +363,8 @@
         <option value="$PROJECT_DIR$/src/reviewerListView.php" />
         <option value="$PROJECT_DIR$/src/js/manuscript.js" />
         <option value="$PROJECT_DIR$/src/manutrack.php" />
+        <option value="$PROJECT_DIR$/src/assignNewReviewer.php" />
+        <option value="$PROJECT_DIR$/database/migration v1.sql" />
       </list>
     </option>
   </component>
@@ -488,19 +524,19 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\workspace\newest-press\code\v0" />
-      <recent name="C:\workspace\newest-press\code\v0\js" />
-      <recent name="C:\workspace\newest-press\Database" />
-      <recent name="C:\workspace\newest\code\v0" />
-      <recent name="C:\workspace\newest\code\v0\model" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\newest\code" />
       <recent name="C:\xampp\htdocs\newest\code\v0\resources" />
       <recent name="C:\workspace\newest-press\code\v0" />
       <recent name="C:\workspace\newest\code\v0" />
       <recent name="C:\workspace\newest\Samples\resources\jeasyui" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\newest-press\database" />
+      <recent name="C:\workspace\newest-press\code\v0" />
+      <recent name="C:\workspace\newest-press\code\v0\js" />
+      <recent name="C:\workspace\newest-press\Database" />
+      <recent name="C:\workspace\newest\code\v0" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -873,7 +909,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460606673881</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="changed ordering for my reviews and add notifications for submitting new manuscript">
+      <created>1460666144525</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1460666144525</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -943,7 +985,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="implement reloading review table based on the mansucript selected&#10;" />
     <MESSAGE value="clean up directories and change css to match newest press theme" />
     <MESSAGE value="adding all the related files to the project" />
     <MESSAGE value="just to pass the code to Maryse" />
@@ -968,7 +1009,8 @@
     <MESSAGE value="added background to the list of reviews" />
     <MESSAGE value="fixing the remove manuscript functionality" />
     <MESSAGE value="fixed column size for note and added phone numbers and column sorting" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed column size for note and added phone numbers and column sorting" />
+    <MESSAGE value="changed ordering for my reviews and add notifications for submitting new manuscript" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed ordering for my reviews and add notifications for submitting new manuscript" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1086,20 +1128,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/changepass.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/myreviews.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/newest.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.153846">
@@ -1287,14 +1315,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignNewReviewer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1522,8 +1542,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/manutrack.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6181411">
-          <caret line="715" column="0" selection-start-line="715" selection-start-column="0" selection-end-line="715" selection-end-column="0" />
+        <state vertical-scroll-proportion="23.884615">
+          <caret line="499" column="20" selection-start-line="499" selection-start-column="20" selection-end-line="499" selection-end-column="20" />
           <folding>
             <marker date="1460666093730" expanded="true" signature="1093:1159" placeholder="SELECT pass tbl_people" />
             <marker date="1460666093730" expanded="true" signature="1893:2128" placeholder="..." />
@@ -1611,6 +1631,36 @@
             <marker date="1460666093730" expanded="true" signature="35473:36102" placeholder="..." />
             <marker date="1460666093730" expanded="true" signature="35483:36102" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/users.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignNewReviewer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.846153">
+          <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+          <folding>
+            <marker date="1460668128145" expanded="true" signature="411:468" placeholder="select * fro... tbl_editreq" />
+            <marker date="1460668128145" expanded="true" signature="411:481" placeholder="select * fro... tbl_editreq" />
+            <marker date="1460668128145" expanded="true" signature="679:739" placeholder="select * fro... tbl_rec" />
+            <marker date="1460668128145" expanded="true" signature="932:1018" placeholder="select * fro... tbl_review" />
+            <marker date="1460668128145" expanded="true" signature="1305:1504" placeholder="insert into tbl_review... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migration v1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6179775">
+          <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
