@@ -702,7 +702,7 @@ function getmanrevall($perid)
 {
 
 //printf('perid: '.$perid.'');
-    $query = "SELECT man_id FROM tbl_review WHERE per_id={$perid}";
+    $query = "SELECT man_id FROM tbl_review WHERE per_id={$perid} order by date_in DESC";
     if (!$res = mysqlConnection::getConnection()->query($query)) {
         die('There was an error running the query [' . $query->error . ']');
     }
@@ -812,7 +812,7 @@ function getmanfullrevall($manid)
 //printf('manid: '.$manid.'');
 
 //$cloud = mysql_query("SELECT man_id, title_orig, genre, notes, stat_id, per_id, datesubmitted FROM tbl_manuscript WHERE man_id=$manid") or die(mysql_error());
-    $query = "SELECT man_id, title_orig, genre, notes, stat_id, per_id, datesubmitted FROM tbl_manuscript WHERE man_id={$manid}";
+    $query = "SELECT man_id, title_orig, genre, notes, stat_id, per_id, datesubmitted FROM tbl_manuscript WHERE man_id={$manid} ORDER by dateSubmitted ASC";
     if (!$res = mysqlConnection::getConnection()->query($query)) {
         die('There was an error running the query [' . $query->error . ']');
     }
@@ -835,13 +835,13 @@ function getmanfullrevall($manid)
         printf('
 		<div id="review" style="border-top:1px solid #ccc;">
 		<table>
-		<tr><td style="width:105px">Manuscript ref #:</td><td>' . $arr['man_id'] . '&nbsp&nbsp<a href="reviewmanuscript.php?manid=' . $arr['man_id'] . '">My Review</a></td></tr>
+		<tr><td style="width:105px">Manuscript ref:</td><td>#' . $arr['man_id'] . '&nbsp&nbsp<a href="reviewmanuscript.php?manid=' . $arr['man_id'] . '">My Review</a></td></tr>
 		<tr><td>Author:</td><td>' . $author . '</td></tr>
 		<tr><td>Title:</td><td>' . $title . '</td></tr>
 		<tr><td>Genre:</td><td>' . $genre . '</td></tr>
 		<tr><td>Notes:</td><td>' . $notes . '</td></tr>');
         getstatus($arr['stat_id']);
-        printf('<tr><td>Date submitted:&nbsp;&nbsp;</td><td>' . $submitted . '</td></tr>
+        printf('<tr><td>Date submitted:</td><td>' . $submitted . '</td></tr>
         
 		</table></div>'
         );

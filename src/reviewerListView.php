@@ -14,31 +14,13 @@
 <script type="text/javascript" src="js/notification.js"></script>
 <script type="text/javascript" src="js/author.js"></script>
 <section>
-    <!--    <div id="sidebarMainManuscriptContainer">-->
-    <!--
-    <!---->
-    <!--    </div>-->
 
-    <!--    <div id="inlinemenu" >-->
-    <!--        <a href="myreviews.php?search=newreviews">New Reviews</a>-->
-    <!--        <a href="myreviews.php?search=recentreviews">Recent Reviews</a>-->
-    <!--        <a href="myreviews.php?search=allreviews">All Reviews</a>-->
-    <!--    </div>-->
     <div id="reviewerProfileContent">
     <span class="pagetitle">My Review </span>
         <?php
         include_once('manutrack.php');
         $per_id = $_SESSION['per_id'];
-        //    if ($_GET['search']=='recentreviews'){
-        //        getmanrevrecent($per_id);
-        //    ($_GET['search']=='allreviews'){
         getmanrevall($per_id);
-        //    }
-        //    else{
-        //        getmanrevnew($per_id);
-        //    }
-
-
         ?>
     </div>
 

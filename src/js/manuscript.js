@@ -18,6 +18,12 @@ function editManuscript() {
         alert('Please select a manuscript first');
 }
 function addManuscript() {
+    //console.log($('#uploadedFile').filebox('getText') + '|' + $('#title').val() + '|' + $('#category').combobox('getText') + '|')
+
+    if ($('#uploadedFile').filebox('getText') === "" || $('#title').val() === "" || $('#category').combobox('getText') === "") {
+        alert('You have to fill the mandatory fields of the form');
+        return;
+    }
     $('#submitManuscriptFm').form('submit', {
         url: 'submitManuscript.php',
         onSubmit: function () {
@@ -82,7 +88,7 @@ function deleteManuscript() {
 }
 function displayManuscriptDialog() {
     $('#submit-manuscript-dlg').dialog('open').dialog('setTitle', 'New Submission');
-    console.log(1);
+    //console.log(1);
 
 
 }
@@ -90,7 +96,7 @@ function displayManuscriptDialog() {
 //$("#manuscriptTable").datagrid.(function() {
 //    //var selected = $(this).hasClass("highlight");
 //    //$("#data tr").removeClass("highlight");
-//    //if(!selected)
+//    //if(!selected)t
 //});
 //
 //function loadAssociatedReviewers(){
