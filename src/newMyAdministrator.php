@@ -13,10 +13,12 @@
 <script type="text/javascript" src="js/notification.js"></script>
 <script type="text/javascript" src="js/author.js"></script>
 <?php
-include "header.php";
+
 include 'manutrack.php';
 sess();
 connect();
+include "header.php";
+
 ?>
 
 
