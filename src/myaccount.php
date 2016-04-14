@@ -101,6 +101,7 @@ return true;
 		$postal=$arruser['postal'];
 		$email=$arruser['email'];
 		$uid=$arruser['per_id'];
+        $phone = $arruser['phone'];
 
         printf('<form name="reg" action="updateuser.php" onsubmit="return validateForm();" method="post" style="font-size: 12px" >');
 			printf('<table>');
@@ -113,6 +114,7 @@ return true;
 					printf('<tr><td>Province:</td><td><input type=text name="province" value="'.$province.'" size="50"></td></tr>');
         printf('<tr><td>Postal src:</td><td><input type=text name="postal" value="' . $postal . '" size="50"></td></tr>');
 					printf('<tr><td>Email address:</td><td><input type=text name="uemail" value="'.$email.'" size="50"></td></tr>');
+        printf('<tr><td>Email address:</td><td><input type=text name="phone" value="' . $phone . '" size="50"></td></tr>');
 					printf('<tr><td></td><td><input type="submit" value="Submit changes"></td></tr>');
 			printf('</table>');
 		printf('</form>');

@@ -5,15 +5,14 @@
 <div id="mainManuscriptContainer" class="easyui-tabs">
 
     <div title="Manuscript & Reviews" style="padding:15px;">
-        <div id="manuscriptMainContainer" style="padding: 5px">
+        <div id="manuscriptMainContainer" style="padding: 5px" onclick="addRowHandlers()">
             <table id="manuscriptTable" title="Manuscripts" class="easyui-datagrid"
                    style="width: auto;height:400px;"
                    url="getManuscript.php"
-                   onSelect:function(record){ alert(record.text)}
                    toolbar="#manuscriptToolbar" pagination="true"
                    remoteSort="false"
-                   multiSort="true"
                    fitColumns="false"
+                   multiSort="true"
                    rownumbers="true" singleSelect="true">
                 <thead>
                 <tr>
@@ -23,7 +22,7 @@
                     <th field="category" ,width="30" data-options="sortable:true">Category</th>
                     <th field="dateSubmitted" ,width="45" data-options="sortable:true">Submission Date</th>
                     <th field="status" ,width="25" data-options="sortable:true">Status</th>
-                    <th field="notes" ,width="35" data-options="sortable:false">Notes</th>
+                    <!--                    <th field="notes" ,width="300", data-options="sortable:false">Notes</th>-->
                     <th field="dateStatus" ,width="75" data-options="sortable:true">Finalized Date</th>
                     <th field="downloadLink" ,width="45">Download</th>
                 </tr>
@@ -81,22 +80,10 @@
                                data-options="multiline:true" style="width:400px;height: 200px">
                     </div>
 
-                    <!--                        <div class="fitem">-->
-                    <!--                            <label>Upload File:</label>-->
-                    <!--                            <input id='uploadedFile' name="uploadedFile" class="easyui-filebox" style="width:300px;">-->
-                    <!--                        </div>-->
-                    <!--                        <div class="fitem">-->
-                    <!--                            <label>Or</label>-->
-                    <!---->
-                    <!--                        </div>-->
-                    <!--                        <div class="fitem">-->
-                    <!--                            <label>Paste Text:</label>-->
-                    <!--                            <input id='msText' name="msText" class="easyui-textbox" data-options="multiline:true"-->
-                    <!--                                   style="width:530px;height: 300px">-->
-                    <!--                        </div>-->
                 </form>
 
             </div>
+
 
             <div id="addManuscriptDlg" class="easyui-dialog"
                  style="top: 30% ;width:600px;height:400px;padding:10px 20px"
@@ -347,15 +334,15 @@
 
                 <tr>
                     <th field="per_id" width="0" hidden="true">ID</th>
-                    <th field="fname" width="50">First Name</th>
-                    <th field="lname" width="50">Last Name</th>
+                    <th field="fname" width="50" data-options="sortable:true">First Name</th>
+                    <th field="lname" width="50" data-options="sortable:true">Last Name</th>
                     <th field="street" width="50">Street</th>
-                    <th field="postal" width="40">Postal Code</th>
-                    <th field="city" width="50">City</th>
-                    <th field="province" width="50">Province</th>
+                    <th field="postal" width="40" data-options="sortable:true">Postal Code</th>
+                    <th field="city" width="50" data-options="sortable:true">City</th>
+                    <th field="province" width="50" data-options="sortable:true">Province</th>
                     <th field="phone" width="50">Phone</th>
                     <th field="email" width="50">Email</th>
-                    <th field="created" width="50">Registration Date</th>
+                    <th field="created" width="50" data-options="sortable:true">Registration Date</th>
                 </tr>
                 </thead>
             </table>

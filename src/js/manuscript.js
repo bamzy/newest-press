@@ -2,6 +2,7 @@
  * Created by bamdad on 2/12/2016.
  */
 var url;
+
 function newManuscript() {
     $('#addManuscriptDlg').dialog('open').dialog('setTitle', 'New Manuscript');
     $('#addManuscriptDlg').form('clear');
@@ -100,3 +101,15 @@ function displayManuscriptDialog() {
 //        $('#reviewerTable').datagrid('reload');
 //    }
 //}
+
+function addRowHandlers() {
+    var table = document.getElementById("manuscriptTable");
+    table.onclick = function () {
+        return function () {
+
+            console.log(1);
+        };
+    }
+
+}
+//window.onload = addRowHandlers();
