@@ -14,17 +14,6 @@
 							if(isset($_SESSION['user'])) {
 								//session_start();
 		  						$userName = $_SESSION['user'];
-		  						
-		  						$query = "SELECT per_id, role_id FROM tbl_people WHERE uname LIKE  '{$username}'";
-								if (!$res = mysqlConnection::getConnection()->query($query)) {
-									die('There was an error running the query [' . $query->error . ']');
-								}
-								while ($arr = $res->fetch_assoc()) {
-									$uid = $arr['per_id'];
-									$roleid = $arr['role_id'];
-								}
-								$_SESSION['role_id'] = $roleid;
-								echo "{$roleid}";
 								echo "Hi, {$userName}!" .'&nbsp;&nbsp;&nbsp;'.'<a href="logout.php">Logout</a>';
 							}
 			
