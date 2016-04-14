@@ -13,7 +13,9 @@ function editAuthor() {
         $('#authorDlg').dialog('open').dialog('setTitle', 'Edit Author');
         $('#authorFm').form('load', row);
         url = 'updateAuthor.php?id=' + row.id;
-    }
+    } else
+        alert('Please select an author first');
+
 }
 function saveAuthor() {
     $('#authorFm').form('submit', {

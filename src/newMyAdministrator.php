@@ -11,6 +11,7 @@
 <script type="text/javascript" src="js/reviewer.js"></script>
 <script type="text/javascript" src="js/review.js"></script>
 <script type="text/javascript" src="js/notification.js"></script>
+<script type="text/javascript" src="js/author.js"></script>
 <?php
 include "header.php";
 include 'manutrack.php';

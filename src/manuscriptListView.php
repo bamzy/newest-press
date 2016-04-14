@@ -100,7 +100,7 @@
 
             <div id="addManuscriptDlg" class="easyui-dialog"
                  style="top: 30% ;width:600px;height:400px;padding:10px 20px"
-                 closed="true" buttons="#add-manuscript-dlg-buttons">
+                 closed="true" display="none" buttons="#add-manuscript-dlg-buttons">
                 <div class="ftitle">Add Manuscript</div>
                 <!--                    <form id="manuscriptFm" method="post" >-->
                 <form id="editManuscriptFm" method="post" enctype="multipart/form-data">
@@ -149,7 +149,7 @@
 
 
             <div id="edit-manuscript-dlg-buttons">
-                <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok"
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok"
                    onclick="saveManuscript()"
                    style="width:90px">Save</a>
                 <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel"

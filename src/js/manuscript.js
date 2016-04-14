@@ -13,7 +13,8 @@ function editManuscript() {
         $('#editManuscriptDlg').dialog('open').dialog('setTitle', 'Edit Manuscript');
         $('#editManuscriptFm').form('load', row);
         url = 'updateManuscript.php?id=' + row.id;
-    }
+    } else
+        alert('Please select a manuscript first');
 }
 function addManuscript() {
     $('#submitManuscriptFm').form('submit', {
@@ -60,7 +61,7 @@ function saveManuscript() {
 function deleteManuscript() {
     var row = $('#manuscriptTable').datagrid('getSelected');
     if (row) {
-        $.messager.confirm('Confirm', 'Are you sure you want to destroy this manuscript?', function (r) {
+        $.messager.confirm('Confirm', 'Are you sure you want to remove this manuscript?', function (r) {
             if (r) {
                 $.post('deleteManuscript.php', {id: row.id}, function (result) {
                     if (result.success) {
@@ -74,6 +75,8 @@ function deleteManuscript() {
                 }, 'json');
             }
         });
+    } else {
+        alert('Please select a manuscript');
     }
 }
 function displayManuscriptDialog() {

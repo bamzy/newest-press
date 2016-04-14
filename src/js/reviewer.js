@@ -13,7 +13,8 @@ function editReviewer() {
         $('#reviewerDlg').dialog('open').dialog('setTitle', 'Edit Reviewer');
         $('#reviewerFm').form('load', row);
         url = 'updateReviewer.php?id=' + row.id;
-    }
+    } else
+        alert('Please select a reviewer first');
 }
 function saveReviewer() {
     $('#reviewerFm').form('submit', {
@@ -136,8 +137,11 @@ function assignNewReviewer() {
 function loadAssociatedReviewers() {
 
     var row = $('#manuscriptTable').datagrid('getSelected');
-    $('#associateReviewTable').datagrid('reload', {
-        id: row.id,
-    });
+    if (row) {
+        $('#associateReviewTable').datagrid('reload', {
+            id: row.id,
+        });
+    } else
+        alert('Please select a manuscript first');
 
 }
