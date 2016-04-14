@@ -10,13 +10,21 @@
 <div class="header">
 	<div class="top">
 		<div class="top-inner">
-			<!--<a href="#">Sign in</a>&nbsp;&nbsp;|&nbsp;
-			<a href="#">Contact</a>
-			-->
 						<?php
 							if(isset($_SESSION['user'])) {
-//								session_start();
+								//session_start();
 		  						$userName = $_SESSION['user'];
+		  						
+		  						$query = "SELECT per_id, role_id FROM tbl_people WHERE uname LIKE  '{$username}'";
+								if (!$res = mysqlConnection::getConnection()->query($query)) {
+									die('There was an error running the query [' . $query->error . ']');
+								}
+								while ($arr = $res->fetch_assoc()) {
+									$uid = $arr['per_id'];
+									$roleid = $arr['role_id'];
+								}
+								$_SESSION['role_id'] = $roleid;
+								echo "{$roleid}";
 								echo "Hi, {$userName}!" .'&nbsp;&nbsp;&nbsp;'.'<a href="logout.php">Logout</a>';
 							}
 			
@@ -34,7 +42,11 @@
 		</div>
 	</div>
 	<div class="clear"></div>
-	<div class="logo"><a href="http://newestpress.com/"><img src="images/newestpress-logo.png"> </a></div>
+	<div class="logo">
+
+		<a href="login.php">
+	
+	<img src="images/newestpress-logo.png"> </a></div>
 
 </div>
 
@@ -42,3 +54,4 @@
 
 </body>
 </html>
+<!--<a href="http://newestpress.com/">-->

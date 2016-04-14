@@ -1,3 +1,11 @@
+
+<?php
+
+include 'manutrack.php';
+//include "header.php";
+
+sess2();
+?>
 <title>Newest Manuscript Tracking System</title>
 <link rel="stylesheet" type="text/css" href="./resources/jeasyui/themes/default/easyui.css">
 <link rel="stylesheet" type="text/css" href="./resources/jeasyui/themes/icon.css">
@@ -9,13 +17,7 @@
 <script type="text/javascript" src="./resources/jeasyui/jquery.min.js"></script>
 <script type="text/javascript" src="./resources/jeasyui/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="js/edit.js"></script>
-<?php
-
-include 'manutrack.php';
-include "header.php";
-
-sess();
-?>
+<?php include 'header.php'?>
 <div class="main" id="main">
 <?php
 printf('<div id="sidebar" style="width: 150px;height: 700px">');

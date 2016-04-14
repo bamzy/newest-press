@@ -1,8 +1,10 @@
 <?php
-include "header.php";
+
 include_once('manutrack.php');
 sess();
 connect();
+include 'header.php';
+
 ?>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
 <div class="main" id="main">

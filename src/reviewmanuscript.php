@@ -10,11 +10,12 @@
 <script type="text/javascript" src="./resources/jeasyui/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="js/edit.js"></script>
 <?php
-include "header.php";
+//include "header.php";
 include 'manutrack.php';
 include_once('./model/mysqlConnection.php');
 sess();
 connect();
+include "header.php";
 if ($_SESSION['role_id'] == 3) {
     printf('Only editors may view this page.');
     printf('<script type="text/javascript">

@@ -200,4 +200,7 @@ February 2012
 a:visited{
 	color:blue;
 }
+.top a:visited{
+	color: white;
+}
 

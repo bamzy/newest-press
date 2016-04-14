@@ -16,7 +16,7 @@ include 'header.php';
 <script type="text/javascript" src="js/manuscript.js"></script>
 <div id="main" class="main">
     <div id="sidebar"><?php include 'sidemenu_author.php' ?></div>
-    <div style="margin: 30px; font-size: 14px;">
+    <div style="margin-left: 220px; font-size: 14px;">
         <p><b>Once you have submitted a manuscript you MUST also provide a print copy by mail to:</p>
         <a href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="displayManuscriptDialog()">New Manuscript
             Submission</a>
