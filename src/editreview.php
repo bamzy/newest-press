@@ -56,7 +56,7 @@ if (TRUE == mysqlConnection::getConnection()->query($query)) {
 	alert("Your review has been submitted. Thank you. Administrators will recieve an email about your review.");
 	location.replace("newMyReview.php");
 	</script>');
-    $query = "SELECT email from tbl_notification";
+	$query = "SELECT email from tbl_people where notify='Yes'";
     if (!$res = mysqlConnection::getConnection()->query($query)) {
         die('There was an error running the query [' . $query->error . ']');
     }

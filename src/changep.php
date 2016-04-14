@@ -1,5 +1,6 @@
 <?php
 include 'manutrack.php';
+
 sess2();
 connect();
 
@@ -8,7 +9,10 @@ $upass2=md5($_POST['upass1'].$safe);
 $upass="'".$upass2."'";
 $uid=$_POST['uid'];
 
-$success = mysql_query("UPDATE tbl_people SET pass=$upass WHERE per_id=$uid") or die(mysql_error()); 
+$query = "UPDATE tbl_people SET pass=$upass WHERE per_id=$uid";
+if (!$res = mysqlConnection::getConnection()->query($query)) {
+    die('There was an error running the query [' . $query->error . ']');
+}//$success = mysql_query($query) or die(mysql_error());
 
 print('<script type="text/javascript">
 alert("Your password has been changed successfully.");
