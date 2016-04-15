@@ -23,7 +23,7 @@ include './model/mysqlConnection.php';
 try {
 
 
-	$target_dir = "upload/";
+	$target_dir = "./upload/";
 	$fileName = $_FILES["uploadedFile"]["name"];
 	$target_file = $target_dir . basename($fileName);
 	$uploadOk = 1;

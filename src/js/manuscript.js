@@ -88,6 +88,7 @@ function deleteManuscript() {
 }
 function displayManuscriptDialog() {
     $('#submit-manuscript-dlg').dialog('open').dialog('setTitle', 'New Submission');
+    $('#submit-manuscript-dlg').form('clear');
     //console.log(1);
 
 
