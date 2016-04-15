@@ -39,6 +39,7 @@ function addManuscript() {
             } else {
                 alert('Submission was Successfull');
                 $('#submit-manuscript-dlg').dialog('close');		// close the dialog
+                $('#submitManuscriptFm').form('clear');
                 //$('#manuscriptTable').datagrid('reload');	// reload the user data
             }
         }
@@ -88,7 +89,7 @@ function deleteManuscript() {
 }
 function displayManuscriptDialog() {
     $('#submit-manuscript-dlg').dialog('open').dialog('setTitle', 'New Submission');
-    $('#submit-manuscript-dlg').form('clear');
+    //
     //console.log(1);
 
 

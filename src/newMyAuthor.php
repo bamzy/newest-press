@@ -29,6 +29,7 @@ include 'header.php';
         </b>
         </p>
     </div>
+
     <div id="submit-manuscript-dlg" class="easyui-dialog" style="width:500px;height:550px;padding:10px 30px;top: 30%"
          closed="true"
          title="Register" buttons="#dlg-buttons">
@@ -36,8 +37,9 @@ include 'header.php';
         <form id="submitManuscriptFm" method="post" enctype="multipart/form-data">
             <div class="fitem" hidden="hidden">
                 <label>per_id:</label>
-                <input id='per_id' name="per_id" class="easyui-textbox" style="width: 300px" required="false"
+                <input id="per_id" name="per_id" class="easyui-textbox" style="width: 300px"
                        value="<?php echo $_SESSION['per_id']; ?>">
+
             </div>
             <div class="fitem">
                 <label>Title:</label>
